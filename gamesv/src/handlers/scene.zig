@@ -7,7 +7,7 @@ const Hall = @import("../fs/Hall.zig");
 pub fn onEnterWorldCsReq(context: *network.Context, _: pb.EnterWorldCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.EnterWorldScRsp{ .retcode = retcode }) catch {};
-    defer if (retcode == 0) context.connection.flushSync(context.arena) catch {};
+    defer if (retcode == 0) context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     try switchSection(context, player);
@@ -22,7 +22,7 @@ pub fn onEnterSectionCompleteCsReq(context: *network.Context, _: pb.EnterSection
 pub fn onLeaveCurSceneCsReq(context: *network.Context, _: pb.LeaveCurSceneCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.LeaveCurSceneScRsp{ .retcode = retcode }) catch {};
-    defer if (retcode == 0) context.connection.flushSync(context.arena) catch {};
+    defer if (retcode == 0) context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     try switchSection(context, player);
@@ -33,7 +33,7 @@ pub fn onLeaveCurSceneCsReq(context: *network.Context, _: pb.LeaveCurSceneCsReq)
 pub fn onEnterSectionCsReq(context: *network.Context, request: pb.EnterSectionCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.EnterSectionScRsp{ .retcode = retcode }) catch {};
-    defer if (retcode == 0) context.connection.flushSync(context.arena) catch {};
+    defer if (retcode == 0) context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     player.hall.section_id = request.section_id;
@@ -61,7 +61,7 @@ fn switchSection(context: *network.Context, player: *Player) !void {
 pub fn onInteractWithUnitCsReq(context: *network.Context, request: pb.InteractWithUnitCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.InteractWithUnitScRsp{ .retcode = retcode }) catch {};
-    defer if (retcode == 0) context.connection.flushSync(context.arena) catch {};
+    defer if (retcode == 0) context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     try player.interactWithUnit(

@@ -108,7 +108,7 @@ pub fn onGetServerTimestampCsReq(context: *network.Context, _: pb.GetServerTimes
 pub fn onModAvatarCsReq(context: *network.Context, request: pb.ModAvatarCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.ModAvatarScRsp{ .retcode = retcode }) catch {};
-    defer if (retcode == 0) context.connection.flushSync(context.arena) catch {};
+    defer if (retcode == 0) context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
 

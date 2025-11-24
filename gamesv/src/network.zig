@@ -72,7 +72,7 @@ pub fn processConnection(gpa: Allocator, io: Io, fs: *FileSystem, assets: *const
                         };
                     }
 
-                    try sync.send(connection, changes.arena.allocator());
+                    try sync.send(connection, changes.arena.allocator(), io);
                     try connection.writer.interface.flush();
                 },
             }
@@ -164,8 +164,8 @@ pub const Connection = struct {
         if (connection.player) |*player| player.deinit(gpa);
     }
 
-    pub fn flushSync(connection: *Connection, arena: Allocator) !void {
-        try sync.send(connection, arena);
+    pub fn flushSync(connection: *Connection, arena: Allocator, io: Io) !void {
+        try sync.send(connection, arena, io);
     }
 
     pub fn setPlayerUID(connection: *Connection, uid: u32) !void {

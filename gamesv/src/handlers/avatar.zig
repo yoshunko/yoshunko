@@ -25,7 +25,7 @@ pub fn onGetAvatarDataCsReq(context: *network.Context, _: pb.GetAvatarDataCsReq)
 pub fn onAvatarFavoriteCsReq(context: *network.Context, request: pb.AvatarFavoriteCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.AvatarFavoriteScRsp{ .retcode = retcode }) catch {};
-    defer context.connection.flushSync(context.arena) catch {};
+    defer context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     const avatar = player.avatar_map.getPtr(request.avatar_id) orelse return error.NoSuchAvatar;
@@ -38,7 +38,7 @@ pub fn onAvatarFavoriteCsReq(context: *network.Context, request: pb.AvatarFavori
 pub fn onWeaponDressCsReq(context: *network.Context, request: pb.WeaponDressCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.WeaponDressScRsp{ .retcode = retcode }) catch {};
-    defer context.connection.flushSync(context.arena) catch {};
+    defer context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     const avatar = player.avatar_map.getPtr(request.avatar_id) orelse return error.NoSuchAvatar;
@@ -62,7 +62,7 @@ pub fn onWeaponDressCsReq(context: *network.Context, request: pb.WeaponDressCsRe
 pub fn onWeaponUnDressCsReq(context: *network.Context, request: pb.WeaponUnDressCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.WeaponUnDressScRsp{ .retcode = retcode }) catch {};
-    defer context.connection.flushSync(context.arena) catch {};
+    defer context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     const avatar = player.avatar_map.getPtr(request.avatar_id) orelse return error.NoSuchAvatar;
@@ -75,7 +75,7 @@ pub fn onWeaponUnDressCsReq(context: *network.Context, request: pb.WeaponUnDress
 pub fn onEquipmentDressCsReq(context: *network.Context, request: pb.EquipmentDressCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.EquipmentDressScRsp{ .retcode = retcode }) catch {};
-    defer context.connection.flushSync(context.arena) catch {};
+    defer context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     const avatar = player.avatar_map.getPtr(request.avatar_id) orelse return error.NoSuchAvatar;
@@ -88,7 +88,7 @@ pub fn onEquipmentDressCsReq(context: *network.Context, request: pb.EquipmentDre
 pub fn onEquipmentUnDressCsReq(context: *network.Context, request: pb.EquipmentUnDressCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.EquipmentUnDressScRsp{ .retcode = retcode }) catch {};
-    defer context.connection.flushSync(context.arena) catch {};
+    defer context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     const avatar = player.avatar_map.getPtr(request.avatar_id) orelse return error.NoSuchAvatar;
@@ -105,7 +105,7 @@ pub fn onEquipmentUnDressCsReq(context: *network.Context, request: pb.EquipmentU
 pub fn onEquipmentSuitDressCsReq(context: *network.Context, request: pb.EquipmentSuitDressCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.EquipmentSuitDressScRsp{ .retcode = retcode }) catch {};
-    defer context.connection.flushSync(context.arena) catch {};
+    defer context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     const avatar = player.avatar_map.getPtr(request.avatar_id) orelse return error.NoSuchAvatar;
@@ -139,7 +139,7 @@ fn dressEquip(gpa: Allocator, player: *Player, target_avatar: *Avatar, index: u3
 pub fn onAvatarSkinDressCsReq(context: *network.Context, request: pb.AvatarSkinDressCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.AvatarSkinDressScRsp{ .retcode = retcode }) catch {};
-    defer if (retcode == 0) context.connection.flushSync(context.arena) catch {};
+    defer if (retcode == 0) context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     const avatar = player.avatar_map.getPtr(request.avatar_id) orelse return error.NoSuchAvatar;
@@ -156,7 +156,7 @@ pub fn onAvatarSkinDressCsReq(context: *network.Context, request: pb.AvatarSkinD
 pub fn onAvatarSkinUnDressCsReq(context: *network.Context, request: pb.AvatarSkinUnDressCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.AvatarSkinUnDressScRsp{ .retcode = retcode }) catch {};
-    defer if (retcode == 0) context.connection.flushSync(context.arena) catch {};
+    defer if (retcode == 0) context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     const avatar = player.avatar_map.getPtr(request.avatar_id) orelse return error.NoSuchAvatar;
@@ -170,7 +170,7 @@ pub fn onAvatarSkinUnDressCsReq(context: *network.Context, request: pb.AvatarSki
 pub fn onAvatarUnlockAwakeCsReq(context: *network.Context, request: pb.AvatarUnlockAwakeCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.AvatarUnlockAwakeScRsp{ .retcode = retcode }) catch {};
-    defer if (retcode == 0) context.connection.flushSync(context.arena) catch {};
+    defer if (retcode == 0) context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     const avatar = player.avatar_map.getPtr(request.avatar_id) orelse return error.NoSuchAvatar;
@@ -220,7 +220,7 @@ pub fn onAvatarUnlockAwakeCsReq(context: *network.Context, request: pb.AvatarUnl
 pub fn onAvatarSetAwakeCsReq(context: *network.Context, request: pb.AvatarSetAwakeCsReq) !void {
     var retcode: i32 = 1;
     defer context.respond(pb.AvatarSetAwakeScRsp{ .retcode = retcode }) catch {};
-    defer if (retcode == 0) context.connection.flushSync(context.arena) catch {};
+    defer if (retcode == 0) context.connection.flushSync(context.arena, context.io) catch {};
 
     const player = try context.connection.getPlayer();
     const avatar = player.avatar_map.getPtr(request.avatar_id) orelse return error.NoSuchAvatar;

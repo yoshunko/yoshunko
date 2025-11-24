@@ -15,7 +15,7 @@ const player_sync_fields = .{
     .{ Equip, .{ .item, .equip_list, pb.EquipInfo } },
 };
 
-pub fn send(connection: *Connection, arena: Allocator) !void {
+pub fn send(connection: *Connection, arena: Allocator, io: Io) !void {
     const log = std.log.scoped(.sync);
 
     const player = connection.getPlayer() catch return;
@@ -26,6 +26,26 @@ pub fn send(connection: *Connection, arena: Allocator) !void {
     }
 
     try syncItems(arena, player, &notify);
+
+    if (player.sync.hadal_zone_changed) {
+        const entrance_list = try arena.alloc(pb.HadalEntranceSync, player.hadal_zone.entrances.len);
+        for (player.hadal_zone.entrances, 0..) |entrance, i| {
+            const entrance_type = entrance.entranceType();
+            entrance_list[i] = .{
+                .entrance_id = entrance.id,
+                .state = @enumFromInt(3), // :three:
+                .cur_zone_record_sync = try player.hadal_zone.buildZoneRecord(
+                    io,
+                    arena,
+                    connection.assets,
+                    entrance_type,
+                    entrance.zone_id,
+                ),
+            };
+        }
+
+        notify.hadal_zone = .{ .sync_entrance_list = entrance_list };
+    }
 
     connection.write(notify, 0) catch {};
 

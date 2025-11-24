@@ -5448,7 +5448,7 @@ pub const LFOJHNANHCP = struct {
 pub const FJONIOIBDGN = struct {
 };
 pub const HadalZoneSync = struct {
-    pub const hadal_entrance_list_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const sync_entrance_list_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const NDAPNAHDHMP = struct {
     pub const cmd_id: u16 = 4438;
@@ -22250,7 +22250,7 @@ pub const GIPBMPOFCKA = struct {
 };
 pub const HadalEntranceSync = struct {
     pub const entrance_id_field_desc: struct{ u32, u32 } = .{3, 5103};
-    pub const cur_zone_record_field_desc: struct{ u32, u32 } = .{4, 0};
+    pub const cur_zone_record_sync_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const MLINEPGHPPL_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const CCOMLPPJLHP_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const state_field_desc: struct{ u32, u32 } = .{12, 0};
