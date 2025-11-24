@@ -12,6 +12,7 @@ const Weapon = @import("Weapon.zig");
 const Equip = @import("Equip.zig");
 const Material = @import("Material.zig");
 const Hall = @import("Hall.zig");
+const HadalZone = @import("HadalZone.zig");
 
 const Io = std.Io;
 const Allocator = std.mem.Allocator;
@@ -51,6 +52,7 @@ material_map: std.AutoArrayHashMapUnmanaged(u32, i32),
 hall: Hall,
 cur_section: ?Hall.Section = null,
 active_npcs: std.AutoArrayHashMapUnmanaged(u32, Hall.Npc) = .empty,
+hadal_zone: HadalZone,
 
 pub const Sync = struct {
     fn HashSet(comptime T: type) type {
@@ -241,6 +243,7 @@ pub fn loadOrCreate(gpa: Allocator, fs: *FileSystem, assets: *const Assets, play
     const equip_map = try loadItems(Equip, gpa, fs, assets, player_uid, true);
     const material_map = try Material.loadAll(gpa, fs, assets, player_uid);
     const hall = try file_util.loadOrCreateZon(Hall, gpa, arena.allocator(), fs, "player/{}/hall/info", .{player_uid});
+    const hadal_zone = try file_util.loadOrCreateZon(HadalZone, gpa, arena.allocator(), fs, "player/{}/hadal_zone/info", .{player_uid});
 
     return .{
         .player_uid = player_uid,
@@ -250,6 +253,7 @@ pub fn loadOrCreate(gpa: Allocator, fs: *FileSystem, assets: *const Assets, play
         .equip_map = equip_map,
         .material_map = material_map,
         .hall = hall,
+        .hadal_zone = hadal_zone,
     };
 }
 

@@ -7377,7 +7377,7 @@ pub const StartHadalZoneBattleCsReq = struct {
     second_room_buddy_id: u32 = 0,
     second_room_avatar_id_list: []const u32 = &.{},
     layer_item_id: u32 = 0,
-    IJIKKGDCAIE: u32 = 0,
+    room_index: u32 = 0,
 };
 pub const CGEDPNPLDFA = struct {
     pub const default: @This() = .{};
@@ -8446,7 +8446,7 @@ pub const LayerRecord = struct {
     PNHJOFPBGHI: u32 = 0,
     layer_item_id: u32 = 0,
     NIIHAFBFKOB: ?JBOCHDBLHGP = null,
-    IJIKKGDCAIE: u32 = 0,
+    room_index: u32 = 0,
 };
 pub const LDCHLELLGMP = struct {
     pub const default: @This() = .{};
@@ -17069,7 +17069,7 @@ pub const PCJIJILLCPB = struct {
 pub const CKKGFMHGDOF = struct {
     pub const default: @This() = .{};
     zone_id: u32 = 0,
-    IJIKKGDCAIE: u32 = 0,
+    room_index: u32 = 0,
     layer_index: u32 = 0,
 };
 pub const EKNDMNDEHJK = struct {
@@ -17124,9 +17124,9 @@ pub const EJADNBDBHCM = struct {
 };
 pub const EntranceType = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    EntranceType_MMIPNEOHFEB = 0,
-    EntranceType_PAGGCJPANGJ = 1,
-    EntranceType_BFJOIAOOBBJ = 2,
+    none = 0,
+    constant = 1,
+    scheduled = 2,
 };
 pub const HFLDOGEBFEB = struct {
     pub const default: @This() = .{};
@@ -21960,11 +21960,11 @@ pub const CDBEOKGPFKA = struct {
 };
 pub const LayerStatus = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    LayerStatus_GOCKHJAAJKI = 0,
-    LayerStatus_PHHIPIILKMH = 1,
-    LayerStatus_MBEGDEDDJFI = 2,
-    LayerStatus_DGAJPCDLKII = 4,
-    LayerStatus_KPFFGOAIFLA = 8,
+    GOCKHJAAJKI = 0,
+    PHHIPIILKMH = 1,
+    MBEGDEDDJFI = 2,
+    DGAJPCDLKII = 4,
+    KPFFGOAIFLA = 8,
 };
 pub const MGKFNLMKBKO = struct {
     pub const default: @This() = .{};
@@ -23730,7 +23730,7 @@ pub const HadalZoneSceneData = struct {
     pub const default: @This() = .{};
     second_room_buddy_id: u32 = 0,
     scene_perform: ?ScenePerformInfo = null,
-    IJIKKGDCAIE: u32 = 0,
+    room_index: u32 = 0,
     first_room_buddy_id: u32 = 0,
     CCJCCANJNBJ: []const u32 = &.{},
     zone_id: u32 = 0,
