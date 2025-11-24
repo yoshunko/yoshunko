@@ -1,0 +1,16 @@
+.{
+    .id = 15001111,
+    .on_interact = .{100},
+    .events = .{.{
+        .id = 100,
+        .actions = .{
+            .{
+                .id = 101,
+                .action = .{ .open_ui = .{
+                    .ui = "UIBattlePortal_HadalZoneV2PageController",
+                    .store_template_id = 2016,
+                } },
+            },
+        },
+    }},
+}

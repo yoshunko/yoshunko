@@ -8,14 +8,34 @@
                 .actions = .{
                     .{
                         .id = 301,
-                        .action = .{ .create_npc = .{ .tag_id = 102201 } },
-                    },
-                    .{ .id = 302, .action = .{
-                        .change_interact = .{
-                            .tag_ids = .{102201},
-                            .interact_id = 15001103,
+                        .action = .{
+                            .create_npc = .{ .tag_id = 102201 },
                         },
-                    } },
+                    },
+                    .{
+                        .id = 302,
+                        .action = .{
+                            .create_npc = .{ .tag_id = 102801 },
+                        },
+                    },
+                    .{
+                        .id = 303,
+                        .action = .{
+                            .change_interact = .{
+                                .tag_ids = .{102201},
+                                .interact_id = 15001103,
+                            },
+                        },
+                    },
+                    .{
+                        .id = 304,
+                        .action = .{
+                            .change_interact = .{
+                                .tag_ids = .{102801},
+                                .interact_id = 15001111,
+                            },
+                        },
+                    },
                 },
             }},
         },
