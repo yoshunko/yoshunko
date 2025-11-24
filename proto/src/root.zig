@@ -30,9 +30,12 @@ const WireType = enum(u32) {
 pub fn encodeMessage(w: *Io.Writer, message: anytype, comptime desc_namespace: type) !void {
     const Message = @TypeOf(message);
     const message_name = @typeName(Message)[3..];
-    if (!@hasDecl(desc_namespace, message_name)) return;
+    const message_desc = blk: {
+        if (!@hasDecl(desc_namespace, message_name)) {
+            if (@hasDecl(Message, "map_entry")) break :blk Message else return;
+        } else break :blk @field(desc_namespace, message_name);
+    };
 
-    const message_desc = @field(desc_namespace, message_name);
     inline for (comptime std.meta.fields(Message)) |field| {
         if (@hasDecl(message_desc, field.name ++ "_field_desc")) {
             try encodeField(w, @field(message, field.name), @field(message_desc, field.name ++ "_field_desc"), desc_namespace);
@@ -96,13 +99,17 @@ fn writeVarInt(w: *Io.Writer, value: anytype) !void {
     var v = value;
     while (v >= 0x80) : (v >>= 7) {
         try w.writeByte(@intCast(0x80 | (v & 0x7F)));
-    } else try w.writeByte(@intCast(v));
+    } else try w.writeByte(@intCast(v & 0x7F));
 }
 
 pub fn decodeMessage(r: *Io.Reader, allocator: Allocator, comptime Message: type, comptime desc_namespace: type) !Message {
     const message_name = @typeName(Message)[3..];
-    if (std.meta.fields(Message).len == 0 or !@hasDecl(desc_namespace, message_name)) return Message.default;
-    const message_desc = @field(desc_namespace, message_name);
+    if (std.meta.fields(Message).len == 0) return Message.default;
+    const message_desc = blk: {
+        if (!@hasDecl(desc_namespace, message_name)) {
+            if (@hasDecl(Message, "map_entry")) break :blk Message else return;
+        } else break :blk @field(desc_namespace, message_name);
+    };
 
     const FieldEnum = comptime blk: {
         var fields: []const std.builtin.Type.EnumField = &.{};
