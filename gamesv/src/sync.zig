@@ -16,8 +16,6 @@ const player_sync_fields = .{
 };
 
 pub fn send(connection: *Connection, arena: Allocator, io: Io) !void {
-    const log = std.log.scoped(.sync);
-
     const player = connection.getPlayer() catch return;
     var notify: pb.PlayerSyncScNotify = .default;
 
@@ -92,30 +90,6 @@ pub fn send(connection: *Connection, arena: Allocator, io: Io) !void {
             .scene_type = 1,
             .hall_scene_data = hall_scene_data,
         } }, 0) catch {};
-    }
-
-    if (player.sync.pending_section_switch) |next_section_id| blk: {
-        const transform_id = connection.assets.templates.getSectionDefaultTransform(next_section_id) orelse {
-            log.err("section with id {} doesn't exist", .{next_section_id});
-            break :blk;
-        };
-
-        const action = pb.ActionSwitchSection{
-            .section_id = next_section_id,
-            .transform_id = transform_id,
-        };
-
-        var allocating = Io.Writer.Allocating.init(arena);
-        try proto.encodeMessage(&allocating.writer, action, proto.pb.desc_action);
-
-        connection.write(pb.SectionEventScNotify{
-            .section_id = player.hall.section_id,
-            .owner_type = .scene,
-            .action_list = &.{.{
-                .action_type = .switch_section,
-                .body = allocating.written(),
-            }},
-        }, 0) catch {};
     }
 
     for (player.sync.client_events.items) |client_event| {

@@ -100,7 +100,6 @@ pub const Sync = struct {
     changed_equips: HashSet(u32) = .empty,
     materials_changed: bool = false,
     in_scene_transition: bool = false,
-    pending_section_switch: ?u32 = null,
     hall_refresh: bool = false,
     client_events: std.ArrayList(ClientEvent) = .empty,
     hadal_zone_changed: bool = false,
@@ -113,7 +112,6 @@ pub const Sync = struct {
         sync.changed_equips.clearRetainingCapacity();
         sync.materials_changed = false;
         sync.in_scene_transition = false;
-        sync.pending_section_switch = null;
         sync.hall_refresh = false;
         sync.hadal_zone_changed = false;
 
@@ -182,6 +180,7 @@ pub fn reloadFile(
     player: *Player,
     gpa: Allocator,
     arena: Allocator,
+    assets: *const Assets,
     fs: *FileSystem,
     file: FileSystem.Changes.File,
     base_dir: []const u8,
@@ -225,7 +224,7 @@ pub fn reloadFile(
         var new_hall = try file_util.parseZon(Hall, gpa, content);
 
         if (new_hall.section_id != player.hall.section_id) {
-            player.sync.pending_section_switch = new_hall.section_id;
+            try player.triggerSwitchSection(gpa, assets, new_hall.section_id);
             new_hall.section_id = player.hall.section_id;
         } else player.sync.hall_refresh = true;
 
@@ -252,6 +251,23 @@ pub fn reloadFile(
         player.hadal_zone = new_hz;
         player.sync.hadal_zone_changed = true;
     }
+}
+
+fn triggerSwitchSection(player: *Player, gpa: Allocator, assets: *const Assets, id: u32) !void {
+    var client_event = Sync.ClientEvent.init(gpa);
+    errdefer client_event.deinit();
+
+    const transform_id = assets.templates.getSectionDefaultTransform(id) orelse {
+        log.err("section with id {} doesn't exist", .{id});
+        return;
+    };
+
+    try client_event.add(100, .switch_section, Assets.EventGraphCollection.ActionConfig.SwitchSection{
+        .section_id = id,
+        .transform_id = transform_id,
+    });
+
+    try player.sync.client_events.append(gpa, client_event);
 }
 
 pub fn loadOrCreate(gpa: Allocator, fs: *FileSystem, assets: *const Assets, player_uid: u32) !Player {

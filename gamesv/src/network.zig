@@ -64,6 +64,7 @@ pub fn processConnection(gpa: Allocator, io: Io, fs: *FileSystem, assets: *const
                         connection.player.?.reloadFile(
                             gpa,
                             changes.arena.allocator(),
+                            assets,
                             fs,
                             file,
                             connection.player_data_path.?,

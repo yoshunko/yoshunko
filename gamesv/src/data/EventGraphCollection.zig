@@ -39,6 +39,7 @@ pub const EventActionConfig = struct {
 
 pub const ActionType = enum(i32) {
     open_ui = 5,
+    switch_section = 6,
     create_npc = 3001,
     change_interact = 3003,
 };
@@ -56,6 +57,22 @@ pub const ActionConfig = union(ActionType) {
         }
     };
 
+    pub const SwitchSection = struct {
+        section_id: u32,
+        transform_id: []const u8,
+        camera_x: u32 = 0,
+        camera_y: u32 = 0,
+
+        pub fn toProto(action: SwitchSection, _: Allocator) !pb.ActionSwitchSection {
+            return .{
+                .section_id = action.section_id,
+                .transform_id = action.transform_id,
+                .camera_x = action.camera_x,
+                .camera_y = action.camera_y,
+            };
+        }
+    };
+
     pub const CreateNpc = struct {
         tag_id: u32,
     };
@@ -66,6 +83,7 @@ pub const ActionConfig = union(ActionType) {
     };
 
     open_ui: OpenUI,
+    switch_section: SwitchSection,
     create_npc: CreateNpc,
     change_interact: ChangeInteract,
 };
