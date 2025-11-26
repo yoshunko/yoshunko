@@ -1,3 +1,5 @@
+const std = @import("std");
+
 pub const ayo = @import("ayo.zig");
 pub const args = @import("args.zig");
 pub const var_set = @import("var_set.zig");
@@ -27,3 +29,14 @@ pub const Version = struct {
     silence_md5_files: []const u8,
     cdn_check_url: []const u8,
 };
+
+pub fn printSplash() void {
+    var stderr = std.fs.File.stderr().writer("");
+    stderr.interface.writeAll(
+        \\ __  ______  ______ ____  ___  ____ ______ 
+        \\ \ \/ / __ \/ __/ // / / / / |/ / //_/ __ \
+        \\  \  / /_/ /\ \/ _  / /_/ /    / ,< / /_/ /
+        \\  /_/\____/___/_//_/\____/_/|_/_/|_|\____/ 
+        \\
+    ) catch {};
+}

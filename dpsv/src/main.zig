@@ -13,6 +13,7 @@ const fs_root: []const u8 = "state";
 
 fn init(gpa: Allocator, io: Io) u8 {
     const log = std.log.scoped(.init);
+    common.printSplash();
 
     var fs = FileSystem.init(gpa, io, fs_root) catch |err| {
         log.err("failed to open filesystem at '{s}': {}", .{ fs_root, err });

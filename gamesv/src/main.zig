@@ -14,6 +14,7 @@ const fs_root: []const u8 = "state";
 
 fn init(gpa: Allocator, io: Io) u8 {
     const log = std.log.scoped(.init);
+    common.printSplash();
 
     var assets = Assets.init(gpa, io) catch |err| {
         log.err("failed to load assets: {t}", .{err});
