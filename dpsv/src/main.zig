@@ -8,22 +8,37 @@ const ayo = common.ayo;
 const Allocator = std.mem.Allocator;
 const FileSystem = common.FileSystem;
 
-const address = Io.net.IpAddress.parseLiteral("127.0.0.1:10100") catch unreachable;
-const fs_root: []const u8 = "state";
+const Args = struct {
+    state_dir: []const u8 = "state",
+    listen_address: []const u8 = "127.0.0.1:10100",
+};
 
 fn init(gpa: Allocator, io: Io) u8 {
     const log = std.log.scoped(.init);
     common.printSplash();
 
-    var fs = FileSystem.init(gpa, io, fs_root) catch |err| {
-        log.err("failed to open filesystem at '{s}': {}", .{ fs_root, err });
+    const cmd_args = std.process.argsAlloc(gpa) catch @panic("early OOM");
+    defer std.process.argsFree(gpa, cmd_args);
+
+    const args = common.args.parse(Args, cmd_args[1..]) orelse {
+        common.args.printUsage(Args, cmd_args[0]);
+        return 1;
+    };
+
+    const address = Io.net.IpAddress.parseLiteral(args.listen_address) catch |err| {
+        log.err("invalid listen address specified: {t}", .{err});
+        return 1;
+    };
+
+    var fs = FileSystem.init(gpa, io, args.state_dir) catch |err| {
+        log.err("failed to open filesystem at '{s}': {t}", .{ args.state_dir, err });
         return 1;
     };
 
     defer fs.deinit();
 
     var server = address.listen(io, .{ .reuse_address = true }) catch |err| {
-        log.err("failed to listen at {f}: {}", .{ address, err });
+        log.err("failed to listen at {f}: {t}", .{ address, err });
         if (err == error.AddressInUse) log.err("another instance of this service might be already running", .{});
         return 1;
     };
@@ -41,7 +56,7 @@ fn init(gpa: Allocator, io: Io) u8 {
 
     futures.concurrent(gpa, io, .accept, Io.net.Server.accept, .{ &server, io }) catch |err| {
         // TODO: fallback to io.async calls if ConcurrencyUnavailable
-        log.err("failed to schedule accept routine: {}", .{err});
+        log.err("failed to schedule accept routine: {t}", .{err});
         return 1;
     };
 
@@ -60,12 +75,12 @@ fn init(gpa: Allocator, io: Io) u8 {
                 };
             },
             .close => |fallible| {
-                fallible catch |err| log.err("client disconnect due to an error: {}", .{err});
+                fallible catch |err| log.err("client disconnect due to an error: {t}", .{err});
             },
         }
     } else |err| {
         if (!io.cancelRequested())
-            log.err("futures.wait failed: {}", .{err});
+            log.err("futures.wait failed: {t}", .{err});
     }
 
     return 0;

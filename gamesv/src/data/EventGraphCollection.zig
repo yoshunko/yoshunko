@@ -105,6 +105,16 @@ pub fn load(gpa: Allocator, io: Io) !EventGraphCollection {
 
 pub fn deinit(collection: *EventGraphCollection, gpa: Allocator) void {
     std.zon.parse.free(gpa, collection.main_city);
+    freeMap(gpa, &collection.interacts);
+}
+
+fn freeMap(gpa: Allocator, map: anytype) void {
+    var items = map.iterator();
+    while (items.next()) |kv| {
+        std.zon.parse.free(gpa, kv.value_ptr.*);
+    }
+
+    map.deinit(gpa);
 }
 
 fn readAndParse(comptime T: type, io: Io, gpa: Allocator, dir: Io.Dir, sub_path: []const u8) !T {

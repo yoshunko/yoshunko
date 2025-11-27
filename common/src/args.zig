@@ -11,7 +11,7 @@ pub fn parse(comptime Args: type, args: [][:0]u8) ?Args {
             flags[i] = name[0];
         }
 
-        break :blk @Enum(u8, .exhaustive, field_names, flags);
+        break :blk @Enum(u8, .exhaustive, field_names, &flags);
     };
 
     var result: Args = .{};
