@@ -11,12 +11,21 @@ const Assets = @import("data/Assets.zig");
 
 const xorpad_len: usize = 4096;
 
-pub fn processConnection(gpa: Allocator, io: Io, fs: *FileSystem, assets: *const Assets, stream: Io.net.Stream) !void {
+pub fn onConnect(gpa: Allocator, io: Io, fs: *FileSystem, assets: *const Assets, stream: Io.net.Stream) void {
+    const log = std.log.scoped(.session);
+
+    if (processConnection(gpa, io, fs, assets, stream)) {
+        log.debug("connection from {f} disconnected", .{stream.socket.address});
+    } else |err| {
+        log.debug("connection from {f} disconnected due to an error: {t}", .{ stream.socket.address, err });
+    }
+}
+
+fn processConnection(gpa: Allocator, io: Io, fs: *FileSystem, assets: *const Assets, stream: Io.net.Stream) !void {
     const log = std.log.scoped(.session);
     defer stream.close(io);
 
     log.debug("new connection from {f}", .{stream.socket.address});
-    defer log.debug("connection from {f} disconnected", .{stream.socket.address});
 
     var xorpad = try fs.readFile(gpa, "xorpad/bytes") orelse return error.MissingXorpadFile;
     defer gpa.free(xorpad);
