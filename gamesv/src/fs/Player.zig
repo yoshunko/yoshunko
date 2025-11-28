@@ -378,9 +378,26 @@ pub fn runEvent(player: *Player, gpa: Allocator, fs: *FileSystem, assets: *const
     for (event.actions) |action| {
         switch (action.action) {
             .create_npc => |config| {
-                const npc: Hall.Npc = .{};
-                try saveNpc(arena, fs, player.player_uid, player.hall.section_id, config.tag_id, npc);
+                const template = assets.templates.getConfigByKey(.main_city_object_template_tb, config.tag_id) orelse {
+                    log.err("missing config for npc with tag {}", .{config.tag_id});
+                    continue;
+                };
 
+                var npc: Hall.Npc = .{};
+
+                if (template.default_interact_ids.len != 0) {
+                    const participators = try gpa.alloc(Hall.Interact.Participator, 1);
+                    participators[0] = .{ .id = 102201, .name = try gpa.dupe(u8, "A") };
+                    npc.interacts[1] = .{
+                        .name = try gpa.dupe(u8, template.interact_name),
+                        .scale = @splat(1),
+                        .tag_id = config.tag_id,
+                        .participators = participators,
+                        .id = template.default_interact_ids[0],
+                    };
+                }
+
+                try saveNpc(arena, fs, player.player_uid, player.hall.section_id, config.tag_id, npc);
                 try player.active_npcs.put(gpa, config.tag_id, npc);
             },
             .change_interact => |config| {
