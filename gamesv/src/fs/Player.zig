@@ -135,7 +135,7 @@ pub const Sync = struct {
 pub fn save(player: *const Player, arena: Allocator, fs: *FileSystem) !void {
     try player.saveStruct(player.sync.basic_info_changed, player.basic_info, "info", fs, arena);
     try player.saveStruct(player.sync.hadal_zone_changed, player.hadal_zone, "hadal_zone/info", fs, arena);
-    try player.saveStruct(player.sync.in_scene_transition or player.sync.hall_refresh, player.hall, "hall/info", fs, arena);
+    try player.saveStruct(player.sync.in_scene_transition, player.hall, "hall/info", fs, arena);
 
     inline for (Player.item_containers, Sync.change_sets) |pair, chg| {
         const Type, const container_field = pair;
@@ -386,13 +386,10 @@ pub fn runEvent(player: *Player, gpa: Allocator, fs: *FileSystem, assets: *const
                 var npc: Hall.Npc = .{};
 
                 if (template.default_interact_ids.len != 0) {
-                    const participators = try gpa.alloc(Hall.Interact.Participator, 1);
-                    participators[0] = .{ .id = 102201, .name = try gpa.dupe(u8, "A") };
                     npc.interacts[1] = .{
                         .name = try gpa.dupe(u8, template.interact_name),
                         .scale = @splat(1),
                         .tag_id = config.tag_id,
-                        .participators = participators,
                         .id = template.default_interact_ids[0],
                     };
                 }
