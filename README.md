@@ -25,7 +25,7 @@ zig build run-gamesv
 **Yoshunko** doesn't have a config file in particular, however its behavior can be modified with a different approach. The users are intended to manipulate the `state` directory of their servers. For example, list of regions the `dpsv` serves to clients is defined under the `state/gateway` directory. Another example is player data: state of each player is represented as a file system. It's located under `state/player/[UID]` directory. The state files can be edited at any time and the servers will apply these changes immediately. The moment you write to a file under player state directory, server hot-reloads it and synchronizes the state with the client.
 
 ### Logging in
-Currently supported client version is `CNBetaWin2.5.2`, you can get it from 3rd party sources. Next, you have to apply the necessary [client patch](https://git.xeondev.com/yidhari-zs/Tentacle). It allows you to connect to the local server and replaces encryption keys with custom ones.
+Currently supported client version is `CNBetaWin2.5.3`, you can get it from 3rd party sources. Next, you have to apply the necessary [client patch](https://git.xeondev.com/yidhari-zs/Tentacle). It allows you to connect to the local server and replaces encryption keys with custom ones.
 
 ## Community
 - [Our Discord Server](https://discord.xeondev.com)
