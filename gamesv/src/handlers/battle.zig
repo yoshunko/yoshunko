@@ -96,7 +96,7 @@ pub fn onStartHadalZoneBattleCsReq(
     const play_type = getHadalZonePlayType(txn.message.zone_id, txn.message.room_index);
 
     mode_mgr.change(mem.gpa, .hollow, .{
-        .battle_event_id = 19800014,
+        .battle_event_id = layer_id,
         .play_type = play_type,
         .scene_data = .{ .hadal_zone = .{
             .zone_id = txn.message.zone_id,
