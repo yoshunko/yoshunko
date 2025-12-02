@@ -1,0 +1,16 @@
+.{
+    .id = 10000028,
+    .on_interact = .{100},
+    .events = .{.{
+        .id = 100,
+        .actions = .{
+            .{
+                .id = 101,
+                .action = .{ .open_ui = .{
+                    .ui = "UIBangbooModGaragePageController",
+                    .store_template_id = 1031,
+                } },
+            },
+        },
+    }},
+}

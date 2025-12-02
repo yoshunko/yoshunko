@@ -14,6 +14,7 @@ uid: PlayerUID,
 basic: @import("../logic/component/player/PlayerBasicComponent.zig"),
 avatar: @import("../logic/component/player/PlayerAvatarComponent.zig"),
 item: @import("../logic/component/player/PlayerItemComponent.zig"),
+buddy: @import("../logic/component/player/PlayerBuddyComponent.zig"),
 hall: @import("../logic/component/player/PlayerHallComponent.zig"),
 hadal_zone: @import("../logic/component/player/PlayerHadalZoneComponent.zig"),
 
@@ -24,6 +25,7 @@ pub fn init(gpa: Allocator, fs: *FileSystem, assets: *const Assets, player_uid: 
         .basic = try .init(gpa, fs, player_uid),
         .avatar = try .init(gpa, fs, assets, player_uid),
         .item = try .init(gpa, fs, assets, player_uid),
+        .buddy = try .init(gpa, fs, assets, player_uid),
         .hall = try .init(gpa, fs, player_uid),
         .hadal_zone = try .init(gpa, fs, player_uid),
     };
@@ -33,6 +35,7 @@ pub fn deinit(pcs: *PlayerComponentStorage, gpa: Allocator) void {
     pcs.basic.deinit(gpa);
     pcs.avatar.deinit(gpa);
     pcs.item.deinit(gpa);
+    pcs.buddy.deinit(gpa);
     pcs.hall.deinit(gpa);
     pcs.hadal_zone.deinit(gpa);
 }

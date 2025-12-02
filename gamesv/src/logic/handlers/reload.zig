@@ -8,6 +8,7 @@ const EventQueue = @import("../EventQueue.zig");
 const PlayerBasicComponent = @import("../component/player/PlayerBasicComponent.zig");
 const PlayerItemComponent = @import("../component/player/PlayerItemComponent.zig");
 const PlayerAvatarComponent = @import("../component/player/PlayerAvatarComponent.zig");
+const PlayerBuddyComponent = @import("../component/player/PlayerBuddyComponent.zig");
 const PlayerHallComponent = @import("../component/player/PlayerHallComponent.zig");
 const PlayerHadalZoneComponent = @import("../component/player/PlayerHadalZoneComponent.zig");
 const comp_util = @import("../component/comp_util.zig");
@@ -15,6 +16,7 @@ const file_util = @import("../../fs/file_util.zig");
 const Avatar = @import("../../fs/Avatar.zig");
 const Weapon = @import("../../fs/Weapon.zig");
 const Equip = @import("../../fs/Equip.zig");
+const Buddy = @import("../../fs/Buddy.zig");
 const Hall = @import("../../fs/Hall.zig");
 const FileSystem = @import("common").FileSystem;
 const Connection = @import("../../network/Connection.zig");
@@ -44,6 +46,12 @@ pub fn onStateFileModified(event: EventQueue.Dequeue(.state_file_modified), even
             .content = event.data.content,
             .equip_uid = unique_id,
         });
+    } else if (std.mem.startsWith(u8, event.data.path, "buddy/")) {
+        const unique_id = std.fmt.parseInt(u32, event.data.basename(), 10) catch return;
+        try events.enqueue(.reload_buddy_data, .{
+            .content = event.data.content,
+            .buddy_id = unique_id,
+        });
     }
 }
 
@@ -67,7 +75,14 @@ pub fn reloadHadalZone(
     try events.enqueue(.hadal_zone_modified, .{});
 }
 
-pub fn reloadHallInfo(event: EventQueue.Dequeue(.reload_hall_info), events: *EventQueue, hall_comp: *PlayerHallComponent, mem: Memory, conn: *Connection, assets: *const Assets) !void {
+pub fn reloadHallInfo(
+    event: EventQueue.Dequeue(.reload_hall_info),
+    events: *EventQueue,
+    hall_comp: *PlayerHallComponent,
+    mem: Memory,
+    conn: *Connection,
+    assets: *const Assets,
+) !void {
     const new_hall_info = file_util.parseZon(Hall, mem.gpa, event.data.content) catch return;
     errdefer new_hall_info.deinit(mem.gpa);
 
@@ -119,6 +134,21 @@ pub fn reloadAvatarData(
     }
 
     try events.enqueue(.avatar_data_modified, .{ .avatar_id = event.data.avatar_id });
+}
+
+pub fn reloadBuddyData(
+    event: EventQueue.Dequeue(.reload_buddy_data),
+    events: *EventQueue,
+    mem: Memory,
+    buddy_comp: *PlayerBuddyComponent,
+) !void {
+    const new_buddy = file_util.parseZon(Buddy, mem.gpa, event.data.content) catch return;
+    if (buddy_comp.buddy_map.getPtr(event.data.buddy_id)) |buddy| {
+        buddy.*.deinit(mem.gpa);
+        buddy.* = new_buddy;
+    } else try buddy_comp.buddy_map.put(mem.gpa, event.data.buddy_id, new_buddy);
+
+    try events.enqueue(.buddy_data_modified, .{ .buddy_id = event.data.buddy_id });
 }
 
 pub fn reloadWeaponData(

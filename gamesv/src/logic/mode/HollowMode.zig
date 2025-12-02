@@ -1,18 +1,18 @@
 const HollowMode = @This();
 const std = @import("std");
-const pb = @import("proto").pb;
-const AvatarUnit = @import("../battle/AvatarUnit.zig");
 const Allocator = std.mem.Allocator;
 
 battle_event_id: u32,
 enemy_property_scale: u32 = 0,
 play_type: LocalPlayType,
 avatar_ids: []const []const u32,
+buddy_ids: []const u32,
 scene_data: SceneData,
 
 pub fn deinit(mode: *HollowMode, gpa: Allocator) void {
     for (mode.avatar_ids) |list| gpa.free(list);
     gpa.free(mode.avatar_ids);
+    gpa.free(mode.buddy_ids);
 }
 
 pub const SceneData = union(enum) {

@@ -69,7 +69,7 @@ pub fn deinit(fs: *FileSystem) void {
     fs.root_dir.close(fs.io);
 }
 
-pub fn readFile(fs: *FileSystem, caller_gpa: Allocator, path: []const u8) !?[]u8 {
+pub fn readFile(fs: *FileSystem, caller_gpa: Allocator, path: []const u8) !?[:0]u8 {
     try fs.map_lock.lock(fs.io);
     defer fs.map_lock.unlock(fs.io);
 
@@ -79,9 +79,9 @@ pub fn readFile(fs: *FileSystem, caller_gpa: Allocator, path: []const u8) !?[]u8
 
         if (fs.root_dir.statPath(fs.io, path, .{})) |stat| {
             if (stat.mtime.toSeconds() > cached.mtime) {
-                const content = (try readEntireFileAlloc(fs.io, fs.root_dir, path, caller_gpa)) orelse return null;
-                errdefer caller_gpa.free(content);
-                const cached_content = try fs.gpa.dupe(u8, content);
+                const cached_content = (try readEntireFileAlloc(fs.io, fs.root_dir, path, fs.gpa)) orelse return null;
+                errdefer fs.gpa.free(cached_content);
+                const content = try fs.gpa.dupeZ(u8, cached_content);
 
                 if (cached.content) |old_content|
                     fs.gpa.free(old_content);
@@ -89,7 +89,7 @@ pub fn readFile(fs: *FileSystem, caller_gpa: Allocator, path: []const u8) !?[]u8
                 cached.mtime = stat.mtime.toSeconds();
                 cached.content = cached_content;
                 return content;
-            } else return if (cached.content) |content| try caller_gpa.dupe(u8, content) else null;
+            } else return if (cached.content) |content| try caller_gpa.dupeZ(u8, content) else null;
         } else |_| {
             if (cached.content) |content| {
                 fs.gpa.free(content);
@@ -104,15 +104,15 @@ pub fn readFile(fs: *FileSystem, caller_gpa: Allocator, path: []const u8) !?[]u8
             else => return err,
         };
 
-        const content = (try readEntireFileAlloc(fs.io, fs.root_dir, path, caller_gpa)) orelse return null;
-        errdefer caller_gpa.free(content);
+        const cached_content = (try readEntireFileAlloc(fs.io, fs.root_dir, path, fs.gpa)) orelse return null;
+        errdefer fs.gpa.free(cached_content);
 
         try fs.map.put(fs.gpa, try fs.gpa.dupe(u8, path), .{
-            .content = try fs.gpa.dupe(u8, content),
+            .content = cached_content,
             .mtime = stat.mtime.toSeconds(),
         });
 
-        return content;
+        return try fs.gpa.dupeZ(u8, cached_content);
     }
 }
 

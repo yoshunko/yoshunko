@@ -7843,7 +7843,7 @@ pub const HKPAGPGMPFM = struct {
     pub const NKKMDIMLEEG_field_desc: struct{ u32, u32 } = .{10, 5644};
     pub const CNCGILPIPBO_field_desc: struct{ u32, u32 } = .{12, 2768};
 };
-pub const EJHFAFANABP = struct {
+pub const BuddySkillLevel = struct {
     pub const level_field_desc: struct{ u32, u32 } = .{12, 5000};
     pub const skill_type_field_desc: struct{ u32, u32 } = .{13, 8550};
 };
@@ -7941,10 +7941,10 @@ pub const BFIOCGOFAOJ = struct {
 };
 pub const HadalZoneSceneData = struct {
     pub const scene_perform_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const second_room_buddy_id_field_desc: struct{ u32, u32 } = .{3, 7626};
+    pub const first_room_buddy_id_field_desc: struct{ u32, u32 } = .{3, 7626};
     pub const first_room_avatar_id_list_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const CEEHIOMNHAG_field_desc: struct{ u32, u32 } = .{5, 13428};
-    pub const first_room_buddy_id_field_desc: struct{ u32, u32 } = .{6, 12710};
+    pub const second_room_buddy_id_field_desc: struct{ u32, u32 } = .{6, 12710};
     pub const layer_index_field_desc: struct{ u32, u32 } = .{8, 10789};
     pub const EBOMPCHFPNF_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const JAEMIBCJEHG_field_desc: struct{ u32, u32 } = .{10, 14790};
@@ -16579,7 +16579,7 @@ pub const BCFGLNONJJJ = struct {
     pub const JOLNKNGIHCA_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const retcode_field_desc: struct{ u32, u32 } = .{5, 14346};
 };
-pub const OGCIJOKJKOE = struct {
+pub const BuddySync = struct {
     pub const NJELDDOLDAG_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const HMGJAGPAEOA_field_desc: struct{ u32, u32 } = .{5, 12063};
     pub const BGDIAHMMEKL_field_desc: struct{ u32, u32 } = .{7, 0};
@@ -21766,7 +21766,7 @@ pub const GDHFENCKAEM = struct {
     pub const OALGHJMOBGJ_field_desc: struct{ u32, u32 } = .{9, 10950};
     pub const retcode_field_desc: struct{ u32, u32 } = .{13, 9248};
 };
-pub const CAECPFBDDDH = struct {
+pub const BuddyFavoriteCsReq = struct {
     pub const cmd_id: u16 = 3250;
     pub const is_favorite_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const buddy_id_field_desc: struct{ u32, u32 } = .{12, 5380};
@@ -24896,8 +24896,8 @@ pub const EOCBDPJKCHI = struct {
 };
 pub const StartHadalZoneBattleCsReq = struct {
     pub const cmd_id: u16 = 4971;
-    pub const first_room_buddy_id_field_desc: struct{ u32, u32 } = .{1, 9728};
-    pub const second_room_buddy_id_field_desc: struct{ u32, u32 } = .{2, 11789};
+    pub const second_room_buddy_id_field_desc: struct{ u32, u32 } = .{1, 9728};
+    pub const first_room_buddy_id_field_desc: struct{ u32, u32 } = .{2, 11789};
     pub const second_room_avatar_id_list_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const room_index_field_desc: struct{ u32, u32 } = .{9, 532};
     pub const layer_index_field_desc: struct{ u32, u32 } = .{10, 2308};

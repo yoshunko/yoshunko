@@ -7,6 +7,7 @@ const EventQueue = @import("../EventQueue.zig");
 const Connection = @import("../../network/Connection.zig");
 const PlayerBasicComponent = @import("../component/player/PlayerBasicComponent.zig");
 const PlayerAvatarComponent = @import("../component/player/PlayerAvatarComponent.zig");
+const PlayerBuddyComponent = @import("../component/player/PlayerBuddyComponent.zig");
 const PlayerItemComponent = @import("../component/player/PlayerItemComponent.zig");
 const PlayerHadalZoneComponent = @import("../component/player/PlayerHadalZoneComponent.zig");
 
@@ -33,6 +34,22 @@ pub fn syncAvatarData(
     const avatar_id = event.data.avatar_id;
     const avatar = avatar_comp.avatar_map.getPtr(avatar_id) orelse return;
     try avatar_sync.avatar_list.append(mem.arena, try avatar.toProto(avatar_id, mem.arena));
+}
+
+pub fn syncBuddyData(
+    event: EventQueue.Dequeue(.buddy_data_modified),
+    mem: Memory,
+    buddy_comp: *PlayerBuddyComponent,
+    notify: *pb.PlayerSyncScNotify,
+) !void {
+    const buddy_sync = if (notify.buddy) |*sync| sync else blk: {
+        notify.buddy = .{};
+        break :blk &notify.buddy.?;
+    };
+
+    const buddy_id = event.data.buddy_id;
+    const buddy = buddy_comp.buddy_map.getPtr(buddy_id) orelse return;
+    try buddy_sync.buddy_list.append(mem.arena, try buddy.toProto(buddy_id, mem.arena));
 }
 
 pub fn sendAddAvatar(

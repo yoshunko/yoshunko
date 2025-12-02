@@ -14,6 +14,7 @@ const net_namespaces: []const type = &.{
     @import("handlers/player.zig"),
     @import("handlers/item.zig"),
     @import("handlers/avatar.zig"),
+    @import("handlers/buddy.zig"),
     @import("handlers/quest.zig"),
     @import("handlers/archive.zig"),
     @import("handlers/hollow.zig"),

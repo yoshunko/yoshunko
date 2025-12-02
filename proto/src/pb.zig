@@ -516,12 +516,12 @@ pub const IGFCFJAEHBL = struct {
     layer_item_id: u32 = 0,
     AKMDADIBIFC: u32 = 0,
 };
-pub const FHNFDOIHCCK = enum(i32) {
+pub const BuddyUnitType = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    FHNFDOIHCCK_LFCCEIIGDCM = 0,
-    FHNFDOIHCCK_NALGPOCOJJJ = 1,
-    FHNFDOIHCCK_FCBGNLOLOOO = 2,
-    FHNFDOIHCCK_LFHKACOFFOE = 3,
+    BuddyUnitType_LFCCEIIGDCM = 0,
+    BuddyUnitType_NALGPOCOJJJ = 1,
+    fighting = 2,
+   	assisting = 3,
 };
 pub const NBHKCOIMDJB = struct {
     pub const default: @This() = .{};
@@ -5318,7 +5318,7 @@ pub const BuddyInfo = struct {
     taken_rank_up_reward_list: std.ArrayList(u32) = .empty,
     NMGFLPOEELO: u32 = 0,
     star: u32 = 0,
-    skill_type_level: std.ArrayList(CCMNBDKNJDF) = .empty,
+    skill_type_level: std.ArrayList(BuddySkillLevel) = .empty,
     id: u32 = 0,
     rank: u32 = 0,
     first_get_time: i64 = 0,
@@ -7191,7 +7191,7 @@ pub const HJLOKIEKNEE = struct {
     pub const default: @This() = .{};
     HFHNMHBOALP: std.ArrayList(MKFNOCIPBAF) = .empty,
 };
-pub const GMAHGEONIKF = struct {
+pub const BuddySync = struct {
     pub const default: @This() = .{};
     KEOAHPAMJMB: u32 = 0,
     KBNJIIOBCGM: std.ArrayList(u32) = .empty,
@@ -7533,7 +7533,7 @@ pub const BuddyUnitInfo = struct {
     pub const default: @This() = .{};
     buddy_id: u32 = 0,
     properties: std.ArrayList(MapEntry(u32, i32)) = .empty,
-    type: ?FHNFDOIHCCK = null,
+    type: ?BuddyUnitType = null,
 };
 pub const AvatarUnitInfo = struct {
     pub const default: @This() = .{};
@@ -24275,10 +24275,14 @@ pub const LFPONJFONHP = struct {
     pub const default: @This() = .{};
     HBKLIAJDNBL: u32 = 0,
 };
-pub const PCNGEJIPFCD = struct {
+pub const BuddyFavoriteCsReq = struct {
     pub const default: @This() = .{};
     is_favorite: bool = false,
     buddy_id: u32 = 0,
+};
+pub const BuddyFavoriteScRsp = struct {
+    pub const default: @This() = .{};
+    retcode: i32 = 0,
 };
 pub const IJKLIBONHJD = struct {
     pub const default: @This() = .{};
@@ -25292,7 +25296,7 @@ pub const KOGLNOIGLOJ = struct {
     DHGEAFIAHIH: []const u8 = "",
     param_list: std.ArrayList(MNGBIHCCAEA) = .empty,
 };
-pub const CCMNBDKNJDF = struct {
+pub const BuddySkillLevel = struct {
     pub const default: @This() = .{};
     skill_type: u32 = 0,
     level: u32 = 0,
@@ -26081,7 +26085,7 @@ pub const PlayerSyncScNotify = struct {
     pub const default: @This() = .{};
     MBANFGFECFL: ?LLOFLODGHDG = null,
     AMAIBOLGIKD: ?GNOMGCGMLCL = null,
-    buddy: ?GMAHGEONIKF = null,
+    buddy: ?BuddySync = null,
     BIENAGEDIBP: ?EEEIBOEFNND = null,
     self_basic_info: ?SelfBasicInfo = null,
     IPBNIDHPDPO: ?DPPLKFDCGHN = null,
@@ -26198,7 +26202,7 @@ pub const GECKNPNGMPA = struct {
 };
 pub const OKNAOJDDCHB = struct {
     pub const default: @This() = .{};
-    OPPGCLEJGPK: ?FHNFDOIHCCK = null,
+    OPPGCLEJGPK: ?BuddyUnitType = null,
     buddy_id: u32 = 0,
 };
 pub const FJMOBCIOOBP = struct {

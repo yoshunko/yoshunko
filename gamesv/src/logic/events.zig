@@ -44,6 +44,11 @@ pub const ReloadEquipData = struct {
     content: []const u8,
 };
 
+pub const ReloadBuddyData = struct {
+    buddy_id: u32,
+    content: []const u8,
+};
+
 pub const BasicInfoModified = struct {};
 
 pub const AvatarUnlocked = struct {
@@ -60,6 +65,10 @@ pub const WeaponDataModified = struct {
 
 pub const EquipDataModified = struct {
     equip_uid: u32,
+};
+
+pub const BuddyDataModified = struct {
+	buddy_id: u32,
 };
 
 pub const MaterialsModified = struct {};

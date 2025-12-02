@@ -4,8 +4,10 @@ const network = @import("../network.zig");
 const property_util = @import("../logic/property_util.zig");
 const PlayerAvatarComponent = @import("../logic/component/player/PlayerAvatarComponent.zig");
 const PlayerItemComponent = @import("../logic/component/player/PlayerItemComponent.zig");
+const PlayerBuddyComponent = @import("../logic/component/player/PlayerBuddyComponent.zig");
 const Dungeon = @import("../logic/battle/Dungeon.zig");
 const AvatarUnit = @import("../logic/battle/AvatarUnit.zig");
+const BuddyUnit = @import("../logic/battle/BuddyUnit.zig");
 const ModeManager = @import("../logic/mode.zig").ModeManager;
 const HollowMode = @import("../logic/mode/HollowMode.zig");
 const Memory = @import("../network/State.zig").Memory;
@@ -34,6 +36,7 @@ pub fn onStartTrainingQuestCsReq(
             []const u32,
             &.{try mem.gpa.dupe(u32, txn.message.avatar_id_list.items)},
         ),
+        .buddy_ids = try mem.gpa.dupe(u32, &.{txn.message.buddy_id}),
     });
 
     try events.enqueue(.game_mode_transition, .{});
@@ -58,6 +61,7 @@ pub fn onStartHadalZoneBattleCsReq(
     mode_mgr: *ModeManager,
     avatar_comp: *PlayerAvatarComponent,
     item_comp: *PlayerItemComponent,
+    buddy_comp: *PlayerBuddyComponent,
     assets: *const Assets,
     mem: Memory,
 ) !void {
@@ -70,6 +74,12 @@ pub fn onStartHadalZoneBattleCsReq(
         try mem.gpa.dupe(u32, txn.message.first_room_avatar_id_list.items),
         try mem.gpa.dupe(u32, txn.message.second_room_avatar_id_list.items),
     });
+
+    var buddy_id_list: std.ArrayList(u32) = .empty;
+    defer buddy_id_list.deinit(mem.gpa);
+    if (txn.message.first_room_buddy_id != 0) try buddy_id_list.append(mem.gpa, txn.message.first_room_buddy_id);
+    if (txn.message.second_room_buddy_id != 0) try buddy_id_list.append(mem.gpa, txn.message.second_room_buddy_id);
+    const buddy_ids = try buddy_id_list.toOwnedSlice(mem.gpa);
 
     var zone_group = txn.message.zone_id;
     while ((zone_group / 100) > 0) zone_group /= 10;
@@ -91,6 +101,7 @@ pub fn onStartHadalZoneBattleCsReq(
         .quest_type = quest_config_template.quest_type,
         .quest_id = @intCast(hadal_zone_quest_template.quest_id),
         .avatar_units = try makeAvatarUnits(mem.gpa, avatar_comp, item_comp, assets, avatar_vec),
+        .buddy_units = try makeBuddyUnits(mem.gpa, buddy_comp, assets, buddy_ids),
     };
 
     const play_type = getHadalZonePlayType(txn.message.zone_id, txn.message.room_index);
@@ -105,6 +116,7 @@ pub fn onStartHadalZoneBattleCsReq(
             .layer_item_id = txn.message.layer_item_id,
         } },
         .avatar_ids = avatar_vec,
+        .buddy_ids = buddy_ids,
         .enemy_property_scale = switch (play_type) {
             .hadal_zone_bosschallenge => hadal_zone_bosschallenge_enemy_property_scale,
             .hadal_zone_impact_battle => hadal_zone_impact_battle_enemy_property_scale,
@@ -134,7 +146,13 @@ pub fn onEndBattleCsReq(txn: *network.Transaction(pb.EndBattleCsReq)) !void {
     try txn.respond(.{ .fight_settle = .{} });
 }
 
-fn makeAvatarUnits(gpa: Allocator, avatar_comp: *const PlayerAvatarComponent, item_comp: *const PlayerItemComponent, assets: *const Assets, avatars: []const []const u32) !std.AutoArrayHashMapUnmanaged(u32, AvatarUnit) {
+fn makeAvatarUnits(
+    gpa: Allocator,
+    avatar_comp: *const PlayerAvatarComponent,
+    item_comp: *const PlayerItemComponent,
+    assets: *const Assets,
+    avatars: []const []const u32,
+) !std.AutoArrayHashMapUnmanaged(u32, AvatarUnit) {
     var map: std.AutoArrayHashMapUnmanaged(u32, AvatarUnit) = .empty;
 
     for (avatars) |list| for (list) |avatar_id| {
@@ -144,6 +162,28 @@ fn makeAvatarUnits(gpa: Allocator, avatar_comp: *const PlayerAvatarComponent, it
             .properties = properties,
         });
     };
+
+    return map;
+}
+
+fn makeBuddyUnits(
+    gpa: Allocator,
+    buddy_comp: *const PlayerBuddyComponent,
+    assets: *const Assets,
+    buddy_ids: []const u32,
+) !std.AutoArrayHashMapUnmanaged(u32, BuddyUnit) {
+    _ = assets;
+    _ = buddy_comp;
+
+    var map: std.AutoArrayHashMapUnmanaged(u32, BuddyUnit) = .empty;
+    try map.put(gpa, BuddyUnit.assisting_buddy_id, .{ .type = .assisting });
+
+    for (buddy_ids) |buddy_id| {
+        try map.put(gpa, buddy_id, .{
+            .type = .fighting,
+            .properties = .empty, // TODO: properties for BuddyUnits
+        });
+    }
 
     return map;
 }

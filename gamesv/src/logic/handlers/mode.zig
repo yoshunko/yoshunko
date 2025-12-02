@@ -9,6 +9,7 @@ const Connection = @import("../../network/Connection.zig");
 const PlayerBasicComponent = @import("../component/player/PlayerBasicComponent.zig");
 const PlayerAvatarComponent = @import("../component/player/PlayerAvatarComponent.zig");
 const PlayerItemComponent = @import("../component/player/PlayerItemComponent.zig");
+const PlayerBuddyComponent = @import("../component/player/PlayerBuddyComponent.zig");
 const PlayerHallComponent = @import("../component/player/PlayerHallComponent.zig");
 const Dungeon = @import("../battle/Dungeon.zig");
 const Allocator = std.mem.Allocator;
@@ -60,6 +61,7 @@ pub fn onHollowModeLoaded(
     mem: Memory,
     avatar_comp: *PlayerAvatarComponent,
     item_comp: *PlayerItemComponent,
+    buddy_comp: *PlayerBuddyComponent,
 ) !void {
     var scene: pb.SceneData = .{
         .scene_id = mode.battle_event_id,
@@ -90,6 +92,8 @@ pub fn onHollowModeLoaded(
                     .fromOwnedSlice(try mem.arena.dupe(u32, mode.avatar_ids[1]))
                 else
                     .empty,
+                .first_room_buddy_id = if (mode.buddy_ids.len > 0) mode.buddy_ids[0] else 0,
+                .second_room_buddy_id = if (mode.buddy_ids.len > 1) mode.buddy_ids[1] else 0,
             };
         },
     }
@@ -97,12 +101,20 @@ pub fn onHollowModeLoaded(
     var dungeon_info: pb.DungeonInfo = .{
         .quest_id = dungeon.quest_id,
         .quest_type = dungeon.quest_type,
-        .dungeon_package_info = try makeDungeonPackage(mem.arena, avatar_comp, item_comp, mode.avatar_ids),
+        .dungeon_package_info = try makeDungeonPackage(mem.arena, avatar_comp, item_comp, buddy_comp, mode.avatar_ids, mode.buddy_ids),
     };
 
     var avatar_units = dungeon.avatar_units.iterator();
     while (avatar_units.next()) |kv| {
         try dungeon_info.avatar_list.append(
+            mem.arena,
+            try kv.value_ptr.toProto(mem.arena, kv.key_ptr.*),
+        );
+    }
+
+    var buddy_units = dungeon.buddy_units.iterator();
+    while (buddy_units.next()) |kv| {
+        try dungeon_info.buddy_list.append(
             mem.arena,
             try kv.value_ptr.toProto(mem.arena, kv.key_ptr.*),
         );
@@ -118,11 +130,14 @@ fn makeDungeonPackage(
     arena: Allocator,
     avatar_comp: *PlayerAvatarComponent,
     item_comp: *PlayerItemComponent,
+    buddy_comp: *PlayerBuddyComponent,
     avatar_vec: []const []const u32,
+    buddy_ids: []const u32,
 ) !pb.DungeonPackageInfo {
     var avatar_list: std.ArrayList(pb.AvatarInfo) = .empty;
     var weapon_list: std.ArrayList(pb.WeaponInfo) = .empty;
     var equip_list: std.ArrayList(pb.EquipInfo) = .empty;
+    var buddy_list: std.ArrayList(pb.BuddyInfo) = .empty;
 
     for (avatar_vec) |list| {
         for (list) |avatar_id| {
@@ -144,9 +159,15 @@ fn makeDungeonPackage(
         }
     }
 
+    for (buddy_ids) |buddy_id| {
+    	const buddy = buddy_comp.buddy_map.getPtr(buddy_id) orelse return error.NoSuchBuddy;
+        try buddy_list.append(arena, try buddy.toProto(buddy_id, arena));
+    }
+
     return .{
         .avatar_list = avatar_list,
         .weapon_list = weapon_list,
         .equip_list = equip_list,
+        .buddy_list = buddy_list,
     };
 }
