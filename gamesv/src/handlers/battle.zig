@@ -28,6 +28,11 @@ pub fn onStartTrainingQuestCsReq(
     if (cur_dungeon.* != null) return error.AlreadyInDungeon;
     cur_dungeon.* = .{ .quest_id = 12254000, .quest_type = 0 };
 
+    var buddy_id_list: std.ArrayList(u32) = .empty;
+    defer buddy_id_list.deinit(mem.gpa);
+
+    if (txn.message.buddy_id != 0) try buddy_id_list.append(mem.gpa, txn.message.buddy_id);
+
     mode_mgr.change(mem.gpa, .hollow, .{
         .battle_event_id = 19800014,
         .play_type = .training_room,
@@ -36,7 +41,7 @@ pub fn onStartTrainingQuestCsReq(
             []const u32,
             &.{try mem.gpa.dupe(u32, txn.message.avatar_id_list.items)},
         ),
-        .buddy_ids = try mem.gpa.dupe(u32, &.{txn.message.buddy_id}),
+        .buddy_ids = try buddy_id_list.toOwnedSlice(mem.gpa),
     });
 
     try events.enqueue(.game_mode_transition, .{});
