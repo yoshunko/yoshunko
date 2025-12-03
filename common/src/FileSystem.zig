@@ -81,7 +81,7 @@ pub fn readFile(fs: *FileSystem, caller_gpa: Allocator, path: []const u8) !?[:0]
             if (stat.mtime.toSeconds() > cached.mtime) {
                 const cached_content = (try readEntireFileAlloc(fs.io, fs.root_dir, path, fs.gpa)) orelse return null;
                 errdefer fs.gpa.free(cached_content);
-                const content = try fs.gpa.dupeZ(u8, cached_content);
+                const content = try caller_gpa.dupeZ(u8, cached_content);
 
                 if (cached.content) |old_content|
                     fs.gpa.free(old_content);
@@ -112,7 +112,7 @@ pub fn readFile(fs: *FileSystem, caller_gpa: Allocator, path: []const u8) !?[:0]
             .mtime = stat.mtime.toSeconds(),
         });
 
-        return try fs.gpa.dupeZ(u8, cached_content);
+        return try caller_gpa.dupeZ(u8, cached_content);
     }
 }
 
