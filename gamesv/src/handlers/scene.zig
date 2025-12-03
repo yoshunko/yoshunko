@@ -117,3 +117,10 @@ pub fn onInteractWithUnitCsReq(
 
     retcode = 0;
 }
+
+pub fn onSectionRefreshCsReq(
+    txn: *network.Transaction(pb.SectionRefreshCsReq),
+    _: *HallMode, // just for the sake of mode check
+) !void {
+    try txn.respond(.{ .retcode = 0 });
+}

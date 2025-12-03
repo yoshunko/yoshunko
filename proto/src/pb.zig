@@ -4571,7 +4571,7 @@ pub const GGECJKPGHHC = struct {
     end_timestamp: i64 = 0,
     MHJBNKEPDJF: []const u8 = "",
     GFLCHOLDEOD: []const u8 = "",
-    HJLFJJKIGFA: u32 = 0,
+    refresh_status: u32 = 0,
     BMGOKMMBBEO: bool = false,
     LJAHFLFDMDH: bool = false,
     DLPKAGEDPNM: u32 = 0,
@@ -8349,7 +8349,7 @@ pub const IIGKPKKPJJO = struct {
     pub const default: @This() = .{};
     PGMMOOELDON: std.ArrayList(u32) = .empty,
     PHCEPGDLMGK: []const u8 = "",
-    HJLFJJKIGFA: u32 = 0,
+    refresh_status: u32 = 0,
     BHPEIDDMHGL: u32 = 0,
     MCACCPJDNEM: u32 = 0,
 };
@@ -25958,9 +25958,9 @@ pub const NJCBAFJMDIG = struct {
     HJPMNKFLLGP: bool = false,
     GLKMLGCFNOL: ?ActionType = null,
 };
-pub const CPMAPFJNNAF = struct {
+pub const SectionRefreshScRsp = struct {
     pub const default: @This() = .{};
-    HJLFJJKIGFA: u32 = 0,
+    refresh_status: u32 = 0,
     retcode: i32 = 0,
 };
 pub const EGBLGHDENFB = enum(i32) {
@@ -29535,11 +29535,11 @@ pub const LAIEPJKKBCN = struct {
     pub const default: @This() = .{};
     LMMAABMEEBG: u32 = 0,
 };
-pub const BPLLCDBMOGD = enum(i32) {
+pub const RefreshStatus = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    BPLLCDBMOGD_REFRESH_AUTO = 0,
-    BPLLCDBMOGD_REFRESH_TRUE = 1,
-    BPLLCDBMOGD_REFRESH_FALSE = 2,
+    RefreshStatus_REFRESH_AUTO = 0,
+    RefreshStatus_REFRESH_TRUE = 1,
+    RefreshStatus_REFRESH_FALSE = 2,
 };
 pub const FNFCPAEKBFC = struct {
     pub const default: @This() = .{};
@@ -29907,7 +29907,7 @@ pub const DCCMEMFGJIO = struct {
     LKFCOHLNCOM: std.ArrayList(i32) = .empty,
     BBANJMOPBFL: std.ArrayList(LKGHPOCPFGB) = .empty,
 };
-pub const AFPJBEHDCPD = struct {
+pub const SectionRefreshCsReq = struct {
     pub const default: @This() = .{};
     CFBCPMJAGKO: bool = false,
     CHOOMPGGMDO: bool = false,
@@ -30298,7 +30298,7 @@ pub const CLJLGHFDCMP = struct {
     HBPOFKFEFPP: i32 = 0,
     BKFAKKFKNGH: bool = false,
     MMILPFPHKLJ: bool = false,
-    HJLFJJKIGFA: ?BPLLCDBMOGD = null,
+    refresh_status: ?RefreshStatus = null,
     FGEFOMIPCMH: ?FOCHMBANMLG = null,
 };
 pub const IAFEOAGBKOL = struct {
@@ -33921,7 +33921,7 @@ pub const NPNANGOPJKN = struct {
     LGNNPDNBLJF: u32 = 0,
     NECOICCMLND: bool = false,
     MOCJFMHFADP: bool = false,
-    HJLFJJKIGFA: u32 = 0,
+    refresh_status: u32 = 0,
     BCECNHEGFND: ?HGIIIBFJEPA = null,
     EOPCIMGLIBD: ?KEMLCFAGDKF = null,
     MMPGIMELFOM: i64 = 0,
