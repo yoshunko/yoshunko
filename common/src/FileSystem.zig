@@ -65,6 +65,7 @@ pub fn deinit(fs: *FileSystem) void {
         fs.gpa.destroy(watcher);
     }
 
+    fs.watchers.deinit(fs.gpa);
     fs.map.deinit(fs.gpa);
     fs.root_dir.close(fs.io);
 }
