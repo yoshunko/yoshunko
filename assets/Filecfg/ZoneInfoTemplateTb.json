@@ -7262,9 +7262,9 @@
     },
     {
       "zone_id": 69028,
-      "friendly_name": "\u5371\u5C40\u5F3A\u88AD\u6218\u7B2C28\u671F\u2014\u2014\u7D22\u8D1D\u514B\u4E0E\u5E08\u5144",
+      "friendly_name": "\u5371\u5C40\u5F3A\u88AD\u6218\u7B2C28\u671F\u2014\u2014\u4EB5\u6E0E\u8005\u4F0A\u745F\u5C14\u5FB7",
       "on_schedule": true,
-      "name": "OfficialName_Monster_Awakener",
+      "name": "OfficialName_Monster_IsoldetheDefiler",
       "layer_id": 6902801,
       "layer_index": 1,
       "unk_6": 0,
@@ -8442,9 +8442,9 @@
     },
     {
       "zone_id": 690281,
-      "friendly_name": "\u3010Beta\u3011\u5371\u5C40\u5F3A\u88AD\u6218\u7B2C28\u671F\u2014\u2014\u7D22\u8D1D\u514B\u4E0E\u5E08\u5144",
+      "friendly_name": "\u3010Beta\u3011\u5371\u5C40\u5F3A\u88AD\u6218\u7B2C28\u671F\u2014\u2014\u4EB5\u6E0E\u8005\u4F0A\u745F\u5C14\u5FB7",
       "on_schedule": true,
-      "name": "OfficialName_Monster_Awakener",
+      "name": "OfficialName_Monster_IsoldetheDefiler",
       "layer_id": 6902801,
       "layer_index": 1,
       "unk_6": 0,

@@ -40251,7 +40251,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 3,
       "unlock_condition": "",
       "finish_condition": "",
       "reward_id": 0,
@@ -40260,10 +40260,7 @@
       "unk_5": "",
       "unk_7": "",
       "unk_10": 0,
-      "unk_11": 0,
-      "preorder_quest_ids": [
-        4161302
-      ]
+      "unk_11": 0
     },
     {
       "quest_id": 4161304,
@@ -40285,7 +40282,7 @@
       "unk_10": 0,
       "unk_11": 0,
       "preorder_quest_ids": [
-        4161303
+        4161302
       ]
     },
     {
@@ -41198,7 +41195,7 @@
       "auto_finish": true,
       "unk_1": 1,
       "unlock_condition": "",
-      "finish_condition": "1035370086&1035510006",
+      "finish_condition": "1035370086",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -41704,7 +41701,7 @@
       "auto_finish": true,
       "unk_1": 1,
       "unlock_condition": "",
-      "finish_condition": "1035370108&1035510017",
+      "finish_condition": "1035370108",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -41736,7 +41733,7 @@
       "unk_10": 0,
       "unk_11": 0,
       "preorder_quest_ids": [
-        4163203
+        4163237
       ]
     },
     {
@@ -41750,7 +41747,7 @@
       "auto_finish": true,
       "unk_1": 1,
       "unlock_condition": "",
-      "finish_condition": "1035370110&1035510007",
+      "finish_condition": "1035370110",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -41759,7 +41756,7 @@
       "unk_10": 0,
       "unk_11": 0,
       "preorder_quest_ids": [
-        4163225
+        4163238
       ]
     },
     {
@@ -41782,7 +41779,7 @@
       "unk_10": 0,
       "unk_11": 0,
       "preorder_quest_ids": [
-        4163227
+        4163239
       ]
     },
     {
@@ -41967,6 +41964,75 @@
       "unk_11": 0,
       "preorder_quest_ids": [
         4163234
+      ]
+    },
+    {
+      "quest_id": 4163237,
+      "quest_name": "QuestName_4163237",
+      "quest_type": 5,
+      "desc": "QuestDesc_4163237",
+      "target_desc": "QuestTarget_4163237",
+      "quest_desc": "",
+      "icon": "",
+      "auto_finish": true,
+      "unk_1": 1,
+      "unlock_condition": "",
+      "finish_condition": "1035510006",
+      "reward_id": 0,
+      "unk_3": 0,
+      "unk_4": 0,
+      "unk_5": "",
+      "unk_7": "",
+      "unk_10": 0,
+      "unk_11": 0,
+      "preorder_quest_ids": [
+        4163203
+      ]
+    },
+    {
+      "quest_id": 4163238,
+      "quest_name": "QuestName_4163238",
+      "quest_type": 5,
+      "desc": "QuestDesc_4163238",
+      "target_desc": "QuestTarget_4163238",
+      "quest_desc": "",
+      "icon": "",
+      "auto_finish": true,
+      "unk_1": 1,
+      "unlock_condition": "",
+      "finish_condition": "1035510017",
+      "reward_id": 0,
+      "unk_3": 0,
+      "unk_4": 0,
+      "unk_5": "",
+      "unk_7": "",
+      "unk_10": 0,
+      "unk_11": 0,
+      "preorder_quest_ids": [
+        4163225
+      ]
+    },
+    {
+      "quest_id": 4163239,
+      "quest_name": "QuestName_4163239",
+      "quest_type": 5,
+      "desc": "QuestDesc_4163239",
+      "target_desc": "QuestTarget_4163239",
+      "quest_desc": "",
+      "icon": "",
+      "auto_finish": true,
+      "unk_1": 1,
+      "unlock_condition": "",
+      "finish_condition": "1035510007",
+      "reward_id": 0,
+      "unk_3": 0,
+      "unk_4": 0,
+      "unk_5": "",
+      "unk_7": "",
+      "unk_10": 0,
+      "unk_11": 0,
+      "preorder_quest_ids": [
+        4163227
       ]
     },
     {
@@ -42293,7 +42359,7 @@
       "auto_finish": true,
       "unk_1": 1,
       "unlock_condition": "",
-      "finish_condition": "1035370115&1035510009",
+      "finish_condition": "1035370115",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -42325,7 +42391,7 @@
       "unk_10": 0,
       "unk_11": 0,
       "preorder_quest_ids": [
-        4164203
+        4164234
       ]
     },
     {
@@ -42454,7 +42520,7 @@
       "auto_finish": true,
       "unk_1": 1,
       "unlock_condition": "",
-      "finish_condition": "1035370122&1035510018",
+      "finish_condition": "1035370122",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -42509,7 +42575,7 @@
       "unk_10": 0,
       "unk_11": 0,
       "preorder_quest_ids": [
-        4164223
+        4164232
       ]
     },
     {
@@ -42532,7 +42598,7 @@
       "unk_10": 0,
       "unk_11": 0,
       "preorder_quest_ids": [
-        4164216
+        4164233
       ]
     },
     {
@@ -42592,7 +42658,7 @@
       "auto_finish": true,
       "unk_1": 1,
       "unlock_condition": "",
-      "finish_condition": "1035370128&1035510011",
+      "finish_condition": "1035370128",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -42730,7 +42796,7 @@
       "auto_finish": true,
       "unk_1": 1,
       "unlock_condition": "",
-      "finish_condition": "1035370135&1035510015",
+      "finish_condition": "1035370135",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -42739,7 +42805,7 @@
       "unk_10": 0,
       "unk_11": 0,
       "preorder_quest_ids": [
-        4164210
+        4164230
       ]
     },
     {
@@ -42753,7 +42819,7 @@
       "auto_finish": true,
       "unk_1": 1,
       "unlock_condition": "",
-      "finish_condition": "1035370136&1035510010",
+      "finish_condition": "1035370136",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -42762,7 +42828,7 @@
       "unk_10": 0,
       "unk_11": 0,
       "preorder_quest_ids": [
-        4164222
+        4164231
       ]
     },
     {
@@ -42901,6 +42967,121 @@
       "unk_11": 0,
       "preorder_quest_ids": [
         4164228
+      ]
+    },
+    {
+      "quest_id": 4164230,
+      "quest_name": "QuestName_4164230",
+      "quest_type": 5,
+      "desc": "QuestDesc_4164230",
+      "target_desc": "QuestTarget_4164230",
+      "quest_desc": "",
+      "icon": "",
+      "auto_finish": true,
+      "unk_1": 1,
+      "unlock_condition": "",
+      "finish_condition": "1035510018",
+      "reward_id": 0,
+      "unk_3": 0,
+      "unk_4": 0,
+      "unk_5": "",
+      "unk_7": "",
+      "unk_10": 0,
+      "unk_11": 0,
+      "preorder_quest_ids": [
+        4164210
+      ]
+    },
+    {
+      "quest_id": 4164231,
+      "quest_name": "QuestName_4164231",
+      "quest_type": 5,
+      "desc": "QuestDesc_4164231",
+      "target_desc": "QuestTarget_4164231",
+      "quest_desc": "",
+      "icon": "",
+      "auto_finish": true,
+      "unk_1": 1,
+      "unlock_condition": "",
+      "finish_condition": "1035510015",
+      "reward_id": 0,
+      "unk_3": 0,
+      "unk_4": 0,
+      "unk_5": "",
+      "unk_7": "",
+      "unk_10": 0,
+      "unk_11": 0,
+      "preorder_quest_ids": [
+        4164222
+      ]
+    },
+    {
+      "quest_id": 4164232,
+      "quest_name": "QuestName_4164232",
+      "quest_type": 5,
+      "desc": "QuestDesc_4164232",
+      "target_desc": "QuestTarget_4164232",
+      "quest_desc": "",
+      "icon": "",
+      "auto_finish": true,
+      "unk_1": 1,
+      "unlock_condition": "",
+      "finish_condition": "1035510010",
+      "reward_id": 0,
+      "unk_3": 0,
+      "unk_4": 0,
+      "unk_5": "",
+      "unk_7": "",
+      "unk_10": 0,
+      "unk_11": 0,
+      "preorder_quest_ids": [
+        4164223
+      ]
+    },
+    {
+      "quest_id": 4164233,
+      "quest_name": "QuestName_4164233",
+      "quest_type": 5,
+      "desc": "QuestDesc_4164233",
+      "target_desc": "QuestTarget_4164233",
+      "quest_desc": "",
+      "icon": "",
+      "auto_finish": true,
+      "unk_1": 1,
+      "unlock_condition": "",
+      "finish_condition": "1035510011",
+      "reward_id": 0,
+      "unk_3": 0,
+      "unk_4": 0,
+      "unk_5": "",
+      "unk_7": "",
+      "unk_10": 0,
+      "unk_11": 0,
+      "preorder_quest_ids": [
+        4164216
+      ]
+    },
+    {
+      "quest_id": 4164234,
+      "quest_name": "QuestName_4164234",
+      "quest_type": 5,
+      "desc": "QuestDesc_4164234",
+      "target_desc": "QuestTarget_4164234",
+      "quest_desc": "",
+      "icon": "",
+      "auto_finish": true,
+      "unk_1": 1,
+      "unlock_condition": "",
+      "finish_condition": "1035510009",
+      "reward_id": 0,
+      "unk_3": 0,
+      "unk_4": 0,
+      "unk_5": "",
+      "unk_7": "",
+      "unk_10": 0,
+      "unk_11": 0,
+      "preorder_quest_ids": [
+        4164203
       ]
     },
     {
@@ -119075,7 +119256,7 @@
       "unk_1": 2,
       "unlock_condition": "",
       "finish_condition": "",
-      "reward_id": 0,
+      "reward_id": 109021046,
       "unk_3": 0,
       "unk_4": 0,
       "unk_5": "",
@@ -144892,7 +145073,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 4,
       "unlock_condition": "712014104",
       "finish_condition": "",
       "reward_id": 11003462,
@@ -144912,7 +145093,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 4,
       "unlock_condition": "712014102",
       "finish_condition": "",
       "reward_id": 11003461,
@@ -144932,7 +145113,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 4,
       "unlock_condition": "712014107",
       "finish_condition": "",
       "reward_id": 11003463,
@@ -144952,7 +145133,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 4,
       "unlock_condition": "712014108",
       "finish_condition": "",
       "reward_id": 11003474,
@@ -144972,7 +145153,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 4,
       "unlock_condition": "712014105",
       "finish_condition": "",
       "reward_id": 11003472,
@@ -144992,7 +145173,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 4,
       "unlock_condition": "712014105",
       "finish_condition": "",
       "reward_id": 11003471,
@@ -145012,7 +145193,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 4,
       "unlock_condition": "712014006",
       "finish_condition": "",
       "reward_id": 11003473,
@@ -145052,7 +145233,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 4,
       "unlock_condition": "712014103",
       "finish_condition": "",
       "reward_id": 11003452,
@@ -145072,7 +145253,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 4,
       "unlock_condition": "712014101",
       "finish_condition": "",
       "reward_id": 11003451,
@@ -145092,7 +145273,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 4,
       "unlock_condition": "712014106",
       "finish_condition": "",
       "reward_id": 11003453,
@@ -145112,7 +145293,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 4,
       "unlock_condition": "712014008|712014009",
       "finish_condition": "",
       "reward_id": 11003481,
@@ -145132,7 +145313,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 4,
       "unlock_condition": "712014010",
       "finish_condition": "",
       "reward_id": 11003482,
@@ -145152,7 +145333,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 1,
+      "unk_1": 4,
       "unlock_condition": "712014007",
       "finish_condition": "",
       "reward_id": 11003483,
@@ -206654,7 +206835,7 @@
       "quest_id": 600210216,
       "quest_name": "QuestName_600210216",
       "quest_type": 5,
-      "desc": "QuestDesc_600210207",
+      "desc": "QuestDesc_600210216",
       "target_desc": "QuestTarget_600210216",
       "quest_desc": "",
       "icon": "",
@@ -207768,7 +207949,7 @@
       "unk_1": 4,
       "unlock_condition": "",
       "finish_condition": "1100142194",
-      "reward_id": 0,
+      "reward_id": 11003198,
       "unk_3": 0,
       "unk_4": 0,
       "unk_5": "",
@@ -207952,7 +208133,7 @@
       "icon": "",
       "auto_finish": true,
       "unk_1": 4,
-      "unlock_condition": "",
+      "unlock_condition": "600221201",
       "finish_condition": "",
       "reward_id": 0,
       "unk_3": 0,
@@ -208195,7 +208376,7 @@
       "quest_desc": "",
       "icon": "",
       "auto_finish": true,
-      "unk_1": 4,
+      "unk_1": 3,
       "unlock_condition": "",
       "finish_condition": "712286002",
       "reward_id": 0,
@@ -208204,10 +208385,7 @@
       "unk_5": "",
       "unk_7": "",
       "unk_10": 0,
-      "unk_11": 0,
-      "preorder_quest_ids": [
-        600220909
-      ]
+      "unk_11": 0
     },
     {
       "quest_id": 600220912,
@@ -208467,7 +208645,7 @@
       "auto_finish": true,
       "unk_1": 4,
       "unlock_condition": "",
-      "finish_condition": "712286003",
+      "finish_condition": "712286002",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -208671,7 +208849,7 @@
       "auto_finish": true,
       "unk_1": 4,
       "unlock_condition": "",
-      "finish_condition": "712286004",
+      "finish_condition": "712286003",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -276754,7 +276932,7 @@
       "auto_finish": true,
       "unk_1": 2,
       "unlock_condition": "",
-      "finish_condition": "",
+      "finish_condition": "522134113",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -286339,7 +286517,7 @@
       "auto_finish": false,
       "unk_1": 2,
       "unlock_condition": "",
-      "finish_condition": "1080360001|1101800002",
+      "finish_condition": "1255360005",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -286359,7 +286537,7 @@
       "auto_finish": false,
       "unk_1": 2,
       "unlock_condition": "",
-      "finish_condition": "1102600001",
+      "finish_condition": "1255360001",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -286379,7 +286557,7 @@
       "auto_finish": false,
       "unk_1": 2,
       "unlock_condition": "",
-      "finish_condition": "1101800001",
+      "finish_condition": "1255360002",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -286399,7 +286577,7 @@
       "auto_finish": false,
       "unk_1": 2,
       "unlock_condition": "",
-      "finish_condition": "1101800003",
+      "finish_condition": "1255360003",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,
@@ -286419,7 +286597,7 @@
       "auto_finish": false,
       "unk_1": 2,
       "unlock_condition": "",
-      "finish_condition": "1100740001",
+      "finish_condition": "1255360004",
       "reward_id": 0,
       "unk_3": 0,
       "unk_4": 0,

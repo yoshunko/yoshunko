@@ -12688,12 +12688,12 @@
     {
       "tips_id": 10012320,
       "tips_text": "Tips_10012320",
-      "tips_group": 202
+      "tips_group": 200
     },
     {
       "tips_id": 10012321,
       "tips_text": "Tips_10012321",
-      "tips_group": 203
+      "tips_group": 201
     },
     {
       "tips_id": 10012322,
@@ -28488,6 +28488,11 @@
     {
       "tips_id": 72025167,
       "tips_text": "Tips_72025167",
+      "tips_group": 200
+    },
+    {
+      "tips_id": 72025168,
+      "tips_text": "Tips_72025168",
       "tips_group": 200
     },
     {
@@ -66264,6 +66269,11 @@
       "tips_id": 205012058,
       "tips_text": "Tips_205012058",
       "tips_group": 20000175
+    },
+    {
+      "tips_id": 205012059,
+      "tips_text": "Tips_205012059",
+      "tips_group": 1371
     },
     {
       "tips_id": 205013001,

@@ -1,5 +1,5 @@
 title = yoshunko
 dispatch_url = http://127.0.0.1:10100/query_gateway/yoshunko
-versions = CNBetaWin2.5.4
+versions = CNBetaWin2.5.12
 ip = 127.0.0.1
 port = 20501

@@ -9421,6 +9421,118 @@
       "rp_recover": 0
     },
     {
+      "id": 3112611,
+      "unk_5": [
+
+      ],
+      "unk_6": [
+
+      ],
+      "unk_7": [
+
+      ],
+      "unk_8": 0,
+      "unk_9": 0,
+      "unk_10": 0,
+      "avatar_piece_id": 5261,
+      "unk_12": 0,
+      "unk_13": 0,
+      "hp_max": 626,
+      "health_growth": 849779,
+      "unk_16": 0,
+      "unk_17": 0,
+      "unk_18": 0,
+      "unk_19": 0,
+      "unk_20": 0,
+      "attack": 127,
+      "attack_growth": 76728,
+      "defence": 49,
+      "defence_growth": 66203,
+      "crit": 500,
+      "crit_damage": 5000,
+      "crit_res": 0,
+      "crit_damage_res": 0,
+      "pen_rate": 0,
+      "pen_delta": 0,
+      "luck": 0,
+      "stun": 0,
+      "break_stun": 86,
+      "element_abnormal_power": 112,
+      "sp_bar_point": 120,
+      "sp_recover": 120,
+      "element_mystery": 114,
+      "rbl": 1,
+      "rbl_correction_factor": 10000,
+      "rbl_probability": 0,
+      "unk_41": 0,
+      "unk_42": 0,
+      "unk_43": 0,
+      "unk_44": 0,
+      "unk_45": 0,
+      "unk_46": 0,
+      "unk_47": 0,
+      "unk_48": 0,
+      "unk_49": 0,
+      "unk_50": 0,
+      "unk_51": 0,
+      "unk_52": 0,
+      "unk_53": 0,
+      "unk_54": 0,
+      "unk_55": 0,
+      "unk_56": 0,
+      "unk_57": 0,
+      "unk_58": 0,
+      "unk_59": 0,
+      "unk_60": 3633661039,
+      "unk_61": 1101507722,
+      "unk_62": 4141686480,
+      "unk_63": 0,
+      "unk_64": 0,
+      "unk_65": 0,
+      "unk_66": 3000,
+      "tags": [
+        "JaneDoe",
+        "Cut",
+        "Physics",
+        "Female",
+        "Camp7",
+        "Size3",
+        "AidTypeParry",
+        "JaneDoe",
+        "EtherEyesSize3"
+      ],
+      "unk_68": [
+
+      ],
+      "unk_69": [
+
+      ],
+      "unk_70": [
+        2,
+        7,
+        8
+      ],
+      "weapon_type": 3,
+      "element": [
+        200
+      ],
+      "hit_type": [
+        101
+      ],
+      "unk_element_camp": [
+        "1:7:2",
+        "3:3:2"
+      ],
+      "unk_75": 0,
+      "unk_76": 5000,
+      "unk_77": 0,
+      "unk_78": 0,
+      "base_avatar_id": 1261,
+      "unk_80": 100,
+      "rp_max": 0,
+      "rp_recover": 0
+    },
+    {
       "id": 3112710,
       "unk_5": [
 
