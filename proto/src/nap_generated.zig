@@ -11,7 +11,7 @@ pub const HJNGPAKFNPA = struct {
 };
 pub const HGFJBIMEOIO = struct {
     pub const BBLACIOEBHG_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const GOAJMIAABMN = struct {
     pub const CGNGNJIPNAA_field_desc: struct{ u32, u32 } = .{2, 0};
@@ -27,7 +27,7 @@ pub const GOAJMIAABMN = struct {
 pub const HBMELNDGPAH = struct {
     pub const NMJNDJNIALM_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const PPPKGBNOHOA_field_desc: struct{ u32, u32 } = .{8, 6369};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{11, 9279};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{11, 9279};
     pub const OKGCLAPJIEO_field_desc: struct{ u32, u32 } = .{12, 0};
 };
 pub const DLAKALMILCJ = struct {
@@ -70,7 +70,7 @@ pub const HEANEJCGFNM = struct {
     pub const DNFLBANAGEH_field_desc: struct{ u32, u32 } = .{1, 15096};
     pub const HAEKFJBIMOE_field_desc: struct{ u32, u32 } = .{2, 3594};
     pub const KIBJMDNOIHH_field_desc: struct{ u32, u32 } = .{3, 2261};
-    pub const HHNIIFPKNBF_field_desc: struct{ u32, u32 } = .{5, 13559};
+    pub const area_id_field_desc: struct{ u32, u32 } = .{5, 13559};
     pub const IJJIODCPMKJ_field_desc: struct{ u32, u32 } = .{6, 5629};
     pub const FFBLPGFHOHC_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const EEBKCAPDINK_field_desc: struct{ u32, u32 } = .{14, 5691};
@@ -91,14 +91,14 @@ pub const NGIDKAOILDE = struct {
     pub const KGEJOGJJOIN_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const HKBIKJBJKPB_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const uid_field_desc: struct{ u32, u32 } = .{9, 8986};
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{11, 9558};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{11, 9558};
     pub const avatar_id_field_desc: struct{ u32, u32 } = .{14, 10043};
     pub const NFCKKLACPOJ_field_desc: struct{ u32, u32 } = .{15, 7944};
 };
-pub const ICBNIHGFCMH = struct {
+pub const GetNewAreaPortalListScRsp = struct {
     pub const cmd_id: u16 = 9911;
     pub const retcode_field_desc: struct{ u32, u32 } = .{11, 7575};
-    pub const DPAFHAPMDGE_field_desc: struct{ u32, u32 } = .{13, 0};
+    pub const new_area_portal_id_list_field_desc: struct{ u32, u32 } = .{13, 0};
 };
 pub const JJODOGJPNCA = struct {
     pub const cmd_id: u16 = 2309;
@@ -135,7 +135,7 @@ pub const LAHMLHBFJKF = struct {
     pub const KBPNIBBCPLN_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const KNIOBHHFLKH = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const PLFEEPJKIEJ_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const FIIEHNHFBCK_field_desc: struct{ u32, u32 } = .{3, 0};
 };
@@ -195,7 +195,7 @@ pub const EquipInfo = struct {
 };
 pub const HAKLEKHKMFO = struct {
     pub const cmd_id: u16 = 9852;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{5, 10820};
+    pub const tag_field_desc: struct{ u32, u32 } = .{5, 10820};
     pub const BAHFAPLOLCG_field_desc: struct{ u32, u32 } = .{8, 0};
 };
 pub const FBJDFMAEHMI = struct {
@@ -208,7 +208,7 @@ pub const GECIDPBKMNG = struct {
     pub const uid_field_desc: struct{ u32, u32 } = .{9, 3953};
 };
 pub const CILNPHNIFLO = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{3, 8796};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{3, 8796};
     pub const BMAHFIICOPN_field_desc: struct{ u32, u32 } = .{5, 2357};
     pub const HGJEMKLCPJK_field_desc: struct{ u32, u32 } = .{7, 7743};
     pub const JINHMCBFAHI_field_desc: struct{ u32, u32 } = .{8, 0};
@@ -272,7 +272,7 @@ pub const MGLFFNBEGDJ = struct {
 };
 pub const IGBECAMLLOD = struct {
     pub const cmd_id: u16 = 6725;
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{7, 8910};
+    pub const type_field_desc: struct{ u32, u32 } = .{7, 8910};
     pub const DBCEADGDLBA_field_desc: struct{ u32, u32 } = .{9, 14179};
 };
 pub const FNKHLGNONAE = struct {
@@ -323,7 +323,7 @@ pub const JPNHMNOMPCD = struct {
 pub const GKAMAOENNBO = struct {
     pub const cmd_id: u16 = 9285;
     pub const BBLACIOEBHG_field_desc: struct{ u32, u32 } = .{3, 533};
-    pub const EJBFBANMDKD_field_desc: struct{ u32, u32 } = .{9, 7654};
+    pub const layer_item_id_field_desc: struct{ u32, u32 } = .{9, 7654};
 };
 pub const GOMHELGOLOL = struct {
     pub const cmd_id: u16 = 7314;
@@ -335,7 +335,7 @@ pub const COEOBNFCPDF = struct {
 };
 pub const LEAEENKIJPO = struct {
     pub const HJOMBIJPGKF_field_desc: struct{ u32, u32 } = .{9, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{14, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const EMCIOKBOAFE = struct {
     pub const EOKLJCGFOJL_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -380,7 +380,7 @@ pub const CBJIMMIMLAA = struct {
     pub const IPMJILMFIPC_field_desc: struct{ u32, u32 } = .{4, 0};
 };
 pub const BAOFJCAFCMJ = struct {
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const BLCEAHAOBOD_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const DMFOHMBPOFC_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const DGPKEJELCNK_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -403,9 +403,9 @@ pub const CDEGKGMPCMK = struct {
     pub const BLBNMDPLMBF_field_desc: struct{ u32, u32 } = .{14, 0};
     pub const LFIOFOAPCKE_field_desc: struct{ u32, u32 } = .{15, 6998};
 };
-pub const AJLGLDEHACI = struct {
+pub const SectionRefreshScRsp = struct {
     pub const cmd_id: u16 = 15;
-    pub const EPAFOPIKIPC_field_desc: struct{ u32, u32 } = .{11, 7751};
+    pub const refresh_status_field_desc: struct{ u32, u32 } = .{11, 7751};
     pub const retcode_field_desc: struct{ u32, u32 } = .{15, 13253};
 };
 pub const NABOHGDDDMG = struct {
@@ -500,7 +500,7 @@ pub const KPFFCBLDGOD = struct {
 };
 pub const DungeonPackageInfo = struct {
     pub const avatar_list_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const DJEBKNBAPLN_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const buddy_list_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const OENINBBMFIL_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const IJMGBHHJDPH_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const FFBHOHCPGFO_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -541,7 +541,7 @@ pub const LINOHAEBKLO = struct {
     pub const LLHJIPDIFEG_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const HDDCPFEGCMG_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const BMAHFIICOPN_field_desc: struct{ u32, u32 } = .{8, 1693};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{9, 4027};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{9, 4027};
     pub const BIJCIOEHHND_field_desc: struct{ u32, u32 } = .{11, 5558};
     pub const BLJHCPONPPF_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const PGADIEHEOBH_field_desc: struct{ u32, u32 } = .{13, 12511};
@@ -664,7 +664,7 @@ pub const MKHOAELDMDF = struct {
 pub const GHDBALGIFHF = struct {
     pub const cmd_id: u16 = 5542;
     pub const index_field_desc: struct{ u32, u32 } = .{9, 14172};
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{15, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const ECBGDHPPNEA = struct {
     pub const PBEAIEIFGKG_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -725,7 +725,7 @@ pub const GAPKJHGIAHH = struct {
     pub const cmd_id: u16 = 8858;
     pub const HDALMNFOLAD_field_desc: struct{ u32, u32 } = .{1, 6112};
     pub const GBDELDBAMLO_field_desc: struct{ u32, u32 } = .{3, 10647};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{9, 13834};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{9, 13834};
     pub const LJNNHNCMBKJ_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const DHFLIEKBPKA_field_desc: struct{ u32, u32 } = .{13, 8891};
     pub const CEOCCGDPCNG_field_desc: struct{ u32, u32 } = .{15, 9489};
@@ -791,7 +791,7 @@ pub const LMEPGMPIFCL = struct {
 };
 pub const NOGBGPHJENA = struct {
     pub const BLFGGOLDPLP_field_desc: struct{ u32, u32 } = .{4, 14285};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{6, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const BFCINLPCBAK_field_desc: struct{ u32, u32 } = .{10, 7984};
 };
 pub const PBLLIKAMIJI = struct {
@@ -816,7 +816,7 @@ pub const AEIFCDJGOBK = struct {
 };
 pub const GHCGCINCIDP = struct {
     pub const PADJCLALFKP_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const ONFNACOGFAA_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const GKEGDJFPKHG_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const BEJOPMHMDBI_field_desc: struct{ u32, u32 } = .{6, 0};
@@ -897,13 +897,13 @@ pub const BCNONKEOBBP = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{6, 8417};
     pub const IBGHCFFDIME_field_desc: struct{ u32, u32 } = .{12, 0};
 };
-pub const HLNOLIFNPEO = struct {
-    pub const IDIDLFEHOGD_field_desc: struct{ u32, u32 } = .{3, 0};
-    pub const DNDCGEIMBAK_field_desc: struct{ u32, u32 } = .{6, 6458};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{9, 0};
-    pub const MGLEFOBOJBD_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const HFBFHMPGOBJ_field_desc: struct{ u32, u32 } = .{12, 0};
-    pub const HHNIIFPKNBF_field_desc: struct{ u32, u32 } = .{15, 5232};
+pub const AreaStreetInfo = struct {
+    pub const is_area_pop_show_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const area_progress_field_desc: struct{ u32, u32 } = .{6, 6458};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{9, 0};
+    pub const is_urban_area_show_field_desc: struct{ u32, u32 } = .{11, 0};
+    pub const is_3d_area_show_field_desc: struct{ u32, u32 } = .{12, 0};
+    pub const area_id_field_desc: struct{ u32, u32 } = .{15, 5232};
 };
 pub const CIDDMOIICMG = struct {
     pub const HKNGDMNAOFA_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -930,7 +930,7 @@ pub const CIDDMOIICMG = struct {
     pub const BNJLDMHKJGA_field_desc: struct{ u32, u32 } = .{22, 0};
     pub const GJLIEAIEKDN_field_desc: struct{ u32, u32 } = .{23, 0};
     pub const GAPJINFMBJN_field_desc: struct{ u32, u32 } = .{24, 0};
-    pub const HIBJGKBIMCO_field_desc: struct{ u32, u32 } = .{25, 0};
+    pub const participators_field_desc: struct{ u32, u32 } = .{25, 0};
     pub const HLIHNGFFGOG_field_desc: struct{ u32, u32 } = .{26, 0};
     pub const KMPLMDKMNOG_field_desc: struct{ u32, u32 } = .{27, 0};
     pub const NPHBMBIKKAI_field_desc: struct{ u32, u32 } = .{28, 0};
@@ -1082,7 +1082,7 @@ pub const GPJIAKFMOAG = struct {
 };
 pub const CGEBBNJKNDP = struct {
     pub const cmd_id: u16 = 8361;
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{4, 7778};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{4, 7778};
     pub const DCIBLLHCNJI_field_desc: struct{ u32, u32 } = .{10, 13300};
     pub const MLJLFMCBAMK_field_desc: struct{ u32, u32 } = .{14, 14109};
 };
@@ -1105,7 +1105,7 @@ pub const FPHFHDEJHON = struct {
     pub const BCFJPHLEGBP_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const KIFJODFCDMI_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const PMGDAINLGCL_field_desc: struct{ u32, u32 } = .{9, 14381};
-    pub const CGFAJDMJFMD_field_desc: struct{ u32, u32 } = .{10, 2270};
+    pub const begin_timestamp_field_desc: struct{ u32, u32 } = .{10, 2270};
     pub const BMHJECHFMGC_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const DEHOGKDKNON_field_desc: struct{ u32, u32 } = .{12, 6703};
     pub const CMAFKOCGNOK_field_desc: struct{ u32, u32 } = .{13, 2800};
@@ -1116,10 +1116,10 @@ pub const EIMIKFEOPFJ = struct {
     pub const uid_field_desc: struct{ u32, u32 } = .{4, 15343};
     pub const KMJBKFGDCFJ_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const PFFDFIJKMLI_field_desc: struct{ u32, u32 } = .{8, 0};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{11, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const index_field_desc: struct{ u32, u32 } = .{12, 7093};
     pub const IHLMBKILIFB_field_desc: struct{ u32, u32 } = .{14, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{15, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const GABBBBDPBEA = struct {
     pub const cmd_id: u16 = 5278;
@@ -1151,8 +1151,8 @@ pub const APBPJAEEGME = struct {
 };
 pub const JKLGKPNKHCP = struct {
     pub const IKBOHJPNNDK_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const CGFAJDMJFMD_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const begin_timestamp_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const KEEOJPILJID = struct {
     pub const NHONHKDBBDB_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -1222,13 +1222,13 @@ pub const DIDLEGAGDED = struct {
 };
 pub const PMCAGNPFMPN = struct {
     pub const MOANJJIEJBA_field_desc: struct{ u32, u32 } = .{3, 0};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{4, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const PDGAFDGDGBN_field_desc: struct{ u32, u32 } = .{6, 7755};
 };
 pub const OHOLOGJBMKK = struct {
-    pub const AKLFJLFOPID_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const LJHBEAHDJGN_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const AGMANPJBJLN_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const action_id_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const action_type_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const body_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const IFFPLFAAOJD = struct {
     pub const OPIMNHHNCHC_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -1283,7 +1283,7 @@ pub const GPBLHGOOEEF = struct {
 };
 pub const HEEFKOBMLFO = struct {
     pub const EDOBAMEJEGJ_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const DJEBKNBAPLN_field_desc: struct{ u32, u32 } = .{14, 0};
+    pub const buddy_list_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const LEGGIKIKNBL = struct {
     pub const cmd_id: u16 = 9273;
@@ -1326,9 +1326,9 @@ pub const GDIDCDKHJOH = struct {
     pub const JCJFNFGFOKP_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const MPJCKINHBJF = struct {
-    pub const CGFAJDMJFMD_field_desc: struct{ u32, u32 } = .{3, 3843};
+    pub const begin_timestamp_field_desc: struct{ u32, u32 } = .{3, 3843};
     pub const PEKOBELBACG_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{10, 12762};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{10, 12762};
 };
 pub const KJIFPAJMHPH = struct {
     pub const CLIEDEGFDAA_field_desc: struct{ u32, u32 } = .{1, 9255};
@@ -1341,7 +1341,7 @@ pub const CHINLKFIFGN = struct {
 pub const BMBIOCPCOAL = struct {
     pub const cmd_id: u16 = 2610;
     pub const GFMICALBBMP_field_desc: struct{ u32, u32 } = .{2, 4648};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{7, 6653};
+    pub const type_field_desc: struct{ u32, u32 } = .{7, 6653};
     pub const KHPEMOKMAOF_field_desc: struct{ u32, u32 } = .{9, 12996};
 };
 pub const GMAKBFCELCC = struct {
@@ -1422,7 +1422,7 @@ pub const LIIEGEFDOFL = struct {
     pub const GFIPEECOKAO_field_desc: struct{ u32, u32 } = .{15, 11326};
 };
 pub const BMBLEACAONA = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const GLEACJBJBJH_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const GHOCLEGCNCA = struct {
@@ -1438,7 +1438,7 @@ pub const MGOALACAAEL = struct {
     pub const GNOFILBAFIO_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PCKMECBOCBF_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const NOEFHKJFBIH_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{6, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const MEMCMHEMCCM_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const OHEFKEIEIIL_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const ALEPOFPHCOI_field_desc: struct{ u32, u32 } = .{9, 0};
@@ -1454,8 +1454,8 @@ pub const MGOALACAAEL = struct {
     pub const HPLNCAJEJCE_field_desc: struct{ u32, u32 } = .{19, 0};
 };
 pub const GHAGBFNOCFC = struct {
-    pub const OJDEHLPAHIL_field_desc: struct{ u32, u32 } = .{10, 7737};
-    pub const HBGLKPMHNMO_field_desc: struct{ u32, u32 } = .{14, 1603};
+    pub const layer_index_field_desc: struct{ u32, u32 } = .{10, 7737};
+    pub const room_index_field_desc: struct{ u32, u32 } = .{14, 1603};
 };
 pub const PKEKPJHLJKM = struct {
     pub const cmd_id: u16 = 6532;
@@ -1473,7 +1473,7 @@ pub const DIIEPLLCNHB = struct {
 };
 pub const JCECJKDCJIN = struct {
     pub const cmd_id: u16 = 3698;
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const retcode_field_desc: struct{ u32, u32 } = .{11, 13746};
 };
 pub const DCEDOBHFCJL = struct {
@@ -1518,7 +1518,7 @@ pub const IPFKALJJLDD = struct {
 };
 pub const FAMJINGGHKP = struct {
     pub const cmd_id: u16 = 1684;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{9, 13116};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{9, 13116};
 };
 pub const HKMGBEPHOOM = struct {
     pub const MJKMGILBGAA_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -1557,7 +1557,7 @@ pub const DBFHGHBEPDJ = struct {
     pub const cmd_id: u16 = 5460;
     pub const retcode_field_desc: struct{ u32, u32 } = .{7, 13946};
 };
-pub const NGDBHIAOBMB = struct {
+pub const BuddyInfo = struct {
     pub const BHCNABOKFHE_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const level_field_desc: struct{ u32, u32 } = .{2, 12074};
     pub const is_favorite_field_desc: struct{ u32, u32 } = .{3, 0};
@@ -1644,10 +1644,10 @@ pub const BKCNKFAPNKA = struct {
 };
 pub const HDPOLBEFGFA = struct {
     pub const cmd_id: u16 = 2312;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{8, 7504};
+    pub const tag_field_desc: struct{ u32, u32 } = .{8, 7504};
 };
 pub const GCIHLIFKGDL = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const NKJBOIKAJJA_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const NDJLIDNCDOP_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const OAJHCFJOKLM_field_desc: struct{ u32, u32 } = .{6, 0};
@@ -1812,7 +1812,7 @@ pub const CLIMOGLNLEP = struct {
 };
 pub const FJJPAHAFHAD = struct {
     pub const IAAKEAMCDKD_field_desc: struct{ u32, u32 } = .{2, 14942};
-    pub const OJDEHLPAHIL_field_desc: struct{ u32, u32 } = .{4, 14099};
+    pub const layer_index_field_desc: struct{ u32, u32 } = .{4, 14099};
 };
 pub const COIFAJJCJEE = struct {
     pub const LCLKLBHLDGK_field_desc: struct{ u32, u32 } = .{6, 0};
@@ -1938,11 +1938,11 @@ pub const MDLHKGNMJJA = struct {
     pub const OOMAFLADKMN_field_desc: struct{ u32, u32 } = .{3, 863};
     pub const id_field_desc: struct{ u32, u32 } = .{5, 11928};
     pub const JLPEHJOMNCF_field_desc: struct{ u32, u32 } = .{7, 10438};
-    pub const CGFAJDMJFMD_field_desc: struct{ u32, u32 } = .{10, 10436};
+    pub const begin_timestamp_field_desc: struct{ u32, u32 } = .{10, 10436};
     pub const IONDKGAAIOA_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const DCLAHIMJLGP_field_desc: struct{ u32, u32 } = .{13, 0};
     pub const APCHANLJOJL_field_desc: struct{ u32, u32 } = .{14, 0};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{15, 11060};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{15, 11060};
 };
 pub const CHHHPFIHKAP = struct {
     pub const NBLIJPLFEGL_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -1968,8 +1968,8 @@ pub const LOFLPMHIIAO = struct {
 pub const LHINOLDPHIC = struct {
     pub const cmd_id: u16 = 3436;
     pub const PJKNGPLILHM_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{9, 0};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{15, 14395};
+    pub const type_field_desc: struct{ u32, u32 } = .{9, 0};
+    pub const tag_field_desc: struct{ u32, u32 } = .{15, 14395};
 };
 pub const EGJHGJAIKJJ = struct {
     pub const uid_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -2003,7 +2003,7 @@ pub const PADFPIANPHG = struct {
 pub const NNMCDBIKLGJ = struct {
     pub const cmd_id: u16 = 326;
     pub const index_field_desc: struct{ u32, u32 } = .{8, 14216};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{12, 4909};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{12, 4909};
 };
 pub const LHBHPGPOJGJ = struct {
     pub const cmd_id: u16 = 4477;
@@ -2034,7 +2034,7 @@ pub const OHOMGFPNCAM = struct {
 };
 pub const PCJMOJLFBMD = struct {
     pub const cmd_id: u16 = 7910;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{10, 14630};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{10, 14630};
     pub const LACABLMDCEP_field_desc: struct{ u32, u32 } = .{12, 0};
 };
 pub const LMDJFGPHCBK = struct {
@@ -2072,9 +2072,9 @@ pub const JOEFDPDLNBG = struct {
     pub const JNDONMACOBH_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const OKGCLAPJIEO_field_desc: struct{ u32, u32 } = .{2, 0};
 };
-pub const KIEMEGOELDE = struct {
+pub const GetNewAreaPortalListCsReq = struct {
     pub const cmd_id: u16 = 5139;
-    pub const DPAFHAPMDGE_field_desc: struct{ u32, u32 } = .{4, 0};
+    pub const new_area_portal_id_list_field_desc: struct{ u32, u32 } = .{4, 0};
 };
 pub const FLOHGBDDNJB = struct {
     pub const cmd_id: u16 = 7975;
@@ -2094,7 +2094,7 @@ pub const KKIDNGBBJDI = struct {
     pub const cmd_id: u16 = 6923;
 };
 pub const OBGJLHOEDCK = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const DCDBECHOOPC = struct {
     pub const cmd_id: u16 = 6538;
@@ -2106,7 +2106,7 @@ pub const DCDBECHOOPC = struct {
 };
 pub const GFPMJCGLGEM = struct {
     pub const cmd_id: u16 = 4607;
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{1, 15884};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{1, 15884};
     pub const is_favorite_field_desc: struct{ u32, u32 } = .{11, 0};
 };
 pub const MNNBDIMICGK = struct {
@@ -2160,7 +2160,7 @@ pub const APCFIBAEGFE = struct {
     pub const NFEIGGDDNAL_field_desc: struct{ u32, u32 } = .{5, 6000};
     pub const EMJFNHAKHAF_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const APFMCMMPGPP_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{11, 4294};
+    pub const type_field_desc: struct{ u32, u32 } = .{11, 4294};
     pub const JOLMFFHFBJA_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const FEDMDFJOOAJ_field_desc: struct{ u32, u32 } = .{14, 0};
 };
@@ -2189,7 +2189,7 @@ pub const NLOJEKBJHNL = struct {
 };
 pub const BEOIKPGECLH = struct {
     pub const KBBOLKDLDDH_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const GAMMIHFMHGK_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PGNOFANCGLE_field_desc: struct{ u32, u32 } = .{4, 0};
 };
@@ -2209,13 +2209,13 @@ pub const HENNEEOAEGH = struct {
     pub const HPBKJJALGIP_field_desc: struct{ u32, u32 } = .{4, 12943};
     pub const DBJNGENIOEH_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const IDMNNGGPCDP_field_desc: struct{ u32, u32 } = .{6, 0};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{7, 12249};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{7, 12249};
     pub const JLEIIFJIOBL_field_desc: struct{ u32, u32 } = .{8, 14970};
     pub const CGFMNNGAGOJ_field_desc: struct{ u32, u32 } = .{10, 9737};
     pub const EOGJFFAAJIA_field_desc: struct{ u32, u32 } = .{12, 15229};
     pub const HEPHACKLCNM_field_desc: struct{ u32, u32 } = .{13, 14855};
     pub const JPCBGPGKFDD_field_desc: struct{ u32, u32 } = .{14, 14941};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{15, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const GLICJDKLCAG = struct {
     pub const cmd_id: u16 = 6166;
@@ -2225,7 +2225,7 @@ pub const DCEGNLJGHLO = struct {
     pub const OKGCLAPJIEO_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const FCHBFANAIBJ_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const DEHOGKDKNON_field_desc: struct{ u32, u32 } = .{5, 8550};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{7, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const AGANCBCBLOJ_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const GELKGGPHIAH_field_desc: struct{ u32, u32 } = .{13, 0};
 };
@@ -2300,7 +2300,7 @@ pub const LAHDLBPBEEK = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{10, 13330};
 };
 pub const EDMAAIPKEOD = struct {
-    pub const LJHBEAHDJGN_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const action_type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const OOBAHGHHGKB_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const NMEBBCOJEIP = struct {
@@ -2320,7 +2320,7 @@ pub const JHODAOABIPC = struct {
 };
 pub const PKLFNDOGJGC = struct {
     pub const quest_id_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JINGAEMJADE_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const JCJFNFGFOKP_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const HKNGDMNAOFA_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -2340,15 +2340,15 @@ pub const MOBINJDABJL = struct {
 };
 pub const DOMHOMOLLOL = struct {
     pub const cmd_id: u16 = 4515;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{9, 10295};
+    pub const tag_field_desc: struct{ u32, u32 } = .{9, 10295};
 };
-pub const IJHEHDMDNAO = struct {
+pub const HadalEntranceSync = struct {
     pub const KFLEBNNBBNH_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const LMNJMLDDHLB_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const EAHMJGOBELE_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const EKANCGGPLOF_field_desc: struct{ u32, u32 } = .{11, 0};
+    pub const cur_zone_record_sync_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const BELDKOHIGHL_field_desc: struct{ u32, u32 } = .{13, 0};
-    pub const JFDFCDBAIOP_field_desc: struct{ u32, u32 } = .{14, 14297};
+    pub const entrance_id_field_desc: struct{ u32, u32 } = .{14, 14297};
     pub const state_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const NMDLGJGGLIJ = struct {
@@ -2375,7 +2375,7 @@ pub const FNDNLKKBAGO = struct {
     pub const LKKFOGGOKMK_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const GLJIIEEDBNN = struct {
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const JPCBGPGKFDD_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const OKKPLGPIFJL_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const LCNEPFMPHDP_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -2427,7 +2427,7 @@ pub const CIIAFCCAJLK = struct {
     pub const FENBNEMNHIB_field_desc: struct{ u32, u32 } = .{10, 0};
 };
 pub const APGDEOMEMDG = struct {
-    pub const HHNIIFPKNBF_field_desc: struct{ u32, u32 } = .{2, 2448};
+    pub const area_id_field_desc: struct{ u32, u32 } = .{2, 2448};
     pub const KFPPJLNPLJI_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const JLNMOGKKOHK_field_desc: struct{ u32, u32 } = .{6, 3060};
     pub const MBAGDMENJNH_field_desc: struct{ u32, u32 } = .{8, 10807};
@@ -2470,7 +2470,7 @@ pub const PBEFIJCHNCJ = struct {
 };
 pub const PJIENJKIMFC = struct {
     pub const cmd_id: u16 = 6125;
-    pub const EJBFBANMDKD_field_desc: struct{ u32, u32 } = .{3, 6808};
+    pub const layer_item_id_field_desc: struct{ u32, u32 } = .{3, 6808};
     pub const AIGOENNAGNG_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const KHAFKENOOJI_field_desc: struct{ u32, u32 } = .{5, 4818};
     pub const BBAKOBCPEDM_field_desc: struct{ u32, u32 } = .{6, 0};
@@ -2478,7 +2478,7 @@ pub const PJIENJKIMFC = struct {
     pub const INJDJIHNJHL_field_desc: struct{ u32, u32 } = .{9, 11248};
     pub const DBLKKFNJPPB_field_desc: struct{ u32, u32 } = .{10, 6558};
     pub const DHKKCADDJGF_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{14, 6208};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{14, 6208};
 };
 pub const KLCPMHNNKGO = struct {
     pub const cmd_id: u16 = 6084;
@@ -2668,7 +2668,7 @@ pub const NIECPGOFGCM = struct {
     pub const MOANJJIEJBA_field_desc: struct{ u32, u32 } = .{13, 0};
 };
 pub const CKPEAJPMEFE = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const FJLFCNLKNLI_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const NHDDHPOJGNH = struct {
@@ -2737,9 +2737,9 @@ pub const PAABBOAAFDJ = struct {
     pub const cmd_id: u16 = 3623;
     pub const FCPAAEMPPIA_field_desc: struct{ u32, u32 } = .{3, 0};
 };
-pub const GNGDOBDMICH = struct {
+pub const WeaponUnDressCsReq = struct {
     pub const cmd_id: u16 = 7419;
-    pub const CKHNAJCMAKP_field_desc: struct{ u32, u32 } = .{6, 871};
+    pub const avatar_id_field_desc: struct{ u32, u32 } = .{6, 871};
 };
 pub const KPPBMDDNFNG = struct {
     pub const position_field_desc: struct{ u32, u32 } = .{2, 0};
@@ -2747,7 +2747,7 @@ pub const KPPBMDDNFNG = struct {
     pub const HGJEMKLCPJK_field_desc: struct{ u32, u32 } = .{6, 3315};
 };
 pub const ILEJNNKLKCM = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const KNOMPGOPFHH_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const PBHGHIAMAJL_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const BFNLOPAPGBK_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -2770,7 +2770,7 @@ pub const LIOBINALONN = struct {
     pub const LOKPNBKLAPA_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const NDPCCAGCDEP_field_desc: struct{ u32, u32 } = .{7, 14935};
     pub const CKGNLEHKFMJ_field_desc: struct{ u32, u32 } = .{8, 12555};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{9, 14026};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{9, 14026};
     pub const DEHBIPJCDEB_field_desc: struct{ u32, u32 } = .{10, 0};
     pub const NOCFNBGJBJA_field_desc: struct{ u32, u32 } = .{11, 14722};
     pub const KCOBCCLHCJA_field_desc: struct{ u32, u32 } = .{12, 9175};
@@ -2799,7 +2799,7 @@ pub const LIOBINALONN = struct {
     pub const JCHOFHBDNIG_field_desc: struct{ u32, u32 } = .{1437, 0};
     pub const KAPPKMPENBG_field_desc: struct{ u32, u32 } = .{1438, 0};
     pub const OLOHFBKBKJA_field_desc: struct{ u32, u32 } = .{1464, 1579};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1574, 7900};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1574, 7900};
     pub const AMAFFKBPIJK_field_desc: struct{ u32, u32 } = .{1633, 0};
     pub const AKLCILNEOEG_field_desc: struct{ u32, u32 } = .{1668, 14958};
     pub const HHABMCMKFLL_field_desc: struct{ u32, u32 } = .{1676, 0};
@@ -2891,7 +2891,7 @@ pub const NIBLKOJMNLD = struct {
     pub const quest_id_field_desc: struct{ u32, u32 } = .{10, 1616};
 };
 pub const LMECGONKFNI = struct {
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const LKFGLHMMALG_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const FHBPLBCCJHC_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const DPLHCBFBGAC_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -2901,20 +2901,20 @@ pub const HPIOOJCMCHJ = struct {
     pub const cmd_id: u16 = 8928;
     pub const DCOPJGAJFGA_field_desc: struct{ u32, u32 } = .{9, 0};
 };
-pub const PHEBGHLDCAK = struct {
+pub const LayerRecord = struct {
     pub const total_time_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const PIECAHHNJEM_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const OJDEHLPAHIL_field_desc: struct{ u32, u32 } = .{3, 0};
-    pub const LFEIPLAGBEO_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const KODFFJHEBMI_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const layer_index_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const status_field_desc: struct{ u32, u32 } = .{4, 0};
+    pub const fight_time_list_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const NMGDNKCKKNP_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const LOOOGBOPOHJ_field_desc: struct{ u32, u32 } = .{7, 0};
-    pub const HCPFFPOIIBG_field_desc: struct{ u32, u32 } = .{8, 0};
-    pub const BNMFNBINAFH_field_desc: struct{ u32, u32 } = .{9, 0};
+    pub const avatar_id_list_field_desc: struct{ u32, u32 } = .{8, 0};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const AKIEMGOAFHP_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const EJBFBANMDKD_field_desc: struct{ u32, u32 } = .{11, 0};
+    pub const layer_item_id_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const FOIHLHNHOKE_field_desc: struct{ u32, u32 } = .{12, 0};
-    pub const HBGLKPMHNMO_field_desc: struct{ u32, u32 } = .{14, 0};
+    pub const room_index_field_desc: struct{ u32, u32 } = .{14, 0};
     pub const OCAHLOCJLBJ_field_desc: struct{ u32, u32 } = .{15, 0};
     pub const MLBKENNDHEN_field_desc: struct{ u32, u32 } = .{16, 0};
 };
@@ -2946,7 +2946,7 @@ pub const IDGENHEEIKG = struct {
     pub const position_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const MAAJKCCKKPL_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const EAFICEIGJCH_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{6, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const MJPLPILAGMB_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const KOAEFIGJDNM_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const NAFDGIHFLFM_field_desc: struct{ u32, u32 } = .{9, 0};
@@ -3052,7 +3052,7 @@ pub const PBEGFJBEFOD = struct {
 pub const HDKGNJHPJPD = struct {
     pub const cmd_id: u16 = 5080;
     pub const GBDELDBAMLO_field_desc: struct{ u32, u32 } = .{9, 6034};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{14, 1623};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{14, 1623};
 };
 pub const IAENDGDCDOO = struct {
     pub const cmd_id: u16 = 4298;
@@ -3148,7 +3148,7 @@ pub const EGNLHJGPGLD = struct {
 };
 pub const OMLEHNGPBNG = struct {
     pub const cmd_id: u16 = 3090;
-    pub const JNIPMLPCJJA_field_desc: struct{ u32, u32 } = .{5, 15132};
+    pub const interact_id_field_desc: struct{ u32, u32 } = .{5, 15132};
 };
 pub const MHPBDEGFFIJ = struct {
     pub const NBDIFMCPPHL_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -3159,7 +3159,7 @@ pub const MHPBDEGFFIJ = struct {
     pub const MCEEJCDKFLL_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const BMKKMOIALDE_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const JFGOCHIBPJD_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{13, 2658};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{13, 2658};
     pub const FMKAMGOEGNE_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const HMKFKEIEJEM = struct {
@@ -3209,7 +3209,7 @@ pub const IGJCEPFMKGN = struct {
     pub const FJPEJJENMCH_field_desc: struct{ u32, u32 } = .{15, 9402};
 };
 pub const CGMKIBOAOID = struct {
-    pub const HHNIIFPKNBF_field_desc: struct{ u32, u32 } = .{1, 1227};
+    pub const area_id_field_desc: struct{ u32, u32 } = .{1, 1227};
     pub const lock_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const LOBFOBAOFGM_field_desc: struct{ u32, u32 } = .{10, 15209};
 };
@@ -3223,7 +3223,7 @@ pub const FLOMNINMOBL = struct {
     pub const AABGOEBLNKI_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const CPEHFBHFOLO = struct {
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const BMNAPNCMANL_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const APFNBDNGMLA_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const NCHMKFCFLGC_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -3280,7 +3280,7 @@ pub const IGJDMGAODLN = struct {
 pub const HGPNEDJBKKD = struct {
     pub const cmd_id: u16 = 5354;
     pub const LDOGAGEMCFD_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{3, 11304};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{3, 11304};
     pub const EHMNABBCNOJ_field_desc: struct{ u32, u32 } = .{4, 10938};
     pub const quest_id_field_desc: struct{ u32, u32 } = .{11, 14804};
     pub const DNKMEFCDIIB_field_desc: struct{ u32, u32 } = .{13, 0};
@@ -3305,9 +3305,9 @@ pub const HJMKOGMEPPN = struct {
     pub const MCLHKGLCKDP_field_desc: struct{ u32, u32 } = .{15, 0};
     pub const GCDBIDGIIEK_field_desc: struct{ u32, u32 } = .{351, 0};
 };
-pub const ELKOKGIEBDN = struct {
-    pub const GEGEHEIHGPC_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const KGKIIIPNLGH_field_desc: struct{ u32, u32 } = .{5, 0};
+pub const AreaMapData = struct {
+    pub const group_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const street_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const HEFFADLPDFA_field_desc: struct{ u32, u32 } = .{12, 0};
 };
 pub const GIFEOGIKFPO = struct {
@@ -3336,7 +3336,7 @@ pub const BLOOBAIMFPE = struct {
 };
 pub const JHHFMPPPFDM = struct {
     pub const cmd_id: u16 = 5292;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{10, 6824};
+    pub const tag_field_desc: struct{ u32, u32 } = .{10, 6824};
 };
 pub const DLCACKMMOBB = struct {
     pub const KCMGAMNGJFM_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -3513,7 +3513,7 @@ pub const CDNKPGCBEOD = struct {
 };
 pub const CDHHJKBCKDA = struct {
     pub const FKBHDDNNGEF_field_desc: struct{ u32, u32 } = .{6, 457};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{10, 10149};
+    pub const type_field_desc: struct{ u32, u32 } = .{10, 10149};
 };
 pub const EFCLCAAHENC = struct {
     pub const cmd_id: u16 = 4852;
@@ -3621,7 +3621,7 @@ pub const EPIJMAKCDCF = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{12, 634};
 };
 pub const MCAGAOLGGKJ = struct {
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const GPGHJIJIFMI_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const NIABONABMCH_field_desc: struct{ u32, u32 } = .{3, 0};
 };
@@ -3649,14 +3649,14 @@ pub const BKDOOHFCHMD = struct {
     pub const KANDAKPDFJK_field_desc: struct{ u32, u32 } = .{17, 0};
     pub const NIEABBADFLB_field_desc: struct{ u32, u32 } = .{18, 0};
 };
-pub const DKOAPFJPDGO = struct {
+pub const EquipmentUnDressCsReq = struct {
     pub const cmd_id: u16 = 3296;
     pub const avatar_id_field_desc: struct{ u32, u32 } = .{5, 2564};
-    pub const PKHMPLCGEPP_field_desc: struct{ u32, u32 } = .{13, 0};
+    pub const undress_index_list_field_desc: struct{ u32, u32 } = .{13, 0};
 };
 pub const KPPDCGJFBJJ = struct {
     pub const cmd_id: u16 = 6434;
-    pub const DJEBKNBAPLN_field_desc: struct{ u32, u32 } = .{9, 0};
+    pub const buddy_list_field_desc: struct{ u32, u32 } = .{9, 0};
 };
 pub const JFBANCNILIH = struct {
 };
@@ -3689,7 +3689,7 @@ pub const FLOHCLABIHJ = struct {
     pub const cmd_id: u16 = 9402;
     pub const quest_id_field_desc: struct{ u32, u32 } = .{1, 13785};
     pub const EECBBOEKLML_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{7, 14385};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{7, 14385};
     pub const BOEIDBIGNPP_field_desc: struct{ u32, u32 } = .{9, 2865};
 };
 pub const NILKMNMHNGM = struct {
@@ -3708,7 +3708,7 @@ pub const PFMJKNCCBCG = struct {
     pub const cmd_id: u16 = 3460;
     pub const retcode_field_desc: struct{ u32, u32 } = .{13, 15254};
 };
-pub const BBPKCIOGHIP = struct {
+pub const SectionEventScNotify = struct {
     pub const cmd_id: u16 = 5264;
     pub const GLOFBGKIFDA_field_desc: struct{ u32, u32 } = .{1, 2127};
     pub const ODGMDIDGIBA_field_desc: struct{ u32, u32 } = .{2, 0};
@@ -3716,15 +3716,15 @@ pub const BBPKCIOGHIP = struct {
     pub const NGLBPAHNIPM_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const GFDDFAOLDJF_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const section_id_field_desc: struct{ u32, u32 } = .{6, 2010};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{7, 2915};
+    pub const tag_field_desc: struct{ u32, u32 } = .{7, 2915};
     pub const DAIBOEHJDNE_field_desc: struct{ u32, u32 } = .{8, 2743};
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{10, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{10, 0};
     pub const JMAKCIMHCGD_field_desc: struct{ u32, u32 } = .{11, 16273};
     pub const KGPPOEHEIJP_field_desc: struct{ u32, u32 } = .{12, 2726};
     pub const GHJLDIBLECH_field_desc: struct{ u32, u32 } = .{13, 0};
     pub const MOIGAMBENNK_field_desc: struct{ u32, u32 } = .{14, 14203};
-    pub const GGFEBBBLHAN_field_desc: struct{ u32, u32 } = .{15, 0};
-    pub const AIHGFHHDNJE_field_desc: struct{ u32, u32 } = .{119, 0};
+    pub const action_list_field_desc: struct{ u32, u32 } = .{15, 0};
+    pub const event_name_field_desc: struct{ u32, u32 } = .{119, 0};
 };
 pub const INAMLGLCKOA = struct {
     pub const id_field_desc: struct{ u32, u32 } = .{10, 7773};
@@ -3734,7 +3734,7 @@ pub const BDAODAPKPGM = struct {
     pub const cmd_id: u16 = 1990;
 };
 pub const AIGELGEBPEA = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const BJCGHPAADLN = struct {
     pub const data_field_desc: struct{ u32, u32 } = .{7, 0};
@@ -3839,10 +3839,10 @@ pub const OLFOANFNIAK = struct {
     pub const cmd_id: u16 = 133;
     pub const MOANJJIEJBA_field_desc: struct{ u32, u32 } = .{1, 0};
 };
-pub const KOGMBAFCFMA = struct {
-    pub const AKLFJLFOPID_field_desc: struct{ u32, u32 } = .{2, 12892};
-    pub const LJHBEAHDJGN_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const AGMANPJBJLN_field_desc: struct{ u32, u32 } = .{15, 0};
+pub const ActionInfo = struct {
+    pub const action_id_field_desc: struct{ u32, u32 } = .{2, 12892};
+    pub const action_type_field_desc: struct{ u32, u32 } = .{11, 0};
+    pub const body_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const OPJENNDBHPO = struct {
     pub const uid_field_desc: struct{ u32, u32 } = .{1, 4996};
@@ -3875,17 +3875,17 @@ pub const LABFFLAOPEF = struct {
 pub const DECKMMNAPOK = struct {
     pub const cmd_id: u16 = 2217;
     pub const retcode_field_desc: struct{ u32, u32 } = .{9, 1528};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{10, 11898};
+    pub const tag_field_desc: struct{ u32, u32 } = .{10, 11898};
 };
 pub const BCOACBPHJGI = struct {
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{7, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const LLOCGLHHNGH_field_desc: struct{ u32, u32 } = .{8, 988};
     pub const JLKAANKLGGB_field_desc: struct{ u32, u32 } = .{14, 12272};
     pub const FIBMEINDEPE_field_desc: struct{ u32, u32 } = .{15, 15219};
 };
 pub const EOLIBJHMAPK = struct {
     pub const CLMCPOHFOBB_field_desc: struct{ u32, u32 } = .{1, 1650};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{15, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const LCEBCOFBIIJ = struct {
     pub const cmd_id: u16 = 3299;
@@ -4014,7 +4014,7 @@ pub const KHLLNIFBEHL = struct {
 };
 pub const PJPGPKIJOBM = struct {
     pub const cmd_id: u16 = 5396;
-    pub const JNIPMLPCJJA_field_desc: struct{ u32, u32 } = .{15, 11495};
+    pub const interact_id_field_desc: struct{ u32, u32 } = .{15, 11495};
 };
 pub const FDDPMFFJBFE = struct {
 };
@@ -4026,8 +4026,8 @@ pub const JLIHBJNHOFP = struct {
     pub const EFANMFNMMHP_field_desc: struct{ u32, u32 } = .{13, 0};
     pub const IKEPPELAIIJ_field_desc: struct{ u32, u32 } = .{14, 836};
 };
-pub const KKPHGMFLIDF = struct {
-    pub const FNONJNLKMFM_field_desc: struct{ u32, u32 } = .{11, 0};
+pub const HadalZoneSync = struct {
+    pub const sync_entrance_list_field_desc: struct{ u32, u32 } = .{11, 0};
 };
 pub const JIAGNMIIMJK = struct {
     pub const HKNGDMNAOFA_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -4054,7 +4054,7 @@ pub const JIAGNMIIMJK = struct {
     pub const BNJLDMHKJGA_field_desc: struct{ u32, u32 } = .{22, 0};
     pub const GJLIEAIEKDN_field_desc: struct{ u32, u32 } = .{23, 0};
     pub const GAPJINFMBJN_field_desc: struct{ u32, u32 } = .{24, 0};
-    pub const HIBJGKBIMCO_field_desc: struct{ u32, u32 } = .{25, 0};
+    pub const participators_field_desc: struct{ u32, u32 } = .{25, 0};
     pub const KMPLMDKMNOG_field_desc: struct{ u32, u32 } = .{27, 0};
     pub const NPHBMBIKKAI_field_desc: struct{ u32, u32 } = .{28, 0};
 };
@@ -4075,7 +4075,7 @@ pub const IBBNBLJCABE = struct {
 pub const JFKHGMIKLIK = struct {
     pub const IHLHDHLNDAE_field_desc: struct{ u32, u32 } = .{1, 5580};
     pub const BLNJLCJIMDM_field_desc: struct{ u32, u32 } = .{3, 7284};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{4, 3427};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{4, 3427};
     pub const FOPHKKFFFPB_field_desc: struct{ u32, u32 } = .{5, 15803};
     pub const PBHGHIAMAJL_field_desc: struct{ u32, u32 } = .{8, 611};
     pub const DIHHLKDKMMA_field_desc: struct{ u32, u32 } = .{9, 7307};
@@ -4089,7 +4089,7 @@ pub const NNKOCMHGPMJ = struct {
 };
 pub const LFBNFFHAFIP = struct {
     pub const PADJCLALFKP_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const ONFNACOGFAA_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const GKEGDJFPKHG_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const BEJOPMHMDBI_field_desc: struct{ u32, u32 } = .{6, 0};
@@ -4119,7 +4119,7 @@ pub const ANKPHICBPBD = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{1, 14369};
 };
 pub const AJLIIDHAONF = struct {
-    pub const INPPLCIHBLK_field_desc: struct{ u32, u32 } = .{7, 1120};
+    pub const zone_id_field_desc: struct{ u32, u32 } = .{7, 1120};
 };
 pub const JHDIFBKLEKB = struct {
     pub const cmd_id: u16 = 7590;
@@ -4141,7 +4141,7 @@ pub const HCDCNGIJHCG = struct {
 pub const PEIGAIPFGOH = struct {
     pub const cmd_id: u16 = 9259;
     pub const PMHJHOPBPNF_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{8, 8845};
+    pub const tag_field_desc: struct{ u32, u32 } = .{8, 8845};
 };
 pub const PCOLKOBHBJI = struct {
     pub const GMGIKINPEDO_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -4151,7 +4151,7 @@ pub const PCOLKOBHBJI = struct {
     pub const DEBDNIMJHJL_field_desc: struct{ u32, u32 } = .{5, 0};
 };
 pub const EEOLECOKAJF = struct {
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const FDFKJAOIBGM_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const CLMCPOHFOBB_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const MJHIGAEOOIM_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -4166,7 +4166,7 @@ pub const DGJHDMGLELO = struct {
     pub const MAFICFFFKLE_field_desc: struct{ u32, u32 } = .{5, 3754};
     pub const play_type_field_desc: struct{ u32, u32 } = .{6, 7048};
     pub const OKAEPAEDINC_field_desc: struct{ u32, u32 } = .{8, 7730};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{12, 9339};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{12, 9339};
     pub const LOOOGBOPOHJ_field_desc: struct{ u32, u32 } = .{14, 3274};
     pub const GEHNDLKAAAP_field_desc: struct{ u32, u32 } = .{15, 6037};
 };
@@ -4223,7 +4223,7 @@ pub const ICJMNPDJKOE = struct {
     pub const cmd_id: u16 = 5392;
     pub const OPIFCDIFLCE_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const DNKMEFCDIIB_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{3, 2305};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{3, 2305};
     pub const LDFCNBPBBHF_field_desc: struct{ u32, u32 } = .{4, 1687};
     pub const MDGMAEJLCKJ_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const OIHKDBLNEMI_field_desc: struct{ u32, u32 } = .{6, 0};
@@ -4252,7 +4252,7 @@ pub const PLIABPPCCMF = struct {
     pub const GOJONIHEIOJ_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const EJIHJJKKMAH = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const BMAHFIICOPN_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const AAIJGMNABFL = struct {
@@ -4265,7 +4265,7 @@ pub const DFBAMAKDBKG = struct {
     pub const quest_id_field_desc: struct{ u32, u32 } = .{8, 12787};
 };
 pub const DOFNKGHPPHA = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const KKMCOPCOLHB_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const MFMOHCDCCII = struct {
@@ -4388,7 +4388,7 @@ pub const BOIACJLJNHK = struct {
     pub const DLEHDCHNEFL_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const HEMBDLPGCEM = struct {
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const FEIIAOBJAHA_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const BGICBLHLHJB_field_desc: struct{ u32, u32 } = .{3, 0};
 };
@@ -4402,11 +4402,11 @@ pub const HHGNCNLHKLK = struct {
 };
 pub const OJEAMHGJICH = struct {
     pub const MCCDDEPMGDH_field_desc: struct{ u32, u32 } = .{1, 13387};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{6, 10444};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{6, 10444};
     pub const NABMJLFBMKO_field_desc: struct{ u32, u32 } = .{11, 3740};
 };
 pub const EMDCNFAEMPE = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const KKMCOPCOLHB_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const BNMGEAKOHAC = struct {
@@ -4470,13 +4470,13 @@ pub const DGGELGBAPKI = struct {
 pub const ODALHCFOLDJ = struct {
     pub const cmd_id: u16 = 1194;
     pub const MLJLFMCBAMK_field_desc: struct{ u32, u32 } = .{11, 7084};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{14, 11202};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{14, 11202};
 };
 pub const ODFPKOFAOLK = struct {
     pub const LIODBJNKNAH_field_desc: struct{ u32, u32 } = .{2, 8131};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{5, 5724};
+    pub const type_field_desc: struct{ u32, u32 } = .{5, 5724};
     pub const MGIOLAFAHIF_field_desc: struct{ u32, u32 } = .{7, 13188};
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{15, 5064};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{15, 5064};
 };
 pub const AMNBGADODAE = struct {
     pub const NEJEJCHOJDC_field_desc: struct{ u32, u32 } = .{1, 8916};
@@ -4563,7 +4563,7 @@ pub const AFIPDPMNDLI = struct {
 };
 pub const BKGPOHNIOHI = struct {
     pub const cmd_id: u16 = 4155;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{11, 6137};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{11, 6137};
 };
 pub const FAPBCONIJBJ = struct {
     pub const ABICOKGBFEL_field_desc: struct{ u32, u32 } = .{1, 4627};
@@ -4586,7 +4586,7 @@ pub const DFCJLLDJMIL = struct {
 };
 pub const MNLAOEFPIDC = struct {
     pub const IANDBIDAABE_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JINGAEMJADE_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const JCJFNFGFOKP_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const EHMNABBCNOJ_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -4604,10 +4604,10 @@ pub const GBJNFFPACIA = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{8, 11825};
 };
 pub const MOMNFMHACBL = struct {
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const position_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const rotation_field_desc: struct{ u32, u32 } = .{3, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{4, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{4, 0};
 };
 pub const KKOBGFDIMHJ = struct {
     pub const cmd_id: u16 = 4066;
@@ -4659,7 +4659,7 @@ pub const GPNNEGPEOAK = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{2, 7479};
 };
 pub const COIMIHKLNIB = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{2, 2197};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{2, 2197};
     pub const OMNMKKMGABM_field_desc: struct{ u32, u32 } = .{9, 10268};
 };
 pub const JJBOBMJKCPA = struct {
@@ -4762,12 +4762,12 @@ pub const PNMOFEBPBJL = struct {
 };
 pub const FIPGBCJBGLK = struct {
     pub const cmd_id: u16 = 396;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{11, 8108};
+    pub const tag_field_desc: struct{ u32, u32 } = .{11, 8108};
 };
 pub const MCEGJEAGLLG = struct {
     pub const cmd_id: u16 = 1123;
     pub const OMNMKKMGABM_field_desc: struct{ u32, u32 } = .{5, 12640};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{11, 16369};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{11, 16369};
 };
 pub const EGEGHDABNKE = struct {
     pub const id_field_desc: struct{ u32, u32 } = .{2, 585};
@@ -4866,7 +4866,7 @@ pub const MLKEKJPHGFG = struct {
     pub const avatar_id_field_desc: struct{ u32, u32 } = .{14, 13877};
 };
 pub const EAHNCIJMBFJ = struct {
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const AIJPKNFJPLG = struct {
     pub const BMAHFIICOPN_field_desc: struct{ u32, u32 } = .{9, 10980};
@@ -5075,14 +5075,14 @@ pub const BHNDPMJJLEB = struct {
     pub const NABKEKKHAPF_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const BLBOBDAFLKB_field_desc: struct{ u32, u32 } = .{4, 0};
 };
-pub const FMCJBHLGOJG = struct {
-    pub const PFHFKMFBMPD_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const JFDFCDBAIOP_field_desc: struct{ u32, u32 } = .{2, 0};
+pub const HadalEntranceInfo = struct {
+    pub const entrance_type_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const entrance_id_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const state_field_desc: struct{ u32, u32 } = .{3, 0};
-    pub const LPLBFOGCABA_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const OILGKKEMONN_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const cur_zone_record_field_desc: struct{ u32, u32 } = .{4, 0};
+    pub const prev_zone_record_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const CKLPNPGILDP_field_desc: struct{ u32, u32 } = .{6, 0};
-    pub const FILHGGLBJOE_field_desc: struct{ u32, u32 } = .{7, 0};
+    pub const zone_record_history_list_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const BELDKOHIGHL_field_desc: struct{ u32, u32 } = .{8, 0};
 };
 pub const EJHEDADGLDN = struct {
@@ -5120,7 +5120,7 @@ pub const BFLLLPDEDDL = struct {
     pub const state_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const NMJNDJNIALM_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const LIODBJNKNAH_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{5, 0};
 };
 pub const APENIFBPIHL = struct {
     pub const MMPDEBMNJJC_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -5152,8 +5152,8 @@ pub const HENAEJIJOJJ = struct {
 pub const FOOICLNLIHF = struct {
     pub const cmd_id: u16 = 7896;
     pub const BMGDGOHFIKJ_field_desc: struct{ u32, u32 } = .{3, 3492};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{5, 6261};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{6, 754};
+    pub const type_field_desc: struct{ u32, u32 } = .{5, 6261};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{6, 754};
 };
 pub const JMOKLHNDCNC = struct {
     pub const cmd_id: u16 = 1416;
@@ -5287,7 +5287,7 @@ pub const PlayerSyncScNotify = struct {
     pub const PEBIIKLCFPJ_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const MOEOKPKCAPJ_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const FDBLNIDCMEJ_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const NAAFCOMCPHA_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const buddy_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const FBENFGDHJKN_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const HHLOALDPIBK_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const JEJNNENMKNL_field_desc: struct{ u32, u32 } = .{8, 0};
@@ -5324,7 +5324,7 @@ pub const PlayerSyncScNotify = struct {
     pub const FHJAPDMNNBG_field_desc: struct{ u32, u32 } = .{784, 0};
     pub const LCPBEKFCCEB_field_desc: struct{ u32, u32 } = .{854, 0};
     pub const HNJPIHFPCBP_field_desc: struct{ u32, u32 } = .{955, 0};
-    pub const OGLPMDPIBFG_field_desc: struct{ u32, u32 } = .{1014, 0};
+    pub const hadal_zone_field_desc: struct{ u32, u32 } = .{1014, 0};
     pub const HNMNPDGOCHE_field_desc: struct{ u32, u32 } = .{1047, 0};
     pub const AMLANHAFJFI_field_desc: struct{ u32, u32 } = .{1074, 0};
     pub const OEDFNJJCGCL_field_desc: struct{ u32, u32 } = .{1129, 0};
@@ -5396,7 +5396,7 @@ pub const LKOFDBMKCNG = struct {
 };
 pub const DFHDLGKKJGI = struct {
     pub const FEKAOLAJOOM_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const tag_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const HEFINOBPKEI_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const BLCNECFEHIJ_field_desc: struct{ u32, u32 } = .{4, 0};
 };
@@ -5461,7 +5461,7 @@ pub const OBIDLENNNFN = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{3, 15105};
 };
 pub const EKOABGCNDEI = struct {
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const GPGHJIJIFMI_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const NIABONABMCH_field_desc: struct{ u32, u32 } = .{3, 0};
 };
@@ -5626,8 +5626,8 @@ pub const LENGCNDEICB = struct {
     pub const PCAIDEIBMKO_field_desc: struct{ u32, u32 } = .{13, 0};
 };
 pub const ODCOADNKCAP = struct {
-    pub const JNIPMLPCJJA_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const HIBJGKBIMCO_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const interact_id_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const participators_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const ELOEDIKOEFH = struct {
     pub const cmd_id: u16 = 5507;
@@ -5641,7 +5641,7 @@ pub const MAIGGEAPJBM = struct {
     pub const NCHMKFCFLGC_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const FEHOLLLJKPJ_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const retcode_field_desc: struct{ u32, u32 } = .{9, 10223};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{12, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const APFNBDNGMLA_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const GetMiscDataCsReq = struct {
@@ -5703,12 +5703,12 @@ pub const LEJHJFEANKN = struct {
     pub const MGKAEJFGEOA_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const HBHJBNLKJFD_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const LNLKGOACCOG_field_desc: struct{ u32, u32 } = .{13, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{14, 5947};
+    pub const type_field_desc: struct{ u32, u32 } = .{14, 5947};
 };
 pub const GCEGIFGNDHO = struct {
     pub const HOMBHJBKHBG_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PJBIDBCBKEK_field_desc: struct{ u32, u32 } = .{6, 3864};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{8, 9225};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{8, 9225};
     pub const NJCNPEOMHAL_field_desc: struct{ u32, u32 } = .{10, 9309};
     pub const quest_id_field_desc: struct{ u32, u32 } = .{15, 345};
 };
@@ -5769,7 +5769,7 @@ pub const LGPDCANDFGO = struct {
 pub const NKAGFPDBLMO = struct {
     pub const cmd_id: u16 = 414;
     pub const IKBOHJPNNDK_field_desc: struct{ u32, u32 } = .{11, 11903};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{12, 4016};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{12, 4016};
 };
 pub const EIAEOPHEHKJ = struct {
     pub const HAKHLDINKGB_field_desc: struct{ u32, u32 } = .{8, 7758};
@@ -5795,7 +5795,7 @@ pub const NGPAFJAIFJO = struct {
     pub const CDGJLALPNPD_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const KLEBAIGLDNK_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const KGGDFBNHEDJ_field_desc: struct{ u32, u32 } = .{6, 0};
-    pub const OGLPMDPIBFG_field_desc: struct{ u32, u32 } = .{7, 0};
+    pub const hadal_zone_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const IDCEGELDBEG_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const HCCIJBGBENF_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const HHPEEGEIMJH_field_desc: struct{ u32, u32 } = .{10, 0};
@@ -5908,7 +5908,7 @@ pub const NPLDEFLOLDG = struct {
     pub const cmd_id: u16 = 9390;
     pub const PEPHLJCOKON_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const BFBHIAHCLLG_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const INPPLCIHBLK_field_desc: struct{ u32, u32 } = .{15, 14305};
+    pub const zone_id_field_desc: struct{ u32, u32 } = .{15, 14305};
 };
 pub const EDJLNFJBLPM = struct {
     pub const cmd_id: u16 = 5769;
@@ -5946,8 +5946,8 @@ pub const JAJEBOACJDO = struct {
     pub const BLHDEDFOPFA_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const FCKBODFLFLL_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const FNENFJDAFAC_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const EJBFBANMDKD_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{12, 0};
+    pub const layer_item_id_field_desc: struct{ u32, u32 } = .{11, 0};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const ENLJEFLDILH_field_desc: struct{ u32, u32 } = .{13, 0};
     pub const GJELCMDFLAE_field_desc: struct{ u32, u32 } = .{14, 0};
     pub const ANBFEGIIIKH_field_desc: struct{ u32, u32 } = .{15, 0};
@@ -6002,7 +6002,7 @@ pub const PDGFNABNKKL = struct {
 };
 pub const CLLBCGGJDNF = struct {
     pub const cmd_id: u16 = 3705;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{3, 7334};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{3, 7334};
     pub const PGADIEHEOBH_field_desc: struct{ u32, u32 } = .{7, 14688};
     pub const play_type_field_desc: struct{ u32, u32 } = .{12, 5438};
 };
@@ -6087,7 +6087,7 @@ pub const JHPGGFGHNJL = struct {
 pub const DMMCBJOJKNI = struct {
     pub const cmd_id: u16 = 1833;
     pub const JHGJDKGPJNB_field_desc: struct{ u32, u32 } = .{8, 8349};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{14, 615};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{14, 615};
 };
 pub const LNJDACAHJEM = struct {
     pub const BECEOBKDFPB_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -6109,7 +6109,7 @@ pub const KKNPLFANNKG = struct {
     pub const PEFOBMOCENK_field_desc: struct{ u32, u32 } = .{10, 0};
 };
 pub const MKFGGNPIBCG = struct {
-    pub const INPPLCIHBLK_field_desc: struct{ u32, u32 } = .{15, 13485};
+    pub const zone_id_field_desc: struct{ u32, u32 } = .{15, 13485};
 };
 pub const DHGMCOPKOFA = struct {
     pub const cmd_id: u16 = 3858;
@@ -6183,7 +6183,7 @@ pub const FKAIAGJNGDP = struct {
 pub const CPAIOELBCJL = struct {
     pub const FIPGCMCMBID_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const HDMGLJHNDHF_field_desc: struct{ u32, u32 } = .{6, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{15, 7062};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{15, 7062};
 };
 pub const CPJIMOJPFIP = struct {
     pub const NLIHNGKBEGH_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -6278,7 +6278,7 @@ pub const CDAAKBECHED = struct {
 };
 pub const LDPKOKHLKOM = struct {
     pub const IBGPBAJLBOI_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const ALHIFKNBJBJ_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const KLKOBOGLHPG_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const CHAFKIMANLC_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -6309,7 +6309,7 @@ pub const KFMICNELNMK = struct {
     pub const ECLJNBCBABN_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const GJLIEAIEKDN_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const GAPJINFMBJN_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const HIBJGKBIMCO_field_desc: struct{ u32, u32 } = .{11, 0};
+    pub const participators_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const KMPLMDKMNOG_field_desc: struct{ u32, u32 } = .{13, 0};
     pub const NPHBMBIKKAI_field_desc: struct{ u32, u32 } = .{14, 0};
 };
@@ -6477,7 +6477,7 @@ pub const BGLPHKNLDDM = struct {
     pub const cmd_id: u16 = 8776;
     pub const quest_id_field_desc: struct{ u32, u32 } = .{6, 13588};
 };
-pub const MAOHENGJODJ = struct {
+pub const AvatarUnlockAwakeCsReq = struct {
     pub const cmd_id: u16 = 2024;
     pub const avatar_id_field_desc: struct{ u32, u32 } = .{3, 5968};
 };
@@ -6520,7 +6520,7 @@ pub const MJMGDJAANLA = struct {
 };
 pub const GHCKLIMHGKD = struct {
     pub const NJGLAJFEFMB_field_desc: struct{ u32, u32 } = .{4, 6937};
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{12, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{12, 0};
 };
 pub const OGAKIAMDLMO = struct {
     pub const cmd_id: u16 = 9441;
@@ -6558,7 +6558,7 @@ pub const LFENCLFAILN = struct {
 };
 pub const EEPPPFIDDBK = struct {
     pub const cmd_id: u16 = 6965;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{6, 1739};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{6, 1739};
 };
 pub const BCMILNNOFOD = struct {
     pub const cmd_id: u16 = 4112;
@@ -6567,7 +6567,7 @@ pub const BCMILNNOFOD = struct {
     pub const IJJJOMHGOKO_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const MFNNAKMJCJO = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const count_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const EEABIBOHKPG_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const FGAMBMONOFG_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -6579,14 +6579,14 @@ pub const KJIKJMPAFBH = struct {
     pub const OIPNBFMMPNE_field_desc: struct{ u32, u32 } = .{1, 9946};
     pub const HAEKFJBIMOE_field_desc: struct{ u32, u32 } = .{4, 12874};
     pub const EEBKCAPDINK_field_desc: struct{ u32, u32 } = .{6, 8846};
-    pub const HHNIIFPKNBF_field_desc: struct{ u32, u32 } = .{7, 5195};
+    pub const area_id_field_desc: struct{ u32, u32 } = .{7, 5195};
 };
 pub const MaterialInfo = struct {
     pub const count_field_desc: struct{ u32, u32 } = .{3, 7536};
     pub const id_field_desc: struct{ u32, u32 } = .{13, 15521};
 };
 pub const IPKBLPMJKIG = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const KNOMPGOPFHH_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const DNJIEPIDKJD_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PBLDMFKCGCC_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -6608,13 +6608,13 @@ pub const HDBJMAHAFCF = struct {
     pub const uid_field_desc: struct{ u32, u32 } = .{6, 16051};
     pub const GHKDDHLEGCO_field_desc: struct{ u32, u32 } = .{9, 13398};
 };
-pub const GAACPBALMMP = struct {
+pub const HallRefreshScNotify = struct {
     pub const cmd_id: u16 = 1688;
     pub const AJEIMKKHHHO_field_desc: struct{ u32, u32 } = .{2, 8813};
     pub const IEEFIBJPAHD_field_desc: struct{ u32, u32 } = .{3, 3034};
-    pub const PPFKHHDDAKE_field_desc: struct{ u32, u32 } = .{4, 0};
+    pub const npc_list_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const NBOFJDPJDFD_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const EPNMAGGOBLI_field_desc: struct{ u32, u32 } = .{6, 0};
+    pub const force_refresh_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const FFDGJAEIIFF_field_desc: struct{ u32, u32 } = .{7, 14450};
     pub const AFLIBEGBNLI_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const DFECKCGPPEM_field_desc: struct{ u32, u32 } = .{9, 0};
@@ -6665,7 +6665,7 @@ pub const JABAEPIFCOL = struct {
     pub const KLEOFGFLFCI_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JIGHLEBJHPA_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const FDMACNCFHPP_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{5, 0};
 };
 pub const NJAJPKNKLFK = struct {
     pub const CGGNANEPKDM_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -6807,7 +6807,7 @@ pub const ABJAGIDOMGG = struct {
     pub const cmd_id: u16 = 9608;
     pub const JCKHEBLMOLO_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const play_type_field_desc: struct{ u32, u32 } = .{9, 13489};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{10, 4375};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{10, 4375};
     pub const JBOIBEFOFDK_field_desc: struct{ u32, u32 } = .{12, 6709};
 };
 pub const LKJFMHBJGBH = struct {
@@ -6855,12 +6855,12 @@ pub const CFEMOPIDAKK = struct {
 pub const BBCBOANMGNI = struct {
     pub const GCOAOCPGDOO_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const BMAHFIICOPN_field_desc: struct{ u32, u32 } = .{13, 7406};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{15, 7315};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{15, 7315};
 };
 pub const MOMDEGPPBAF = struct {
     pub const cmd_id: u16 = 379;
     pub const OHGOIKKEOBJ_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const NCPAKFODOKD_field_desc: struct{ u32, u32 } = .{6, 1996};
     pub const MFLMLOJLHEE_field_desc: struct{ u32, u32 } = .{7, 14764};
     pub const FCAHOCNMPCL_field_desc: struct{ u32, u32 } = .{9, 8991};
@@ -6877,7 +6877,7 @@ pub const OOHJJFBIIEF = struct {
     pub const ALDEFFJDGFI_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const IDMJBAICAGJ = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const LOLGLKDMNOB_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const AAOJLAJMCBG_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const NLLELHMBNKP_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -6916,7 +6916,7 @@ pub const JGEDDGOIANK = struct {
     pub const KBBOPOJHGIH_field_desc: struct{ u32, u32 } = .{4, 7641};
     pub const quest_id_field_desc: struct{ u32, u32 } = .{6, 9264};
     pub const KKFNCKMDCFO_field_desc: struct{ u32, u32 } = .{7, 0};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{9, 10240};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{9, 10240};
     pub const OFEGOFIKBNH_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const IABMEMOMDHG_field_desc: struct{ u32, u32 } = .{12, 7178};
     pub const EDEKLLDMEOO_field_desc: struct{ u32, u32 } = .{15, 0};
@@ -6958,7 +6958,7 @@ pub const KJNDBOCFKDF = struct {
     pub const BBMGGLDPBIG_field_desc: struct{ u32, u32 } = .{13, 0};
 };
 pub const FCGCKDAJEBO = struct {
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const MNIKPJHPKKA_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JGLKEALDKBI_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const GAIJCFIIPMF_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -6973,7 +6973,7 @@ pub const FCGCKDAJEBO = struct {
     pub const DFKGPGMPMJD_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const DGCFEFGLDAH = struct {
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const LKFGLHMMALG_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const FHBPLBCCJHC_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const JDCAOGGDJIL_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -7024,7 +7024,7 @@ pub const CPODDBEIGCM = struct {
 pub const KKPCFOPJOIL = struct {
     pub const cmd_id: u16 = 3539;
     pub const retcode_field_desc: struct{ u32, u32 } = .{6, 9837};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{9, 4236};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{9, 4236};
 };
 pub const IPGDNGIMFLL = struct {
     pub const OPIMNHHNCHC_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -7066,7 +7066,7 @@ pub const BMDBNLLNPGL = struct {
 pub const BDBODIHLOAL = struct {
     pub const OAELCAKJJNO_field_desc: struct{ u32, u32 } = .{3, 2740};
     pub const position_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{6, 833};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{6, 833};
     pub const HKPJIENLKFC_field_desc: struct{ u32, u32 } = .{7, 10527};
     pub const AIEJJPLFBDC_field_desc: struct{ u32, u32 } = .{9, 11209};
     pub const MCNIMIMPIKE_field_desc: struct{ u32, u32 } = .{11, 7033};
@@ -7113,7 +7113,7 @@ pub const OGJFGNJOLME = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{13, 2901};
 };
 pub const PIMPAKOBEOP = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const MFJDDDCJHBB_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const OIBMDDHGIBK_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const GBDJFOCDIKO_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -7142,7 +7142,7 @@ pub const MCJKACCAKCC = struct {
     pub const KMOPICMEPOK_field_desc: struct{ u32, u32 } = .{4, 5850};
     pub const NOCFNBGJBJA_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const PBHGHIAMAJL_field_desc: struct{ u32, u32 } = .{8, 9807};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{9, 0};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const PKDLGJPAHGH_field_desc: struct{ u32, u32 } = .{12, 6864};
     pub const IGPIJODBBGD_field_desc: struct{ u32, u32 } = .{13, 3445};
     pub const LLFIMINNHEH_field_desc: struct{ u32, u32 } = .{14, 0};
@@ -7240,12 +7240,12 @@ pub const OIKIOEMBJIB = struct {
 };
 pub const KAAPGIHKBFM = struct {
     pub const cmd_id: u16 = 1418;
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const NABMJLFBMKO_field_desc: struct{ u32, u32 } = .{8, 13723};
 };
 pub const HAAGPGCNEOI = struct {
     pub const cmd_id: u16 = 6269;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{6, 8149};
+    pub const tag_field_desc: struct{ u32, u32 } = .{6, 8149};
 };
 pub const IBMHNNBKNHA = struct {
 };
@@ -7269,7 +7269,7 @@ pub const JKDJFGHMCDF = struct {
     pub const DAEJFCJDHBJ_field_desc: struct{ u32, u32 } = .{4, 0};
 };
 pub const LMIPBFIKPBP = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const PBHGHIAMAJL_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const BFJCDFEADEP_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const NAEABLGDCBJ_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -7288,7 +7288,7 @@ pub const PFMDCEIMFMB = struct {
     pub const cmd_id: u16 = 5157;
     pub const BMAHFIICOPN_field_desc: struct{ u32, u32 } = .{2, 15388};
     pub const CLMCPOHFOBB_field_desc: struct{ u32, u32 } = .{4, 2263};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{6, 2815};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{6, 2815};
     pub const JCMBJBMNKAJ_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const MLKHOOJLECB = struct {
@@ -7339,7 +7339,7 @@ pub const PFMBMBBLCBK = struct {
 };
 pub const OLKJLHOFFGA = struct {
     pub const cmd_id: u16 = 3731;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{7, 8158};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{7, 8158};
     pub const GBDELDBAMLO_field_desc: struct{ u32, u32 } = .{14, 11613};
 };
 pub const DHPGJHLNDFF = struct {
@@ -7401,7 +7401,7 @@ pub const JICDIDLGMKD = struct {
     pub const HMKBJLIKADF_field_desc: struct{ u32, u32 } = .{6, 0};
 };
 pub const EGPBFFLGHHH = struct {
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{1, 12955};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{1, 12955};
     pub const LJLCBOEAPIB_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const OKGCLAPJIEO_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const NPAELDMGFPH_field_desc: struct{ u32, u32 } = .{8, 57};
@@ -7448,7 +7448,7 @@ pub const HHNMBEJIFHH = struct {
     pub const NHOIMIAJPFD_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const GFADOEJEJJB = struct {
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const BNDKCDFKEJK_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const HELEOEKBGNG = struct {
@@ -7460,7 +7460,7 @@ pub const HELEOEKBGNG = struct {
     pub const IKEPPELAIIJ_field_desc: struct{ u32, u32 } = .{15, 1647};
 };
 pub const AHKCGGNPGMP = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const PLFEEPJKIEJ_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const AMIPCMJGPKA = struct {
@@ -7513,10 +7513,10 @@ pub const LBJILMFEEBD = struct {
     pub const DCOLIOMNIAJ_field_desc: struct{ u32, u32 } = .{1, 14369};
     pub const DBJNGENIOEH_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const HPBKJJALGIP_field_desc: struct{ u32, u32 } = .{4, 1856};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{7, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const PMNJDKCEAGA_field_desc: struct{ u32, u32 } = .{8, 5962};
     pub const BJMHECNCKHL_field_desc: struct{ u32, u32 } = .{13, 1599};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{14, 12948};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{14, 12948};
     pub const CGFMNNGAGOJ_field_desc: struct{ u32, u32 } = .{15, 1064};
 };
 pub const DOHPCLPAJPK = struct {
@@ -7588,7 +7588,7 @@ pub const JADKFKNMMGM = struct {
 pub const JLFCIHELMIL = struct {
     pub const cmd_id: u16 = 940;
     pub const MIMLFAINELK_field_desc: struct{ u32, u32 } = .{1, 13339};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const scene_id_field_desc: struct{ u32, u32 } = .{3, 5892};
     pub const MCNMMHBLCKL_field_desc: struct{ u32, u32 } = .{4, 6573};
     pub const CIGFMBODMFM_field_desc: struct{ u32, u32 } = .{7, 0};
@@ -7935,7 +7935,7 @@ pub const FOONIKOJNDG = struct {
 pub const NLCIOOIFOIJ = struct {
     pub const LHMPCGLFNFG_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const EJIDLLBOJMP_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PBHGHIAMAJL_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const JDFDFCGDHJA_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const GGMEDFMHKDG_field_desc: struct{ u32, u32 } = .{6, 0};
@@ -8045,13 +8045,13 @@ pub const LKNPPCINCIE = struct {
     pub const BLEIIILLDBA_field_desc: struct{ u32, u32 } = .{5, 11322};
     pub const COMGADEMNKB_field_desc: struct{ u32, u32 } = .{6, 14691};
     pub const GDEOECMBLKM_field_desc: struct{ u32, u32 } = .{7, 0};
-    pub const EPAFOPIKIPC_field_desc: struct{ u32, u32 } = .{8, 14011};
+    pub const refresh_status_field_desc: struct{ u32, u32 } = .{8, 14011};
     pub const PIDEBCKABMD_field_desc: struct{ u32, u32 } = .{9, 0};
-    pub const CGFAJDMJFMD_field_desc: struct{ u32, u32 } = .{10, 3265};
+    pub const begin_timestamp_field_desc: struct{ u32, u32 } = .{10, 3265};
     pub const MBFGOMJFOKM_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const LDJIMMCCMBC_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const CLCKKAJIPBJ_field_desc: struct{ u32, u32 } = .{13, 0};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{15, 5033};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{15, 5033};
     pub const OCMGHBOCFFF_field_desc: struct{ u32, u32 } = .{635, 8010};
     pub const IGOFBPJIKEJ_field_desc: struct{ u32, u32 } = .{727, 13233};
     pub const BJDNPMOIDKJ_field_desc: struct{ u32, u32 } = .{1038, 1801};
@@ -8164,14 +8164,14 @@ pub const DPDFIJFLGLF = struct {
 pub const FHMJHELAGIH = struct {
     pub const CGJHKHODABB_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const DBCEADGDLBA_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const CGFAJDMJFMD_field_desc: struct{ u32, u32 } = .{3, 0};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{4, 0};
+    pub const begin_timestamp_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const MCBOKINCNBJ_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const msg_field_desc: struct{ u32, u32 } = .{6, 0};
 };
 pub const AADOOMAHENL = struct {
     pub const cmd_id: u16 = 1432;
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{1, 10132};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{1, 10132};
     pub const PKNOPNLKOHH_field_desc: struct{ u32, u32 } = .{2, 6319};
 };
 pub const ALKOHKODFHP = struct {
@@ -8243,11 +8243,11 @@ pub const LBKPDKMKGGI = struct {
     pub const PPNAIAINKMF_field_desc: struct{ u32, u32 } = .{12, 0};
 };
 pub const OKIGGFNNHLG = struct {
-    pub const JNIPMLPCJJA_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const LEMIKMJAAEA_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const interact_id_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const tag_id_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const LOPCLBKJKFE_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const MAGMBEOJJFI_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const HIBJGKBIMCO_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const participators_field_desc: struct{ u32, u32 } = .{5, 0};
 };
 pub const MJILAPKLMLO = struct {
     pub const LPBEALJGFIA_field_desc: struct{ u32, u32 } = .{1, 14862};
@@ -8500,7 +8500,7 @@ pub const ICFHLMAPINF = struct {
     pub const data_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const DFBCEGFGJDI = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const OAKEOPDANHA_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const KLGMJMJKLJF = struct {
@@ -8761,7 +8761,7 @@ pub const FJIDEFMJEGF = struct {
 pub const KNHDDKGNOPO = struct {
     pub const cmd_id: u16 = 5637;
     pub const GEGEDABNOGP_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{8, 15080};
+    pub const type_field_desc: struct{ u32, u32 } = .{8, 15080};
     pub const retcode_field_desc: struct{ u32, u32 } = .{13, 14865};
     pub const GOJDGLKFJHG_field_desc: struct{ u32, u32 } = .{14, 0};
 };
@@ -8788,7 +8788,7 @@ pub const IHLPDPICABO = struct {
     pub const ADIAKPIDAAD_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const CMIKMCLAFLC = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const EJIDLLBOJMP_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const DJAAJGHCKDN = struct {
@@ -8801,7 +8801,7 @@ pub const OJMNMKKAPGH = struct {
 };
 pub const ECDKFIAOOOC = struct {
     pub const cmd_id: u16 = 8688;
-    pub const INPPLCIHBLK_field_desc: struct{ u32, u32 } = .{9, 4698};
+    pub const zone_id_field_desc: struct{ u32, u32 } = .{9, 4698};
     pub const DDHHBDGNHGG_field_desc: struct{ u32, u32 } = .{15, 8589};
 };
 pub const NOKAFDAMHKA = struct {
@@ -8850,7 +8850,7 @@ pub const FEKGAKJJLDD = struct {
 };
 pub const FLBOCMBAKMG = struct {
     pub const KCCNKKDPOLC_field_desc: struct{ u32, u32 } = .{4, 15585};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{6, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const JNDONMACOBH_field_desc: struct{ u32, u32 } = .{9, 5308};
     pub const DNIJFKNLAKO_field_desc: struct{ u32, u32 } = .{12, 3708};
 };
@@ -8938,10 +8938,10 @@ pub const DKOEIJPPMIC = struct {
     pub const cmd_id: u16 = 5580;
     pub const EFAEGMBLIAD_field_desc: struct{ u32, u32 } = .{13, 3714};
 };
-pub const HMIPOBNEBKC = struct {
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const LJLKIFGBOJB_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{3, 0};
+pub const BuddyUnitInfo = struct {
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const properties_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const NDKPOACJPLB = struct {
 };
@@ -8995,7 +8995,7 @@ pub const CBIDOEKNIDP = struct {
     pub const data_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const PPILLDMDINI = struct {
-    pub const JNIPMLPCJJA_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const interact_id_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const DJNIMHGLPJA = struct {
     pub const cmd_id: u16 = 5703;
@@ -9062,7 +9062,7 @@ pub const JKBJFLHJCBK = struct {
 };
 pub const IGLLPHHHDMB = struct {
     pub const MNKKJPMDJEF_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{13, 553};
+    pub const type_field_desc: struct{ u32, u32 } = .{13, 553};
 };
 pub const IKEODKLIOBK = struct {
     pub const cmd_id: u16 = 1065;
@@ -9294,7 +9294,7 @@ pub const IHEEFCFADGM = struct {
     pub const play_type_field_desc: struct{ u32, u32 } = .{7, 2391};
     pub const MAFICFFFKLE_field_desc: struct{ u32, u32 } = .{11, 7061};
     pub const JCKHEBLMOLO_field_desc: struct{ u32, u32 } = .{13, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{14, 8553};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{14, 8553};
     pub const MEILALLLDEI_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const DEEOHMBBGII = struct {
@@ -9312,7 +9312,7 @@ pub const KNODHKCFBCH = struct {
     pub const EAPPDAJAIJF_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const EKLKDONLKID = struct {
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const HPNJMBPLNBN_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const OMNFFFBMLGG_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const IEEFIBJPAHD_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -9378,7 +9378,7 @@ pub const CCCLMHOIALD = struct {
 pub const JEGALKANLEK = struct {
     pub const cmd_id: u16 = 6052;
     pub const JCMBJBMNKAJ_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{7, 6333};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{7, 6333};
     pub const OMLNIJGGEOE_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const CLMCPOHFOBB_field_desc: struct{ u32, u32 } = .{13, 11928};
     pub const BMAHFIICOPN_field_desc: struct{ u32, u32 } = .{15, 1935};
@@ -9414,7 +9414,7 @@ pub const DKFGBLPOLAL = struct {
     pub const IGPIJODBBGD_field_desc: struct{ u32, u32 } = .{10, 10200};
     pub const IMGHFOHACKA_field_desc: struct{ u32, u32 } = .{11, 9560};
     pub const MEFFFNLPADA_field_desc: struct{ u32, u32 } = .{13, 0};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{14, 10726};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{14, 10726};
 };
 pub const OCCPCAEDKCK = struct {
     pub const ICCMCGDDDHM_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -9579,7 +9579,7 @@ pub const AHCBOBDPJGE = struct {
 };
 pub const CDDPCDMEGIB = struct {
     pub const cmd_id: u16 = 5900;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{5, 7974};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{5, 7974};
 };
 pub const OOFCEAHJFEE = struct {
     pub const CLIEDEGFDAA_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -9679,12 +9679,12 @@ pub const ICOAPMGHEBD = struct {
 };
 pub const PPIKLEKOFAD = struct {
     pub const GFMICALBBMP_field_desc: struct{ u32, u32 } = .{4, 6463};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{12, 15626};
+    pub const type_field_desc: struct{ u32, u32 } = .{12, 15626};
     pub const MPJIEFOINPE_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const CICNCFLPHHH = struct {
     pub const cmd_id: u16 = 1481;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{5, 14693};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{5, 14693};
 };
 pub const LJMNLLDJDGO = struct {
     pub const PPJDPOLBGJD_field_desc: struct{ u32, u32 } = .{1, 924};
@@ -9982,7 +9982,7 @@ pub const GCFECILLAMD = struct {
     pub const KLEOFGFLFCI_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JIGHLEBJHPA_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const FDMACNCFHPP_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{5, 0};
 };
 pub const AMFGGNODIGA = struct {
     pub const cmd_id: u16 = 5429;
@@ -10017,7 +10017,7 @@ pub const BEOAPFGJMAN = struct {
 pub const PFLBFHMOFKM = struct {
     pub const cmd_id: u16 = 6578;
     pub const KBJLHEEDMDO_field_desc: struct{ u32, u32 } = .{1, 7164};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{3, 4762};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{3, 4762};
     pub const AJBLKBAHNDM_field_desc: struct{ u32, u32 } = .{4, 3885};
 };
 pub const GIEPJAHLOGE = struct {
@@ -10032,7 +10032,7 @@ pub const ANJPMJHCOAP = struct {
 pub const NNOOEDNBJHJ = struct {
     pub const state_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const NMJNDJNIALM_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{3, 10171};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{3, 10171};
     pub const FFIGOGIBGOP_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const FCFHGBNDBMJ_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const KOCDAKOOGBK_field_desc: struct{ u32, u32 } = .{6, 12942};
@@ -10042,7 +10042,7 @@ pub const NNOOEDNBJHJ = struct {
     pub const MEMCMHEMCCM_field_desc: struct{ u32, u32 } = .{10, 0};
     pub const INDGLFFMNGE_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const GBIIGANCEOD_field_desc: struct{ u32, u32 } = .{12, 8286};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{13, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{13, 0};
     pub const AAHADPIDKJF_field_desc: struct{ u32, u32 } = .{14, 13980};
     pub const MHBBLIEGLAH_field_desc: struct{ u32, u32 } = .{15, 6958};
 };
@@ -10136,7 +10136,7 @@ pub const ANHPCHBJCLL = struct {
     pub const JGEGKFOJFJM_field_desc: struct{ u32, u32 } = .{15, 15567};
 };
 pub const LNJCCFNILGC = struct {
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const MNIKPJHPKKA_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JGLKEALDKBI_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const GAIJCFIIPMF_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -10170,17 +10170,17 @@ pub const OFGKPOKAJPJ = struct {
 pub const KCEINLBADBP = struct {
     pub const PFMAGIACCKO_field_desc: struct{ u32, u32 } = .{4, 0};
 };
-pub const BPAIBGJLCLG = struct {
+pub const StartHadalZoneBattleCsReq = struct {
     pub const cmd_id: u16 = 3957;
-    pub const EJBFBANMDKD_field_desc: struct{ u32, u32 } = .{1, 22};
-    pub const OJDEHLPAHIL_field_desc: struct{ u32, u32 } = .{2, 8807};
-    pub const INPPLCIHBLK_field_desc: struct{ u32, u32 } = .{3, 7688};
-    pub const CHBADLKJEJP_field_desc: struct{ u32, u32 } = .{7, 0};
-    pub const GAOGAKAADGG_field_desc: struct{ u32, u32 } = .{9, 0};
-    pub const OIJEHMDOLMI_field_desc: struct{ u32, u32 } = .{11, 2754};
+    pub const layer_item_id_field_desc: struct{ u32, u32 } = .{1, 22};
+    pub const layer_index_field_desc: struct{ u32, u32 } = .{2, 8807};
+    pub const zone_id_field_desc: struct{ u32, u32 } = .{3, 7688};
+    pub const second_room_avatar_id_list_field_desc: struct{ u32, u32 } = .{7, 0};
+    pub const first_room_avatar_id_list_field_desc: struct{ u32, u32 } = .{9, 0};
+    pub const second_room_buddy_id_field_desc: struct{ u32, u32 } = .{11, 2754};
     pub const EHOOHPCFGMA_field_desc: struct{ u32, u32 } = .{12, 0};
-    pub const BFPBELNFNBP_field_desc: struct{ u32, u32 } = .{13, 11086};
-    pub const HBGLKPMHNMO_field_desc: struct{ u32, u32 } = .{14, 15879};
+    pub const first_room_buddy_id_field_desc: struct{ u32, u32 } = .{13, 11086};
+    pub const room_index_field_desc: struct{ u32, u32 } = .{14, 15879};
 };
 pub const ALNJJGDDBJK = struct {
     pub const NKCDGOMPGMP_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -10198,7 +10198,7 @@ pub const NLPNBBCJPFM = struct {
     pub const JCHPMPMPOGH_field_desc: struct{ u32, u32 } = .{14, 16379};
 };
 pub const HCGFNAAHFIG = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const KOKENPKMNOO_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const PGADIEHEOBH_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const IOADOOIHJEK_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -10215,9 +10215,9 @@ pub const DGOEMFMEGGI = struct {
 pub const ECEGDBANFBL = struct {
     pub const DMOIPKPKDBD_field_desc: struct{ u32, u32 } = .{2, 10951};
     pub const JLKAANKLGGB_field_desc: struct{ u32, u32 } = .{5, 5383};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{8, 1386};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{8, 1386};
     pub const DGJPEDBPMCC_field_desc: struct{ u32, u32 } = .{9, 0};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{13, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{13, 0};
     pub const NMJNDJNIALM_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const LOIOMBAJJPG = struct {
@@ -10228,7 +10228,7 @@ pub const BDMCIDJMCBE = struct {
     pub const cmd_id: u16 = 8876;
 };
 pub const PBDPGAGJFBM = struct {
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const level_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const JGFMGMGOHMP = struct {
@@ -10304,10 +10304,10 @@ pub const FEDBINLMEJG = struct {
     pub const IOCDHOMIGNL_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const DMGLLIJIFMM_field_desc: struct{ u32, u32 } = .{3, 0};
 };
-pub const PKJELEAIMKE = struct {
-    pub const DNDCGEIMBAK_field_desc: struct{ u32, u32 } = .{3, 11122};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{4, 9613};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{15, 0};
+pub const AreaGroupInfo = struct {
+    pub const area_progress_field_desc: struct{ u32, u32 } = .{3, 11122};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{4, 9613};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const DEHKOPPKJAN = struct {
     pub const cmd_id: u16 = 1886;
@@ -10351,7 +10351,7 @@ pub const KOOEKINEKDG = struct {
     pub const LNGNOOKIFMH_field_desc: struct{ u32, u32 } = .{12, 0};
 };
 pub const NGCPLBGFJHK = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const GOFLEGMBHEH_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const GLJLLAPILNJ_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const KADJAEBBFDC_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -10363,7 +10363,7 @@ pub const LIKJOLEHLGO = struct {
 pub const GEDKCEFFIHH = struct {
     pub const LHMPCGLFNFG_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const EJIDLLBOJMP_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PBHGHIAMAJL_field_desc: struct{ u32, u32 } = .{4, 0};
 };
 pub const BBNMFGBOKJG = struct {
@@ -10501,7 +10501,7 @@ pub const NMHFIJNGONG = struct {
     pub const LIODBJNKNAH_field_desc: struct{ u32, u32 } = .{2, 16004};
     pub const DEJIJGBLOOM_field_desc: struct{ u32, u32 } = .{3, 11106};
     pub const state_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{6, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{6, 0};
 };
 pub const DMGOJAEFPBM = struct {
     pub const GIKJNJMPBBH_field_desc: struct{ u32, u32 } = .{7, 6833};
@@ -10610,7 +10610,7 @@ pub const AFIPCIBEIGJ = struct {
 pub const ECMNKBCJJLE = struct {
     pub const cmd_id: u16 = 9484;
     pub const retcode_field_desc: struct{ u32, u32 } = .{14, 3390};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{15, 6769};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{15, 6769};
 };
 pub const PMPGOGOHBLN = struct {
     pub const cmd_id: u16 = 2656;
@@ -10630,7 +10630,7 @@ pub const BBKFBIMEJGD = struct {
 };
 pub const DLDPOBFBOOD = struct {
     pub const quest_id_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JINGAEMJADE_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const JCJFNFGFOKP_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const HKNGDMNAOFA_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -10660,7 +10660,7 @@ pub const LBEGCOOMCJN = struct {
     pub const ADIAKPIDAAD_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const CKJAKONNGEG = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{4, 10366};
+    pub const type_field_desc: struct{ u32, u32 } = .{4, 10366};
     pub const KOMAIDOLNNA_field_desc: struct{ u32, u32 } = .{5, 0};
 };
 pub const HEIEPHEDMGE = struct {
@@ -10739,7 +10739,7 @@ pub const GOGEGECEHFK = struct {
 };
 pub const JLPABINKGDH = struct {
     pub const cmd_id: u16 = 3944;
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{5, 0};
 };
 pub const IOKLIGABMNA = struct {
     pub const cmd_id: u16 = 1271;
@@ -10793,7 +10793,7 @@ pub const HCLMBANFBDB = struct {
     pub const KCPPOKDCEPB_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const MHKDIPMFMHG = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{2, 4604};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{2, 4604};
     pub const MIFPJEKMLNJ_field_desc: struct{ u32, u32 } = .{10, 0};
 };
 pub const BBCOCPLIFIG = struct {
@@ -10841,7 +10841,7 @@ pub const JMCPPEKANEL = struct {
 pub const BOKCECFAHND = struct {
     pub const cmd_id: u16 = 1799;
     pub const GAPJAENIHFG_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const JFDFCDBAIOP_field_desc: struct{ u32, u32 } = .{7, 10605};
+    pub const entrance_id_field_desc: struct{ u32, u32 } = .{7, 10605};
     pub const CBCPKMAKOAC_field_desc: struct{ u32, u32 } = .{11, 0};
 };
 pub const LFNHBAMGEFJ = struct {
@@ -11004,7 +11004,7 @@ pub const MGMFOEAKEDL = struct {
     pub const AIPKDLEMHBP_field_desc: struct{ u32, u32 } = .{13, 0};
 };
 pub const FHBJFBGGAPO = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 9672};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 9672};
     pub const OAKAGJJKAHE_field_desc: struct{ u32, u32 } = .{2, 13128};
     pub const OFGBNBFFFPD_field_desc: struct{ u32, u32 } = .{7, 12825};
     pub const BLHNHHMLKCP_field_desc: struct{ u32, u32 } = .{11, 0};
@@ -11013,7 +11013,7 @@ pub const BCLCDDLGHDO = struct {
     pub const cmd_id: u16 = 6890;
     pub const KKOGPJDJNEL_field_desc: struct{ u32, u32 } = .{1, 10857};
     pub const retcode_field_desc: struct{ u32, u32 } = .{9, 4651};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{11, 5569};
+    pub const type_field_desc: struct{ u32, u32 } = .{11, 5569};
 };
 pub const MEEIDOJMFEH = struct {
     pub const EFHKKOCIMLB_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -11100,7 +11100,7 @@ pub const NOPJDFJDKNB = struct {
 };
 pub const AFPLIOPOGMC = struct {
     pub const KMFKAIBELEA_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JKKKJOMAOJL_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const AJOAGINEOLG = struct {
@@ -11117,7 +11117,7 @@ pub const ABDDBCJBCDO = struct {
     pub const AFEDCCBOELA_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PPPGMLALAPC_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const BDGDKCEPMMH_field_desc: struct{ u32, u32 } = .{9, 0};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{13, 6043};
+    pub const tag_field_desc: struct{ u32, u32 } = .{13, 6043};
     pub const BAHFAPLOLCG_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const CNBOINBBNOE = struct {
@@ -11127,7 +11127,7 @@ pub const CNBOINBBNOE = struct {
 };
 pub const AGFHHCHJDOO = struct {
     pub const cmd_id: u16 = 233;
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const LIDFOKGAMDC_field_desc: struct{ u32, u32 } = .{3, 7344};
     pub const EHFFBOMHFBK_field_desc: struct{ u32, u32 } = .{4, 56};
     pub const IGPIJODBBGD_field_desc: struct{ u32, u32 } = .{5, 12068};
@@ -11176,7 +11176,7 @@ pub const AONLEDLANBC = struct {
 };
 pub const IMPFJNIKAKK = struct {
     pub const cmd_id: u16 = 1322;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{3, 14116};
+    pub const tag_field_desc: struct{ u32, u32 } = .{3, 14116};
     pub const retcode_field_desc: struct{ u32, u32 } = .{5, 7134};
 };
 pub const NCCFPAFLJOB = struct {
@@ -11420,9 +11420,9 @@ pub const JFJAJECOLML = struct {
     pub const PMJFABACIDO_field_desc: struct{ u32, u32 } = .{13, 1073};
     pub const CECLNEDNALC_field_desc: struct{ u32, u32 } = .{14, 0};
 };
-pub const KIHJBKPINDA = struct {
+pub const UrbanAreaShowCsReq = struct {
     pub const cmd_id: u16 = 8350;
-    pub const JCKAJOLDJJN_field_desc: struct{ u32, u32 } = .{6, 0};
+    pub const area_show_list_field_desc: struct{ u32, u32 } = .{6, 0};
 };
 pub const CDEAAGFNLGE = struct {
     pub const cmd_id: u16 = 8314;
@@ -11520,7 +11520,7 @@ pub const LDLCFMONNBE = struct {
 pub const IDNDEIGJPJE = struct {
     pub const cmd_id: u16 = 6575;
     pub const EDJDDDDNHHB_field_desc: struct{ u32, u32 } = .{3, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{6, 744};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{6, 744};
     pub const MCNIMIMPIKE_field_desc: struct{ u32, u32 } = .{7, 10625};
     pub const GPGHJIJIFMI_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const OKMJEPIMOJP_field_desc: struct{ u32, u32 } = .{10, 0};
@@ -11576,7 +11576,7 @@ pub const KMGDGMIDAPD = struct {
 };
 pub const OONFFEKMPAI = struct {
     pub const cmd_id: u16 = 3973;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{4, 6215};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{4, 6215};
 };
 pub const HDGOACGDLHC = struct {
     pub const CEFMNEIDBJL_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -11652,7 +11652,7 @@ pub const DGGPLNIIOBL = struct {
     pub const HDALMNFOLAD_field_desc: struct{ u32, u32 } = .{1, 7044};
 };
 pub const IAJJHLCGOLD = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{2, 8337};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{2, 8337};
     pub const MGDDCIPLDKN_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const HJGDPGJLBIM_field_desc: struct{ u32, u32 } = .{4, 460};
     pub const CNJCJGMLPNP_field_desc: struct{ u32, u32 } = .{6, 5665};
@@ -11675,7 +11675,7 @@ pub const ABHNLIFFJLL = struct {
     pub const ADBFHHHGAAD_field_desc: struct{ u32, u32 } = .{12, 4610};
     pub const IMLBFLFOCMG_field_desc: struct{ u32, u32 } = .{13, 0};
     pub const FFHLEABJOME_field_desc: struct{ u32, u32 } = .{14, 0};
-    pub const LFEIPLAGBEO_field_desc: struct{ u32, u32 } = .{15, 5944};
+    pub const status_field_desc: struct{ u32, u32 } = .{15, 5944};
 };
 pub const JAKHJHNEMEB = struct {
     pub const cmd_id: u16 = 2122;
@@ -11687,8 +11687,8 @@ pub const DMMDBBMDMFB = struct {
     pub const NBPABMBNFIO_field_desc: struct{ u32, u32 } = .{9, 0};
 };
 pub const CBLPPABDDPK = struct {
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const JNIPMLPCJJA_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const interact_id_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const FMCPPPPONGD_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const DBCEADGDLBA_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const FANCGKGHDNB_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -11905,15 +11905,15 @@ pub const BAGCFGBBONF = struct {
     pub const GELFJKKNBAB_field_desc: struct{ u32, u32 } = .{12, 0};
 };
 pub const HFNFCKEFHBO = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const EEABIBOHKPG_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const FDNAMLFLJFI = struct {
     pub const MNOICKFBFNG_field_desc: struct{ u32, u32 } = .{6, 0};
 };
-pub const GHCMCFMOCAC = struct {
+pub const AvatarUnitInfo = struct {
     pub const avatar_id_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const LJLKIFGBOJB_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const properties_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const PLJCFMFIOGL_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const OKMDNNCBBEK_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const FELCDNFPIJK_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -11991,8 +11991,8 @@ pub const PECGMJBDDOH = struct {
 };
 pub const GLAELGPOHBB = struct {
     pub const cmd_id: u16 = 2662;
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{3, 8254};
-    pub const EJBFBANMDKD_field_desc: struct{ u32, u32 } = .{4, 6373};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{3, 8254};
+    pub const layer_item_id_field_desc: struct{ u32, u32 } = .{4, 6373};
     pub const avatar_id_list_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const BBLACIOEBHG_field_desc: struct{ u32, u32 } = .{15, 8270};
 };
@@ -12033,7 +12033,7 @@ pub const FEJKNNANKKB = struct {
 };
 pub const CCJBLCNGMMM = struct {
     pub const PADJCLALFKP_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const MCGDGDNMKFI_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const BJNNOLIDLLK_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const PBCMOBKDKHB_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -12086,8 +12086,8 @@ pub const DOOMLNKIKMP = struct {
     pub const DGJPEDBPMCC_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const HMNFILAMIJM_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const DMOIPKPKDBD_field_desc: struct{ u32, u32 } = .{10, 3609};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{15, 7080};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{11, 0};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{15, 7080};
 };
 pub const PHHNMEKOLDA = struct {
     pub const FNIGPIKPJKC_field_desc: struct{ u32, u32 } = .{3, 0};
@@ -12102,7 +12102,7 @@ pub const StartTrainingQuestCsReq = struct {
     pub const quest_id_field_desc: struct{ u32, u32 } = .{7, 8726};
     pub const avatar_id_list_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const CNOOOBNCNHE_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{11, 4746};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{11, 4746};
     pub const GOGFHOGBPCK_field_desc: struct{ u32, u32 } = .{12, 0};
 };
 pub const HNIEJGNONBO = struct {
@@ -12260,12 +12260,12 @@ pub const LDCDLMKMPCJ = struct {
     pub const HDALMNFOLAD_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const OKGCLAPJIEO_field_desc: struct{ u32, u32 } = .{9, 0};
 };
-pub const FMFJJLGELOB = struct {
+pub const BuddySync = struct {
     pub const HIEHFJMBFHH_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const COOPAPMJDKG_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const FJODENLEOMD_field_desc: struct{ u32, u32 } = .{7, 13448};
     pub const AKMBAABCFFA_field_desc: struct{ u32, u32 } = .{10, 14222};
-    pub const DJEBKNBAPLN_field_desc: struct{ u32, u32 } = .{12, 0};
+    pub const buddy_list_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const NOBAADKBINO_field_desc: struct{ u32, u32 } = .{13, 0};
 };
 pub const CHOBGAICOOM = struct {
@@ -12309,8 +12309,8 @@ pub const DCAOKBMBIJG = struct {
 };
 pub const OJLBFGANHEH = struct {
     pub const LBLPHDEBOKK_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{6, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{6, 0};
 };
 pub const GJHOBPKGFPN = struct {
     pub const cmd_id: u16 = 378;
@@ -12408,11 +12408,11 @@ pub const EJKLBAEEADB = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{15, 5181};
 };
 pub const DJCAFMMDPHO = struct {
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const avatar_list_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const DJEBKNBAPLN_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const buddy_list_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const GFMICALBBMP_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const KMLOFLMFLDD_field_desc: struct{ u32, u32 } = .{6, 0};
 };
 pub const FPGKCIDKNBE = struct {
@@ -12566,7 +12566,7 @@ pub const GBOOEHOPGBL = struct {
 pub const AJCAMJAFPMH = struct {
     pub const LHMPCGLFNFG_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const EJIDLLBOJMP_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PBHGHIAMAJL_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const JDFDFCGDHJA_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const GGMEDFMHKDG_field_desc: struct{ u32, u32 } = .{6, 0};
@@ -12591,7 +12591,7 @@ pub const BNOGMAAABJJ = struct {
 pub const ECDGFDCELKJ = struct {
     pub const cmd_id: u16 = 7694;
     pub const index_field_desc: struct{ u32, u32 } = .{10, 10163};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{14, 7379};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{14, 7379};
 };
 pub const CIHIOBHOLLP = struct {
     pub const cmd_id: u16 = 8697;
@@ -12634,10 +12634,10 @@ pub const MDMFEAALLBB = struct {
     pub const AMHJHCBPJBP_field_desc: struct{ u32, u32 } = .{9, 0};
 };
 pub const MCJEHLPHDKI = struct {
-    pub const DJEBKNBAPLN_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const buddy_list_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const avatar_list_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const NABMJLFBMKO_field_desc: struct{ u32, u32 } = .{14, 10111};
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{15, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const LMJAHDIFHNE = struct {
     pub const cmd_id: u16 = 1057;
@@ -12671,7 +12671,7 @@ pub const PFGLLINEAMK = struct {
     pub const cmd_id: u16 = 776;
 };
 pub const GMELFCHKILI = struct {
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{1, 2497};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{1, 2497};
     pub const id_field_desc: struct{ u32, u32 } = .{3, 6623};
     pub const total_time_field_desc: struct{ u32, u32 } = .{9, 286};
     pub const PGOCGJABFOJ_field_desc: struct{ u32, u32 } = .{10, 0};
@@ -12698,7 +12698,7 @@ pub const FMKMMAPCLHF = struct {
 };
 pub const PCLCKCELNJM = struct {
     pub const PDGAFDGDGBN_field_desc: struct{ u32, u32 } = .{8, 761};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{9, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{9, 0};
 };
 pub const ALHFPEBKBFJ = struct {
     pub const cmd_id: u16 = 514;
@@ -12747,7 +12747,7 @@ pub const OHIABIOJBHM = struct {
     pub const BLBJMIEEMOA_field_desc: struct{ u32, u32 } = .{12, 11789};
     pub const HJANHICLKBA_field_desc: struct{ u32, u32 } = .{13, 8532};
 };
-pub const AJNCFGCPAOB = struct {
+pub const GetAreaMapDataScRsp = struct {
     pub const cmd_id: u16 = 5013;
     pub const retcode_field_desc: struct{ u32, u32 } = .{12, 11383};
     pub const data_field_desc: struct{ u32, u32 } = .{14, 0};
@@ -12819,7 +12819,7 @@ pub const ADPJIPBDGFM = struct {
 };
 pub const HLANNDJGLGO = struct {
     pub const HGJEMKLCPJK_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const BMAHFIICOPN_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const position_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const rotation_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -12848,7 +12848,7 @@ pub const PAKPNPFDKJD = struct {
 };
 pub const NBLDMFKPGBI = struct {
     pub const cmd_id: u16 = 8762;
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{6, 7215};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{6, 7215};
     pub const retcode_field_desc: struct{ u32, u32 } = .{11, 12260};
 };
 pub const MPOIFPMELKC = struct {
@@ -12931,7 +12931,7 @@ pub const CDLIANEEDOB = struct {
     pub const KEMBIAJOHND_field_desc: struct{ u32, u32 } = .{5, 13874};
 };
 pub const JCAMLGKLBNG = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const ICBHIJPHGBL_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const EFNCBHAPINI_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const uid_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -12968,11 +12968,11 @@ pub const DCHNPJNJGHG = struct {
     pub const BLJHCPONPPF_field_desc: struct{ u32, u32 } = .{10, 0};
     pub const LLHJIPDIFEG_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const KOCBKJEIJED_field_desc: struct{ u32, u32 } = .{14, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{15, 15524};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{15, 15524};
 };
 pub const JEILGHKHALB = struct {
     pub const cmd_id: u16 = 3857;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{14, 15306};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{14, 15306};
 };
 pub const FNFLLDIKOKB = struct {
     pub const CJECLEFBBKN_field_desc: struct{ u32, u32 } = .{5, 7244};
@@ -13076,7 +13076,7 @@ pub const GIIGPGPBPIN = struct {
 };
 pub const NLLICDPOCII = struct {
     pub const cmd_id: u16 = 6356;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{6, 12239};
+    pub const tag_field_desc: struct{ u32, u32 } = .{6, 12239};
     pub const FJMEHEBAEEB_field_desc: struct{ u32, u32 } = .{12, 0};
 };
 pub const OJICBJGCPNP = struct {
@@ -13208,7 +13208,7 @@ pub const KJANBCAOOHP = struct {
 };
 pub const NOCHICEJNJP = struct {
     pub const cmd_id: u16 = 3484;
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{12, 10559};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{12, 10559};
     pub const MLJLFMCBAMK_field_desc: struct{ u32, u32 } = .{14, 4999};
 };
 pub const ELJAIHHBCII = struct {
@@ -13238,7 +13238,7 @@ pub const KBBOEIHLDPA = struct {
 };
 pub const OGMPNMINKNA = struct {
     pub const JNFBPGOJMKK_field_desc: struct{ u32, u32 } = .{9, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{11, 3487};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{11, 3487};
 };
 pub const OMKENLAMLDA = struct {
     pub const cmd_id: u16 = 531;
@@ -13321,7 +13321,7 @@ pub const DBOPPPGFFGB = struct {
 pub const DBEGDHKBDGB = struct {
     pub const IOPIHFLDLHI_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const GNOFILBAFIO_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const MEMCMHEMCCM_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const OHEFKEIEIIL_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const ALEPOFPHCOI_field_desc: struct{ u32, u32 } = .{6, 0};
@@ -13460,7 +13460,7 @@ pub const KLOEDGOJKII = struct {
 };
 pub const ACFBCAKKEEP = struct {
     pub const KBBOLKDLDDH_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const GAMMIHFMHGK_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PGNOFANCGLE_field_desc: struct{ u32, u32 } = .{4, 0};
 };
@@ -13718,7 +13718,7 @@ pub const KGLIBAJPJFA = struct {
     pub const IOAGNIPDOOK_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const HDPOBNOEGLL = struct {
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const HLDLCHFCDCM = struct {
     pub const FKGBADOBJBA_field_desc: struct{ u32, u32 } = .{12, 0};
@@ -13778,7 +13778,7 @@ pub const KOEDEGIDNPM = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{14, 11714};
 };
 pub const KJJOFEBAIAI = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const BMAHFIICOPN_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const MCNIMIMPIKE_field_desc: struct{ u32, u32 } = .{3, 0};
 };
@@ -14029,10 +14029,10 @@ pub const HKKPFJJHNKC = struct {
 };
 pub const NBMDCLLGBLO = struct {
     pub const cmd_id: u16 = 5123;
-    pub const OJDEHLPAHIL_field_desc: struct{ u32, u32 } = .{1, 9857};
-    pub const INPPLCIHBLK_field_desc: struct{ u32, u32 } = .{4, 5040};
+    pub const layer_index_field_desc: struct{ u32, u32 } = .{1, 9857};
+    pub const zone_id_field_desc: struct{ u32, u32 } = .{4, 5040};
     pub const CEBMICFJEIA_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const HBGLKPMHNMO_field_desc: struct{ u32, u32 } = .{14, 10854};
+    pub const room_index_field_desc: struct{ u32, u32 } = .{14, 10854};
 };
 pub const MLINMEDKGAM = struct {
     pub const LAEHNLLEEIP_field_desc: struct{ u32, u32 } = .{6, 0};
@@ -14079,7 +14079,7 @@ pub const HLIKNFGDOMA = struct {
     pub const FAEFBPNFFOI_field_desc: struct{ u32, u32 } = .{1908, 0};
 };
 pub const LDOFPPOCLHE = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const DDOGGCPDLCG_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const position_field_desc: struct{ u32, u32 } = .{3, 0};
 };
@@ -14091,7 +14091,7 @@ pub const KFDJKPBGLKD = struct {
     pub const NELDMGFMJHL_field_desc: struct{ u32, u32 } = .{12, 0};
 };
 pub const OAABIFLAHAO = struct {
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const CLMCPOHFOBB_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const GOMMEGMMEBJ_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const IHDJHEIICLO_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -14183,7 +14183,7 @@ pub const JMEGEPKDIMO = struct {
 };
 pub const FEBLCJLINPC = struct {
     pub const cmd_id: u16 = 3675;
-    pub const JFDFCDBAIOP_field_desc: struct{ u32, u32 } = .{5, 670};
+    pub const entrance_id_field_desc: struct{ u32, u32 } = .{5, 670};
     pub const NKPALMCBMIJ_field_desc: struct{ u32, u32 } = .{13, 10533};
 };
 pub const PPNMHFPLKAG = struct {
@@ -14240,7 +14240,7 @@ pub const CHJAKIDJIOD = struct {
 };
 pub const JFKKGMJNPJO = struct {
     pub const cmd_id: u16 = 3887;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{8, 12130};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{8, 12130};
 };
 pub const MCGCEEBCGIE = struct {
     pub const cmd_id: u16 = 8333;
@@ -14280,7 +14280,7 @@ pub const DIEMDOOIEGF = struct {
     pub const cmd_id: u16 = 9776;
     pub const BMHPNBAKBAI_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const DBCEADGDLBA_field_desc: struct{ u32, u32 } = .{12, 3309};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{14, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const MBMIOIMHDLE = struct {
     pub const cmd_id: u16 = 7453;
@@ -14300,7 +14300,7 @@ pub const JKHEOHGLNDN = struct {
 pub const GABCKBLBKCG = struct {
     pub const cmd_id: u16 = 1281;
     pub const position_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{3, 14059};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{3, 14059};
     pub const FOONOADJIAM_field_desc: struct{ u32, u32 } = .{6, 8001};
 };
 pub const NIGOIIBGPGI = struct {
@@ -14358,7 +14358,7 @@ pub const NPECJGDEHAL = struct {
 };
 pub const CPCANLHAEIE = struct {
     pub const JNLCKFJDHBO_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const KMLOFLMFLDD_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const CCMBIABNPPP_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const param_list_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -14387,7 +14387,7 @@ pub const OJKFAPNKAPO = struct {
 };
 pub const OEFGJHHAJFI = struct {
     pub const cmd_id: u16 = 7713;
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{4, 14103};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{4, 14103};
     pub const HDHDELBPLHH_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const retcode_field_desc: struct{ u32, u32 } = .{12, 6738};
 };
@@ -14518,7 +14518,7 @@ pub const CCMAHHMPKOO = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{12, 14715};
 };
 pub const KBBDGNEGFBK = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 13610};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 13610};
     pub const FMAJOPGLKJI_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const CJECLEFBBKN_field_desc: struct{ u32, u32 } = .{14, 10991};
 };
@@ -14538,7 +14538,7 @@ pub const OMNAGOGEAOO = struct {
     pub const HINEIJEFHGP_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const NOFLNNPODHM = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const HPJEOIMDGEM_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const BCHBJKKNJBF = struct {
@@ -14603,7 +14603,7 @@ pub const DMLFDALHODN = struct {
     pub const AOPDDHPEILD_field_desc: struct{ u32, u32 } = .{11, 0};
 };
 pub const PAPGPGJFABM = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const OKGCLAPJIEO_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const OFBADFNOHEH = struct {
@@ -14627,7 +14627,7 @@ pub const PDLPOJCIIDB = struct {
     pub const EIFBLLELIKB_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const PFMHPDMCHDF_field_desc: struct{ u32, u32 } = .{9, 9134};
     pub const PJOBGJHBDLM_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{14, 5351};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{14, 5351};
 };
 pub const KJHEEIKIHIG = struct {
 };
@@ -14747,7 +14747,7 @@ pub const GetWishlistDataScRsp = struct {
 };
 pub const HMIAOMCMOJO = struct {
     pub const cmd_id: u16 = 1085;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{2, 12554};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{2, 12554};
     pub const PGADIEHEOBH_field_desc: struct{ u32, u32 } = .{4, 633};
 };
 pub const LMNFJLKPBFO = struct {
@@ -14822,7 +14822,7 @@ pub const KEPAOIIGLGK = struct {
     pub const LFBKMCKEKKD_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const GKAKKFEAACC = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const KNOMPGOPFHH_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const PBHGHIAMAJL_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const BFNLOPAPGBK_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -14835,7 +14835,7 @@ pub const CPLFKNEFFPL = struct {
 };
 pub const NDCCOBKBFCC = struct {
     pub const GNOFILBAFIO_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const MEMCMHEMCCM_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const OHEFKEIEIIL_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const ALEPOFPHCOI_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -14937,7 +14937,7 @@ pub const EEBLBBMMHOJ = struct {
 };
 pub const ILCIEBMAAPA = struct {
     pub const cmd_id: u16 = 7702;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{4, 11490};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{4, 11490};
     pub const BMAHFIICOPN_field_desc: struct{ u32, u32 } = .{9, 4223};
 };
 pub const OAHJDDJCJPF = struct {
@@ -14954,7 +14954,7 @@ pub const MFADAAPHCMO = struct {
 pub const HGBOEFPJPHB = struct {
     pub const cmd_id: u16 = 7988;
     pub const DIHHLKDKMMA_field_desc: struct{ u32, u32 } = .{13, 15647};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{15, 14012};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{15, 14012};
 };
 pub const OKGBPBMOAGF = struct {
     pub const cmd_id: u16 = 6648;
@@ -14979,7 +14979,7 @@ pub const GKELOKIGNKK = struct {
     pub const CLMCPOHFOBB_field_desc: struct{ u32, u32 } = .{8, 6819};
     pub const OFEDCABFIKB_field_desc: struct{ u32, u32 } = .{10, 6989};
     pub const PPGDLKIGMJO_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{12, 11564};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{12, 11564};
 };
 pub const KENNIEFENHD = struct {
 };
@@ -15030,7 +15030,7 @@ pub const NDKHGDDKGOJ = struct {
     pub const NKDGNAGPKNI_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const OBJOEJLKCEJ = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const LDHAHAPKFLD_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const GHCNGNKGHBD = struct {
@@ -15263,8 +15263,8 @@ pub const IFPLDPKAMGH = struct {
 };
 pub const ALDJNGDCFPI = struct {
     pub const DFOAOBMOOLL_field_desc: struct{ u32, u32 } = .{7, 12454};
-    pub const CGFAJDMJFMD_field_desc: struct{ u32, u32 } = .{10, 287};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{11, 3825};
+    pub const begin_timestamp_field_desc: struct{ u32, u32 } = .{10, 287};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{11, 3825};
 };
 pub const MHPOFILBLCE = struct {
     pub const AGMFPANHIKO_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -15314,7 +15314,7 @@ pub const IBPFHDMKPLO = struct {
 pub const LMENHEJJNHH = struct {
     pub const cmd_id: u16 = 141;
     pub const DILMNCFCMBO_field_desc: struct{ u32, u32 } = .{6, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{9, 15682};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{9, 15682};
 };
 pub const NKPJHIFDINA = struct {
     pub const cmd_id: u16 = 3213;
@@ -15390,7 +15390,7 @@ pub const MJMAHIPMHDJ = struct {
     pub const LFFMLFANOHL_field_desc: struct{ u32, u32 } = .{2, 5022};
     pub const HFKIMMKKONP_field_desc: struct{ u32, u32 } = .{3, 14068};
     pub const DDDLHNOMJAC_field_desc: struct{ u32, u32 } = .{12, 15089};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{14, 7702};
+    pub const type_field_desc: struct{ u32, u32 } = .{14, 7702};
 };
 pub const IJFGGOHKMCG = struct {
     pub const OPMHGGEEANL_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -15406,7 +15406,7 @@ pub const KJAEKPLJJCG = struct {
 pub const ADAHLLHJDGN = struct {
     pub const cmd_id: u16 = 4850;
     pub const index_field_desc: struct{ u32, u32 } = .{3, 16071};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{14, 8021};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{14, 8021};
 };
 pub const HEMLAJKOJJP = struct {
     pub const cmd_id: u16 = 6122;
@@ -15581,7 +15581,7 @@ pub const EPHJOKMFFCN = struct {
 };
 pub const JGECDECGEMH = struct {
     pub const DBCKDAMCKOC_field_desc: struct{ u32, u32 } = .{1, 139};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{3, 3127};
+    pub const type_field_desc: struct{ u32, u32 } = .{3, 3127};
     pub const EEABIBOHKPG_field_desc: struct{ u32, u32 } = .{11, 11284};
     pub const PHAMOPHKNGC_field_desc: struct{ u32, u32 } = .{12, 12125};
 };
@@ -15625,7 +15625,7 @@ pub const OEFIDBLOGDL = struct {
 pub const MMOFBAMCNNP = struct {
     pub const JBPBEKIIDML_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const equip_list_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const LJLKIFGBOJB_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const properties_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const DLMADFBOEBP_field_desc: struct{ u32, u32 } = .{5, 5364};
     pub const unlocked_talent_num_field_desc: struct{ u32, u32 } = .{6, 7453};
     pub const skill_type_level_field_desc: struct{ u32, u32 } = .{7, 0};
@@ -15660,7 +15660,7 @@ pub const MJIMHCPJDFK = struct {
 pub const AAAIGINCGJE = struct {
     pub const cmd_id: u16 = 1217;
     pub const MLJLFMCBAMK_field_desc: struct{ u32, u32 } = .{3, 15128};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{7, 15406};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{7, 15406};
     pub const LBIKMHFEKGC_field_desc: struct{ u32, u32 } = .{10, 0};
 };
 pub const ONDMFIMBJFL = struct {
@@ -15698,7 +15698,7 @@ pub const LHPKFDECIHJ = struct {
     pub const KFJGIFDNIJE_field_desc: struct{ u32, u32 } = .{2, 3217};
     pub const OKMDDLLGPHA_field_desc: struct{ u32, u32 } = .{3, 8015};
     pub const OKGCLAPJIEO_field_desc: struct{ u32, u32 } = .{9, 1891};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{10, 1863};
+    pub const type_field_desc: struct{ u32, u32 } = .{10, 1863};
     pub const id_field_desc: struct{ u32, u32 } = .{11, 7685};
 };
 pub const MOPFMFODMLC = struct {
@@ -15728,12 +15728,12 @@ pub const DPNFGNGHGIK = struct {
 };
 pub const AHDPAOJGPCO = struct {
     pub const avatar_id_list_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const OJDEHLPAHIL_field_desc: struct{ u32, u32 } = .{5, 5560};
+    pub const layer_index_field_desc: struct{ u32, u32 } = .{5, 5560};
     pub const BCIFINIPBID_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const AKFCOOEENLO_field_desc: struct{ u32, u32 } = .{8, 11394};
-    pub const EJBFBANMDKD_field_desc: struct{ u32, u32 } = .{10, 12785};
+    pub const layer_item_id_field_desc: struct{ u32, u32 } = .{10, 12785};
     pub const APJIALNDPJN_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{12, 13242};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{12, 13242};
     pub const JIAEJDBBGBH_field_desc: struct{ u32, u32 } = .{15, 9594};
 };
 pub const EABIDDLKNFC = struct {
@@ -15803,14 +15803,14 @@ pub const IPJBEIKCJDH = struct {
 pub const ACJPKADALBE = struct {
     pub const total_time_field_desc: struct{ u32, u32 } = .{1, 11983};
     pub const LJIBKNEOKCB_field_desc: struct{ u32, u32 } = .{3, 3236};
-    pub const HCPFFPOIIBG_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const BNMFNBINAFH_field_desc: struct{ u32, u32 } = .{6, 5819};
+    pub const avatar_id_list_field_desc: struct{ u32, u32 } = .{4, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{6, 5819};
     pub const rank_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const GJELCMDFLAE_field_desc: struct{ u32, u32 } = .{8, 10411};
     pub const BBLACIOEBHG_field_desc: struct{ u32, u32 } = .{10, 14527};
     pub const ANBFEGIIIKH_field_desc: struct{ u32, u32 } = .{13, 3670};
-    pub const EJBFBANMDKD_field_desc: struct{ u32, u32 } = .{14, 3773};
+    pub const layer_item_id_field_desc: struct{ u32, u32 } = .{14, 3773};
 };
 pub const HAPPIDJLLMN = struct {
     pub const MIFCOGLLGOD_field_desc: struct{ u32, u32 } = .{9, 8630};
@@ -15869,9 +15869,9 @@ pub const CCCOIHCFEAO = struct {
     pub const FPMINLFOKMN_field_desc: struct{ u32, u32 } = .{4, 11576};
     pub const star_field_desc: struct{ u32, u32 } = .{5, 969};
     pub const exp_field_desc: struct{ u32, u32 } = .{7, 817};
-    pub const LJLKIFGBOJB_field_desc: struct{ u32, u32 } = .{10, 0};
+    pub const properties_field_desc: struct{ u32, u32 } = .{10, 0};
     pub const level_field_desc: struct{ u32, u32 } = .{11, 15144};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{12, 3025};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{12, 3025};
 };
 pub const BECMOPBCAGC = struct {
     pub const NOOBBGLGLHM_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -15890,13 +15890,13 @@ pub const AJNBPACBJLP = struct {
 pub const PLEHKAIBCHN = struct {
     pub const HMOIIHGAFPA_field_desc: struct{ u32, u32 } = .{5, 11648};
     pub const DFOAOBMOOLL_field_desc: struct{ u32, u32 } = .{8, 11666};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{10, 7377};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{10, 7377};
     pub const NOCFNBGJBJA_field_desc: struct{ u32, u32 } = .{11, 7418};
     pub const LADKDHIGCKJ_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const PBCOPANKHIN_field_desc: struct{ u32, u32 } = .{15, 9479};
 };
 pub const BMJLEBPOFLC = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const FIKCMCKFPNM_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const DPIEOIADGPE = struct {
@@ -15932,18 +15932,18 @@ pub const FFFOFFIBCGK = struct {
     pub const LIFHJNJKBJF_field_desc: struct{ u32, u32 } = .{15, 15515};
 };
 pub const FNHAEADLMMP = struct {
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const LKFGLHMMALG_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const FHBPLBCCJHC_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PHPGDIOPOFA_field_desc: struct{ u32, u32 } = .{4, 0};
 };
 pub const BPPPCAKBBKC = struct {
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{11, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const NJGLAJFEFMB_field_desc: struct{ u32, u32 } = .{15, 9915};
 };
 pub const FBDODDLFKDC = struct {
     pub const cmd_id: u16 = 4866;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{5, 15074};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{5, 15074};
 };
 pub const INBJHIBCOEC = struct {
     pub const cmd_id: u16 = 2564;
@@ -15951,7 +15951,7 @@ pub const INBJHIBCOEC = struct {
 };
 pub const MKOPBOLCKHB = struct {
     pub const cmd_id: u16 = 7357;
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{3, 12495};
+    pub const type_field_desc: struct{ u32, u32 } = .{3, 12495};
     pub const GDGGCNCPHAH_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const EHAKFJNPGHF_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const MPJIEFOINPE_field_desc: struct{ u32, u32 } = .{12, 0};
@@ -16016,7 +16016,7 @@ pub const PEHJKBFAICH = struct {
     pub const EHOOHPCFGMA_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const LDOGAGEMCFD_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const DNKMEFCDIIB_field_desc: struct{ u32, u32 } = .{13, 0};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{14, 5169};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{14, 5169};
     pub const quest_id_field_desc: struct{ u32, u32 } = .{15, 2715};
 };
 pub const AEKMAKHJJDP = struct {
@@ -16097,12 +16097,12 @@ pub const PJPAMEAPIDF = struct {
     pub const EFANMFNMMHP_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const IKEPPELAIIJ_field_desc: struct{ u32, u32 } = .{13, 12590};
 };
-pub const NIFAOLLNMPL = struct {
+pub const StartHadalZoneBattleScRsp = struct {
     pub const cmd_id: u16 = 77;
     pub const retcode_field_desc: struct{ u32, u32 } = .{14, 1529};
 };
 pub const HLNDFIIEDMD = struct {
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const JCGFMLAAFIK_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const PBOCPDKPDNF = struct {
@@ -16219,7 +16219,7 @@ pub const KNMBGFKLAGD = struct {
     pub const weapon_list_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const avatar_list_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const CFIODNNABMD_field_desc: struct{ u32, u32 } = .{13, 0};
-    pub const DJEBKNBAPLN_field_desc: struct{ u32, u32 } = .{14, 0};
+    pub const buddy_list_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const KEHOGLDLEAL = struct {
     pub const cmd_id: u16 = 5051;
@@ -16245,7 +16245,7 @@ pub const JEADIFJNOJA = struct {
 pub const LPOPOMBOAJG = struct {
     pub const LHMPCGLFNFG_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const EJIDLLBOJMP_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PBHGHIAMAJL_field_desc: struct{ u32, u32 } = .{4, 0};
 };
 pub const IGFOMKGDFGO = struct {
@@ -16275,7 +16275,7 @@ pub const PGGKMFMAEIH = struct {
     pub const CJECLEFBBKN_field_desc: struct{ u32, u32 } = .{14, 9230};
 };
 pub const KMBBFKDHOOI = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{6, 11071};
+    pub const type_field_desc: struct{ u32, u32 } = .{6, 11071};
     pub const AAOJLAJMCBG_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const MEKEPGEJHBJ_field_desc: struct{ u32, u32 } = .{14, 0};
 };
@@ -16331,7 +16331,7 @@ pub const AJBLCDIEFAI = struct {
     pub const KKOGPJDJNEL_field_desc: struct{ u32, u32 } = .{5, 6184};
 };
 pub const LBBKIGMJGEC = struct {
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{1, 10455};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{1, 10455};
     pub const HNCANNJMHFK_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const LMIPJDJFIAP_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const NDIPLCFEIOH_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -16340,7 +16340,7 @@ pub const LBBKIGMJGEC = struct {
     pub const DFOAOBMOOLL_field_desc: struct{ u32, u32 } = .{7, 6378};
     pub const NOCFNBGJBJA_field_desc: struct{ u32, u32 } = .{8, 6655};
     pub const CCKAICJJPNJ_field_desc: struct{ u32, u32 } = .{9, 0};
-    pub const EPAFOPIKIPC_field_desc: struct{ u32, u32 } = .{10, 12365};
+    pub const refresh_status_field_desc: struct{ u32, u32 } = .{10, 12365};
     pub const BGKJELIGNJG_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const CLCKKAJIPBJ_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const GAJEIBBPMEP_field_desc: struct{ u32, u32 } = .{13, 3651};
@@ -16389,8 +16389,8 @@ pub const NLMOLMPPBNH = struct {
 };
 pub const GGFLMEEDFEO = struct {
     pub const IKBOHJPNNDK_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const CGFAJDMJFMD_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const begin_timestamp_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const EEHPALKMOOO = struct {
     pub const JDHOJNNDGMC_field_desc: struct{ u32, u32 } = .{2, 0};
@@ -16433,7 +16433,7 @@ pub const IDKNLBOCHMA = struct {
 pub const JDFLNELGNOP = struct {
     pub const cmd_id: u16 = 3080;
     pub const play_type_field_desc: struct{ u32, u32 } = .{1, 10823};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{7, 7857};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{7, 7857};
     pub const PPFPCOAMBKH_field_desc: struct{ u32, u32 } = .{8, 7884};
     pub const KDPPCBNFLDJ_field_desc: struct{ u32, u32 } = .{9, 12883};
 };
@@ -16453,7 +16453,7 @@ pub const JDOPDLPNDIG = struct {
     pub const ECLJNBCBABN_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const GJLIEAIEKDN_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const GAPJINFMBJN_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const HIBJGKBIMCO_field_desc: struct{ u32, u32 } = .{11, 0};
+    pub const participators_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const HLIHNGFFGOG_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const KMPLMDKMNOG_field_desc: struct{ u32, u32 } = .{13, 0};
     pub const NPHBMBIKKAI_field_desc: struct{ u32, u32 } = .{14, 0};
@@ -16502,9 +16502,9 @@ pub const ACGGNEADEGP = struct {
     pub const cmd_id: u16 = 8822;
     pub const quest_id_field_desc: struct{ u32, u32 } = .{8, 9311};
 };
-pub const BBKDODBMNBN = struct {
+pub const GetHadalZoneDataScRsp = struct {
     pub const cmd_id: u16 = 4539;
-    pub const KAOKMNAFMBL_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const hadal_entrance_list_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const retcode_field_desc: struct{ u32, u32 } = .{11, 13623};
 };
 pub const AEALNBLLHNP = struct {
@@ -16574,7 +16574,7 @@ pub const KDEDGAADAMH = struct {
 };
 pub const GFDEBPPADBF = struct {
     pub const cmd_id: u16 = 8291;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{7, 13638};
+    pub const tag_field_desc: struct{ u32, u32 } = .{7, 13638};
 };
 pub const GCNJPLLPENA = struct {
     pub const cmd_id: u16 = 5544;
@@ -16629,7 +16629,7 @@ pub const ModAvatarCsReq = struct {
     pub const cmd_id: u16 = 3022;
     pub const avatar_id_field_desc: struct{ u32, u32 } = .{1, 7787};
     pub const control_avatar_id_field_desc: struct{ u32, u32 } = .{3, 15595};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{10, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{10, 0};
     pub const control_guise_avatar_id_field_desc: struct{ u32, u32 } = .{14, 12072};
 };
 pub const MKAJHMHDMKG = struct {
@@ -16662,7 +16662,7 @@ pub const OIBACPHJCDA = struct {
     pub const IMPPOMELBCO_field_desc: struct{ u32, u32 } = .{13, 15930};
 };
 pub const AEGHJPIKEGI = struct {
-    pub const PPFKHHDDAKE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const npc_list_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const OKCJEOPHMAN_field_desc: struct{ u32, u32 } = .{6, 0};
 };
 pub const BCNFKNNNFLJ = struct {
@@ -16845,7 +16845,7 @@ pub const EAIHGABKEAI = struct {
     pub const star_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const NAAJAOCNPJG_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const MOEOKPKCAPJ_field_desc: struct{ u32, u32 } = .{13, 0};
-    pub const DJEBKNBAPLN_field_desc: struct{ u32, u32 } = .{14, 0};
+    pub const buddy_list_field_desc: struct{ u32, u32 } = .{14, 0};
     pub const KDHLEKIEBPO_field_desc: struct{ u32, u32 } = .{15, 0};
     pub const HFIINJGCHPI_field_desc: struct{ u32, u32 } = .{17, 0};
     pub const AOIEICPDLJB_field_desc: struct{ u32, u32 } = .{18, 0};
@@ -16905,9 +16905,9 @@ pub const BAODHNCGJGL = struct {
 pub const INKNOACGONE = struct {
     pub const cmd_id: u16 = 5227;
     pub const BNDMEHKLEJO_field_desc: struct{ u32, u32 } = .{3, 0};
-    pub const LJHBEAHDJGN_field_desc: struct{ u32, u32 } = .{5, 3946};
+    pub const action_type_field_desc: struct{ u32, u32 } = .{5, 3946};
     pub const FKDKNHEIHEB_field_desc: struct{ u32, u32 } = .{6, 0};
-    pub const AGMANPJBJLN_field_desc: struct{ u32, u32 } = .{7, 0};
+    pub const body_field_desc: struct{ u32, u32 } = .{7, 0};
 };
 pub const JAIKFDCEHIG = struct {
     pub const cmd_id: u16 = 9925;
@@ -16999,7 +16999,7 @@ pub const EKBNHLIBGEN = struct {
 pub const HCIGBHDHGFO = struct {
     pub const cmd_id: u16 = 2569;
     pub const GDFKDLBLNAL_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{15, 7861};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{15, 7861};
 };
 pub const EOFDLBBOMMP = struct {
     pub const cmd_id: u16 = 3961;
@@ -17033,7 +17033,7 @@ pub const MAENEGPLCPJ = struct {
     pub const NPDNAGJMPAI_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const JCJFNFGFOKP_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const FDFBOILPGHM_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const EPAFOPIKIPC_field_desc: struct{ u32, u32 } = .{6, 0};
+    pub const refresh_status_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const DNPDGIAIOFK_field_desc: struct{ u32, u32 } = .{7, 0};
 };
 pub const NEFCFKDKEJP = struct {
@@ -17102,7 +17102,7 @@ pub const AOHDHNBKLPI = struct {
 };
 pub const CNOPJMHBKGN = struct {
     pub const cmd_id: u16 = 8042;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{11, 10644};
+    pub const tag_field_desc: struct{ u32, u32 } = .{11, 10644};
 };
 pub const JLPPOOJILPP = struct {
     pub const JBCBKDDIBNG_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -17113,7 +17113,7 @@ pub const LHOIPOHJIFC = struct {
 pub const CKNMPLNFOMF = struct {
     pub const cmd_id: u16 = 755;
     pub const CNJOMNMEMJJ_field_desc: struct{ u32, u32 } = .{7, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{12, 13651};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{12, 13651};
 };
 pub const JPOIFFFDBHE = struct {
 };
@@ -17200,7 +17200,7 @@ pub const HAGGPLKKBPK = struct {
     pub const NFLOCLEIMBI_field_desc: struct{ u32, u32 } = .{9, 12300};
     pub const DILMNCFCMBO_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const BPKCELGFHLA_field_desc: struct{ u32, u32 } = .{13, 11356};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{14, 455};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{14, 455};
 };
 pub const GNPAPDHHMJB = struct {
     pub const GPIAMEBLIIF_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -17238,7 +17238,7 @@ pub const JMEGGFEJCOP = struct {
 };
 pub const IBODACIGGEE = struct {
     pub const GNOFILBAFIO_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const MEMCMHEMCCM_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const OHEFKEIEIIL_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const ALEPOFPHCOI_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -17264,7 +17264,7 @@ pub const GCIEHFKBMGH = struct {
 };
 pub const SceneData = struct {
     pub const KFPELIAEONG_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const DFLDHHHOINJ_field_desc: struct{ u32, u32 } = .{2, 7259};
+    pub const enemy_property_scale_field_desc: struct{ u32, u32 } = .{2, 7259};
     pub const DKEMKCLKIPE_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PPKHJAKNICE_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const FEDEHMOOKPI_field_desc: struct{ u32, u32 } = .{5, 6085};
@@ -17274,7 +17274,7 @@ pub const SceneData = struct {
     pub const hall_scene_data_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const EMOJFPNNHFN_field_desc: struct{ u32, u32 } = .{10, 0};
     pub const AFLIBEGBNLI_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const PPOAPLPLHHH_field_desc: struct{ u32, u32 } = .{12, 0};
+    pub const hadal_zone_scene_data_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const play_type_field_desc: struct{ u32, u32 } = .{13, 7941};
     pub const scene_type_field_desc: struct{ u32, u32 } = .{14, 1902};
     pub const MOLJGFODCHD_field_desc: struct{ u32, u32 } = .{15, 0};
@@ -17318,13 +17318,13 @@ pub const OGCDDOFIPCF = struct {
 pub const ENEIBKLMKIJ = struct {
     pub const cmd_id: u16 = 9310;
     pub const index_field_desc: struct{ u32, u32 } = .{5, 12987};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{15, 9843};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{15, 9843};
 };
 pub const LPNPILJALEN = struct {
     pub const cmd_id: u16 = 3483;
 };
 pub const CDIBLLEBLPN = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const PGADIEHEOBH_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const IBPMHFLDGAE_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const JENPMNKPANM_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -17345,7 +17345,7 @@ pub const CDIBLLEBLPN = struct {
     pub const MPEEDHLKDOD_field_desc: struct{ u32, u32 } = .{19, 0};
 };
 pub const HJACJLIFJLC = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const GLEACJBJBJH_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const GKGMMFHMNHJ = struct {
@@ -17446,7 +17446,7 @@ pub const FBEHHMNCMNH = struct {
 pub const IECDHKOJIGI = struct {
     pub const cmd_id: u16 = 1991;
     pub const quest_id_field_desc: struct{ u32, u32 } = .{1, 7551};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{3, 69};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{3, 69};
     pub const MLIDDBEKDNK_field_desc: struct{ u32, u32 } = .{5, 6774};
     pub const OHBFOGLNCNA_field_desc: struct{ u32, u32 } = .{11, 13601};
 };
@@ -17500,7 +17500,7 @@ pub const ABLGMDMDEGC = struct {
     pub const msg_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const FCFHGBNDBMJ_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const MDOJOAFEPFD_field_desc: struct{ u32, u32 } = .{11, 13085};
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{12, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const JPAGHOILDDI_field_desc: struct{ u32, u32 } = .{13, 7435};
 };
 pub const PMGCLBLLIJG = struct {
@@ -17534,7 +17534,7 @@ pub const MLHJDNDBEMJ = struct {
 };
 pub const LDCNIFCAAGA = struct {
     pub const cmd_id: u16 = 1157;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{2, 5859};
+    pub const tag_field_desc: struct{ u32, u32 } = .{2, 5859};
 };
 pub const HJLCJIJNHAI = struct {
     pub const cmd_id: u16 = 9906;
@@ -17542,7 +17542,7 @@ pub const HJLCJIJNHAI = struct {
 };
 pub const JONBGJAMJHH = struct {
     pub const cmd_id: u16 = 3203;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{4, 5057};
+    pub const tag_field_desc: struct{ u32, u32 } = .{4, 5057};
     pub const OGIOLOLINJN_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const DIHHLKDKMMA_field_desc: struct{ u32, u32 } = .{14, 0};
 };
@@ -17658,7 +17658,7 @@ pub const KAPFPNNILDL = struct {
     pub const cmd_id: u16 = 3943;
     pub const CLMCPOHFOBB_field_desc: struct{ u32, u32 } = .{6, 1390};
     pub const FBDGOFDLLJA_field_desc: struct{ u32, u32 } = .{7, 1331};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{8, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const JDCAOGGDJIL_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const ENDFDODOAHB = struct {
@@ -17729,8 +17729,8 @@ pub const ABPOHPHEKOD = struct {
     pub const AHMNOANIMDA_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const FGBFAMBFCLA = struct {
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const JNIPMLPCJJA_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const interact_id_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const OONOJBFEMFP = struct {
     pub const cmd_id: u16 = 9614;
@@ -17751,8 +17751,8 @@ pub const FLICCPNHJLB = struct {
     pub const PEKCIKBGJPF_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const AAHADPIDKJF_field_desc: struct{ u32, u32 } = .{8, 13992};
     pub const GLEACJBJBJH_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{11, 11196};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{12, 14051};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{11, 11196};
+    pub const type_field_desc: struct{ u32, u32 } = .{12, 14051};
     pub const EHILPPGDCBN_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const MIHEABJCJOK = struct {
@@ -17762,7 +17762,7 @@ pub const MIHEABJCJOK = struct {
 };
 pub const CKDCGHFFPIG = struct {
     pub const cmd_id: u16 = 8785;
-    pub const JFDFCDBAIOP_field_desc: struct{ u32, u32 } = .{12, 12755};
+    pub const entrance_id_field_desc: struct{ u32, u32 } = .{12, 12755};
 };
 pub const AOMGFLECOBO = struct {
     pub const cmd_id: u16 = 9999;
@@ -17779,7 +17779,7 @@ pub const BGHBNLMICOL = struct {
     pub const BKNPMJJLFJJ_field_desc: struct{ u32, u32 } = .{7, 4067};
 };
 pub const BEPCCPLMBOO = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 3204};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 3204};
     pub const BGOMMLPIGCK_field_desc: struct{ u32, u32 } = .{3, 1989};
     pub const HBEPECOIPGG_field_desc: struct{ u32, u32 } = .{4, 14992};
     pub const LKECKEKGKOD_field_desc: struct{ u32, u32 } = .{10, 606};
@@ -17789,7 +17789,7 @@ pub const JEOCIOJHEIJ = struct {
     pub const KHNFMCAAOJB_field_desc: struct{ u32, u32 } = .{5, 15958};
     pub const MAGMBEOJJFI_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const KDBGEKFEBLC_field_desc: struct{ u32, u32 } = .{8, 8321};
-    pub const EPAFOPIKIPC_field_desc: struct{ u32, u32 } = .{10, 3748};
+    pub const refresh_status_field_desc: struct{ u32, u32 } = .{10, 3748};
 };
 pub const MKMLEMPGOEF = struct {
     pub const OIHJDEFJMKA_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -17910,7 +17910,7 @@ pub const LKMGOJCIFAO = struct {
     pub const CLMCGDEFMCK_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const MNNEIIDHFOD = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const DBCEADGDLBA_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const AFKEPDOJOMN = struct {
@@ -17934,7 +17934,7 @@ pub const EGFAIFEHKPB = struct {
 };
 pub const GNDKCOECIHA = struct {
     pub const cmd_id: u16 = 979;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{8, 10663};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{8, 10663};
 };
 pub const DCMMMIPLKGH = struct {
     pub const IADLEJPAKCP_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -18000,7 +18000,7 @@ pub const DAMJPIMMPNB = struct {
     pub const INMLNEHFPDA_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const DNKLOFBAOCL = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const FGAMBMONOFG_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const LJJEAMGHFEP_field_desc: struct{ u32, u32 } = .{3, 0};
 };
@@ -18095,14 +18095,14 @@ pub const KPOFEDDNPGM = struct {
 };
 pub const KJEODIACBHJ = struct {
     pub const OCJGKLLFIML_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const GCHDOFNLKAI_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const DJLBAAJMMHI_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const FGEJLNPECJN_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const GPPPMIJPCFP_field_desc: struct{ u32, u32 } = .{6, 0};
 };
 pub const AKJEKDEOGME = struct {
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const OKGCLAPJIEO_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const HFKDGHFAPBG = struct {
@@ -18182,7 +18182,7 @@ pub const QuestInfo = struct {
     pub const EIGOHBCEEJO_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const NFFHDMECLFO_field_desc: struct{ u32, u32 } = .{10, 0};
     pub const AEOOEGLINJO_field_desc: struct{ u32, u32 } = .{11, 4090};
-    pub const CGFAJDMJFMD_field_desc: struct{ u32, u32 } = .{13, 12921};
+    pub const begin_timestamp_field_desc: struct{ u32, u32 } = .{13, 12921};
     pub const OABIJBGONGA_field_desc: struct{ u32, u32 } = .{14, 8016};
     pub const NMJNDJNIALM_field_desc: struct{ u32, u32 } = .{15, 0};
 };
@@ -18218,7 +18218,7 @@ pub const AKMGLFDDDMM = struct {
     pub const cmd_id: u16 = 5374;
     pub const KNONKNPLDJA_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const EKFJPGBAELO_field_desc: struct{ u32, u32 } = .{6, 15535};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{13, 9267};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{13, 9267};
 };
 pub const EEEHKBGPMFB = struct {
     pub const MAGNHGCPCJD_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -18308,11 +18308,11 @@ pub const EMGCPLHIACP = struct {
     pub const FBFLOIEBCFF_field_desc: struct{ u32, u32 } = .{8, 0};
 };
 pub const CJLONCIMAPD = struct {
-    pub const JNIPMLPCJJA_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const LEMIKMJAAEA_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const interact_id_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const tag_id_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const LOPCLBKJKFE_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const MAGMBEOJJFI_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const HIBJGKBIMCO_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const participators_field_desc: struct{ u32, u32 } = .{5, 0};
 };
 pub const NNIMPGIFMJG = struct {
     pub const LENDFLMKGEN_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -18383,18 +18383,18 @@ pub const ELAKKNHEPHF = struct {
 };
 pub const JJGADKPENFJ = struct {
     pub const FANCGKGHDNB_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const IKLEBJOPEOI = struct {
     pub const OKGCLAPJIEO_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const MNALMBDEDIO_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const GBDELDBAMLO_field_desc: struct{ u32, u32 } = .{11, 1523};
     pub const LJNNHNCMBKJ_field_desc: struct{ u32, u32 } = .{13, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{15, 2315};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{15, 2315};
 };
 pub const KHDGGJHKENM = struct {
     pub const param_list_field_desc: struct{ u32, u32 } = .{7, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{11, 9087};
+    pub const type_field_desc: struct{ u32, u32 } = .{11, 9087};
 };
 pub const HOAEGPHDGBD = struct {
     pub const cmd_id: u16 = 3359;
@@ -18422,7 +18422,7 @@ pub const JDLAIGLAJDL = struct {
 };
 pub const IFJDPAFHHCK = struct {
     pub const cmd_id: u16 = 8166;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{5, 3797};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{5, 3797};
     pub const retcode_field_desc: struct{ u32, u32 } = .{12, 15842};
 };
 pub const BGKCAKALFPH = struct {
@@ -18431,7 +18431,7 @@ pub const BGKCAKALFPH = struct {
 };
 pub const JEAHPGJLMBI = struct {
     pub const cmd_id: u16 = 7007;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{9, 863};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{9, 863};
     pub const DILMNCFCMBO_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const BJMKEPOPPFA = struct {
@@ -18443,14 +18443,14 @@ pub const BJMKEPOPPFA = struct {
 };
 pub const FOOCLAGEJHB = struct {
     pub const cmd_id: u16 = 3174;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{11, 14223};
+    pub const tag_field_desc: struct{ u32, u32 } = .{11, 14223};
 };
 pub const JBBNCDMMAAD = struct {
 };
-pub const CAAAPEKMKEP = struct {
+pub const EnterSectionCsReq = struct {
     pub const cmd_id: u16 = 1902;
     pub const KNKILIPAHMJ_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{3, 667};
+    pub const tag_field_desc: struct{ u32, u32 } = .{3, 667};
     pub const section_id_field_desc: struct{ u32, u32 } = .{5, 7012};
     pub const OKAHMANOCFF_field_desc: struct{ u32, u32 } = .{7, 11448};
     pub const NPDNAGJMPAI_field_desc: struct{ u32, u32 } = .{8, 8692};
@@ -18458,7 +18458,7 @@ pub const CAAAPEKMKEP = struct {
     pub const MCNIMIMPIKE_field_desc: struct{ u32, u32 } = .{10, 5767};
     pub const transform_id_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const LMANGAAFCOM_field_desc: struct{ u32, u32 } = .{12, 0};
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{14, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{14, 0};
     pub const JBDGOAAPJGB_field_desc: struct{ u32, u32 } = .{15, 15237};
 };
 pub const MAGKMEDANKO = struct {
@@ -18524,7 +18524,7 @@ pub const CNDADOEJILC = struct {
     pub const avatar_skin_id_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const PMELDINHKAF = struct {
-    pub const PPFKHHDDAKE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const npc_list_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const DOGFJPMNPBG_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const FDFBOILPGHM_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const NPDNAGJMPAI_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -18579,7 +18579,7 @@ pub const IAABCIPJCLH = struct {
     pub const cmd_id: u16 = 8761;
     pub const IGODEOPJOKO_field_desc: struct{ u32, u32 } = .{1, 8379};
     pub const ONFKNILFFPA_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{12, 10618};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{12, 10618};
 };
 pub const NFHJNFKBFCG = struct {
     pub const DNCIIDHADOG_field_desc: struct{ u32, u32 } = .{1, 2117};
@@ -18680,7 +18680,7 @@ pub const CLACJBMCNIL = struct {
 pub const KGJIDPPIBHE = struct {
     pub const cmd_id: u16 = 6112;
     pub const EFNHJHLPKHA_field_desc: struct{ u32, u32 } = .{9, 16199};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{15, 14729};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{15, 14729};
 };
 pub const BMJHNIOILGB = struct {
     pub const HJNOGKOBIIC_field_desc: struct{ u32, u32 } = .{6, 0};
@@ -18772,7 +18772,7 @@ pub const OGHNPKEKODL = struct {
 };
 pub const HLPEOKJLOMD = struct {
     pub const cmd_id: u16 = 4289;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{2, 4665};
+    pub const tag_field_desc: struct{ u32, u32 } = .{2, 4665};
     pub const retcode_field_desc: struct{ u32, u32 } = .{8, 14479};
 };
 pub const ADFCMJDDDHJ = struct {
@@ -18820,7 +18820,7 @@ pub const KFHCNIAHBMH = struct {
     pub const JCJFNFGFOKP_field_desc: struct{ u32, u32 } = .{6, 0};
 };
 pub const PPAAPBFKGPE = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{13, 6707};
+    pub const type_field_desc: struct{ u32, u32 } = .{13, 6707};
 };
 pub const LKNOJAGNNHO = struct {
     pub const cmd_id: u16 = 1207;
@@ -18982,14 +18982,14 @@ pub const AEHJMGNGGNG = struct {
     pub const cmd_id: u16 = 7142;
     pub const FJMEHEBAEEB_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const retcode_field_desc: struct{ u32, u32 } = .{12, 4047};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{15, 14529};
+    pub const tag_field_desc: struct{ u32, u32 } = .{15, 14529};
 };
 pub const HCCJBANLKDJ = struct {
     pub const cmd_id: u16 = 8789;
     pub const AMAAFNLMFOG_field_desc: struct{ u32, u32 } = .{1, 2106};
 };
 pub const HCMFJONGNDN = struct {
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const LEJNHJDPBLG = struct {
     pub const HHLOALDPIBK_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -19035,7 +19035,7 @@ pub const BLFFGEDKGLC = struct {
     pub const AAOJLAJMCBG_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const ECMMPEKCMGP = struct {
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const FHBPLBCCJHC_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const LKFGLHMMALG_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const IEHBMOKFBHG_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -19085,7 +19085,7 @@ pub const HDKHPELEPFP = struct {
     pub const KELIDNMHAKL_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const JGJHHDOGFCM_field_desc: struct{ u32, u32 } = .{10, 0};
     pub const NBOCGHFBBHP_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{13, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{13, 0};
 };
 pub const AbyssArpeggioGetDataCsReq = struct {
     pub const cmd_id: u16 = 6001;
@@ -19109,14 +19109,14 @@ pub const HPNGHBPLKFM = struct {
 pub const LFKEFFGOCKE = struct {
     pub const NKCDGOMPGMP_field_desc: struct{ u32, u32 } = .{1, 0};
 };
-pub const OBJAHLINILD = struct {
+pub const GetBuddyDataScRsp = struct {
     pub const cmd_id: u16 = 8485;
     pub const HIEHFJMBFHH_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const retcode_field_desc: struct{ u32, u32 } = .{4, 12179};
     pub const AKMBAABCFFA_field_desc: struct{ u32, u32 } = .{8, 13939};
     pub const NOBAADKBINO_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const FJODENLEOMD_field_desc: struct{ u32, u32 } = .{10, 2299};
-    pub const DJEBKNBAPLN_field_desc: struct{ u32, u32 } = .{15, 0};
+    pub const buddy_list_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const KAPBMCLAHKI = struct {
     pub const cmd_id: u16 = 7608;
@@ -19125,7 +19125,7 @@ pub const KAPBMCLAHKI = struct {
 pub const FAEFJNCMLIN = struct {
     pub const cmd_id: u16 = 2966;
     pub const NPDNAGJMPAI_field_desc: struct{ u32, u32 } = .{3, 3603};
-    pub const EPNMAGGOBLI_field_desc: struct{ u32, u32 } = .{7, 0};
+    pub const force_refresh_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const AIEJJPLFBDC_field_desc: struct{ u32, u32 } = .{15, 12547};
 };
 pub const HDHGBBBFAGL = struct {
@@ -19173,7 +19173,7 @@ pub const KLMAHJCGPNJ = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{7, 6239};
 };
 pub const LDJNHFHCPLD = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{3, 15461};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{3, 15461};
     pub const KOHEANLPFJA_field_desc: struct{ u32, u32 } = .{11, 0};
 };
 pub const KFONOHIHJIG = struct {
@@ -19204,11 +19204,11 @@ pub const BALNGKCNNDP = struct {
     pub const OKMJEPIMOJP_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const CMKGFOMJHNL_field_desc: struct{ u32, u32 } = .{2, 0};
 };
-pub const GBBPJIPLGLL = struct {
+pub const InteractWithUnitCsReq = struct {
     pub const cmd_id: u16 = 5265;
-    pub const JNIPMLPCJJA_field_desc: struct{ u32, u32 } = .{5, 14499};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{6, 0};
-    pub const CKLBLDDIFKP_field_desc: struct{ u32, u32 } = .{12, 12163};
+    pub const interact_id_field_desc: struct{ u32, u32 } = .{5, 14499};
+    pub const type_field_desc: struct{ u32, u32 } = .{6, 0};
+    pub const npc_tag_id_field_desc: struct{ u32, u32 } = .{12, 12163};
 };
 pub const IIEIDDMGJEN = struct {
     pub const GFMAOODDCOL_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -19262,7 +19262,7 @@ pub const IHPDIJBMCAM = struct {
     pub const uid_field_desc: struct{ u32, u32 } = .{4, 16026};
     pub const id_field_desc: struct{ u32, u32 } = .{5, 7540};
 };
-pub const MECJOOMHHNB = struct {
+pub const SectionRefreshCsReq = struct {
     pub const cmd_id: u16 = 5899;
     pub const LMANGAAFCOM_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const KNKILIPAHMJ_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -19316,7 +19316,7 @@ pub const BNGEAEFAELI = struct {
     pub const cmd_id: u16 = 6132;
     pub const DNPDGIAIOFK_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const OKCJEOPHMAN_field_desc: struct{ u32, u32 } = .{7, 0};
-    pub const PPFKHHDDAKE_field_desc: struct{ u32, u32 } = .{9, 0};
+    pub const npc_list_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const NPDNAGJMPAI_field_desc: struct{ u32, u32 } = .{10, 2137};
 };
 pub const OCBEGHHNKKH = struct {
@@ -19326,7 +19326,7 @@ pub const OCBEGHHNKKH = struct {
 };
 pub const LLDOLMAJICC = struct {
     pub const cmd_id: u16 = 2880;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 13047};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 13047};
     pub const HDALMNFOLAD_field_desc: struct{ u32, u32 } = .{3, 2781};
 };
 pub const CMGOBFNFAGB = struct {
@@ -19387,7 +19387,7 @@ pub const OHBLDDBBOMD = struct {
     pub const IBJNGGGGECD_field_desc: struct{ u32, u32 } = .{5, 0};
 };
 pub const FCCEJJAEPNC = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const IHLFIIAIHIA = struct {
     pub const cmd_id: u16 = 9813;
@@ -19493,7 +19493,7 @@ pub const LKEOHEIKDAE = struct {
     pub const unlock_time_field_desc: struct{ u32, u32 } = .{3, 9471};
     pub const GOAMJIELNEK_field_desc: struct{ u32, u32 } = .{9, 12541};
     pub const AFBFCBNDIMF_field_desc: struct{ u32, u32 } = .{14, 1794};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{15, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const KCGDLGEGNHA = struct {
     pub const cmd_id: u16 = 765;
@@ -19679,19 +19679,19 @@ pub const GetSelfBasicInfoScRsp = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{2, 14378};
     pub const self_basic_info_field_desc: struct{ u32, u32 } = .{4, 0};
 };
-pub const ACJJLADGCFP = struct {
+pub const InteractInfo = struct {
     pub const MKOEKNAOPEG_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const MMLLOKAJNFC_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const scale_x_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const AHAECHILHGA_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const LDBCMGABNCL_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const DANIKMDFKEJ_field_desc: struct{ u32, u32 } = .{7, 0};
-    pub const HIBJGKBIMCO_field_desc: struct{ u32, u32 } = .{8, 0};
-    pub const LEMIKMJAAEA_field_desc: struct{ u32, u32 } = .{9, 4400};
-    pub const DNLPOBNJMBH_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const NFPBGKOCDKC_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{12, 0};
-    pub const FMJDLJANANM_field_desc: struct{ u32, u32 } = .{13, 0};
-    pub const JLEDCPOLMKC_field_desc: struct{ u32, u32 } = .{14, 0};
+    pub const interact_target_list_field_desc: struct{ u32, u32 } = .{7, 0};
+    pub const participators_field_desc: struct{ u32, u32 } = .{8, 0};
+    pub const tag_id_field_desc: struct{ u32, u32 } = .{9, 4400};
+    pub const scale_y_field_desc: struct{ u32, u32 } = .{10, 0};
+    pub const scale_z_field_desc: struct{ u32, u32 } = .{11, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{12, 0};
+    pub const scale_w_field_desc: struct{ u32, u32 } = .{13, 0};
+    pub const scale_r_field_desc: struct{ u32, u32 } = .{14, 0};
     pub const MHMIEFEBKHL_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const BLKIEFPLMAO = struct {
@@ -19718,7 +19718,7 @@ pub const GIKNILOIMCL = struct {
 pub const HCCJEHOJHIM = struct {
     pub const BCFNAECPNBA_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const GJPMCCDIHIK_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const MHBNAOGBAFJ = struct {
     pub const AFBFCBNDIMF_field_desc: struct{ u32, u32 } = .{7, 10436};
@@ -19806,7 +19806,7 @@ pub const EFIMCLHPHKC = struct {
 };
 pub const MCKIJILHJGP = struct {
     pub const cmd_id: u16 = 6119;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{4, 13329};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{4, 13329};
 };
 pub const GCCMGIKGMPN = struct {
     pub const BEBJIJKFDOJ_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -19821,7 +19821,7 @@ pub const MEEDDGEAAGK = struct {
 };
 pub const DLHINCDIBDA = struct {
     pub const cmd_id: u16 = 4798;
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{2, 16191};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{2, 16191};
     pub const BLHNHHMLKCP_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const lock_field_desc: struct{ u32, u32 } = .{11, 0};
 };
@@ -19866,7 +19866,7 @@ pub const PINMBCGLCEO = struct {
 };
 pub const BCJECENIGGN = struct {
     pub const id_field_desc: struct{ u32, u32 } = .{8, 10281};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{9, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{9, 0};
 };
 pub const BFNKFLGIIFH = struct {
     pub const cmd_id: u16 = 7329;
@@ -19921,7 +19921,7 @@ pub const GOPPDGJMCAO = struct {
     pub const CJECLEFBBKN_field_desc: struct{ u32, u32 } = .{14, 15280};
 };
 pub const LHKJJPLNJIB = struct {
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const BCIFINIPBID_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const LKOGLCHFKOG_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const APFDCAALPNG_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -20089,7 +20089,7 @@ pub const GBHDOCFCKLK = struct {
     pub const position_field_desc: struct{ u32, u32 } = .{4, 0};
 };
 pub const LKOKHHFAPHH = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const DHHCJDEFFEH_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const DKDLOALOOOD_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const NEGEKADIINL_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -20228,20 +20228,20 @@ pub const PCEHOIGLCBP = struct {
     pub const index_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const HLGACLICPPP_field_desc: struct{ u32, u32 } = .{2, 0};
 };
-pub const NCEKANIGDIG = struct {
-    pub const GAOGAKAADGG_field_desc: struct{ u32, u32 } = .{1, 0};
+pub const HadalZoneSceneData = struct {
+    pub const first_room_avatar_id_list_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const DIFBOFBFLPO_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const BFPBELNFNBP_field_desc: struct{ u32, u32 } = .{3, 5813};
-    pub const OJDEHLPAHIL_field_desc: struct{ u32, u32 } = .{4, 13795};
+    pub const first_room_buddy_id_field_desc: struct{ u32, u32 } = .{3, 5813};
+    pub const layer_index_field_desc: struct{ u32, u32 } = .{4, 13795};
     pub const OMPDDDEMHNA_field_desc: struct{ u32, u32 } = .{5, 1489};
-    pub const HBGLKPMHNMO_field_desc: struct{ u32, u32 } = .{6, 9944};
-    pub const INPPLCIHBLK_field_desc: struct{ u32, u32 } = .{7, 6730};
+    pub const room_index_field_desc: struct{ u32, u32 } = .{6, 9944};
+    pub const zone_id_field_desc: struct{ u32, u32 } = .{7, 6730};
     pub const NMFJAJPIKFJ_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const MIKJBPNKLHN_field_desc: struct{ u32, u32 } = .{10, 14550};
     pub const scene_perform_field_desc: struct{ u32, u32 } = .{12, 0};
-    pub const EJBFBANMDKD_field_desc: struct{ u32, u32 } = .{13, 3911};
-    pub const CHBADLKJEJP_field_desc: struct{ u32, u32 } = .{14, 0};
-    pub const OIJEHMDOLMI_field_desc: struct{ u32, u32 } = .{15, 4351};
+    pub const layer_item_id_field_desc: struct{ u32, u32 } = .{13, 3911};
+    pub const second_room_avatar_id_list_field_desc: struct{ u32, u32 } = .{14, 0};
+    pub const second_room_buddy_id_field_desc: struct{ u32, u32 } = .{15, 4351};
 };
 pub const LEOHBCNHADL = struct {
     pub const id_field_desc: struct{ u32, u32 } = .{2, 3829};
@@ -20269,7 +20269,7 @@ pub const ADPLBKLFDNC = struct {
     pub const KMEJNHGPHKN_field_desc: struct{ u32, u32 } = .{4, 0};
 };
 pub const JKMPNBMBNPN = struct {
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const KIIBIGKPHPC_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const LPLAJIJDHLB_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const AEJHIMDCAJD_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -20279,7 +20279,7 @@ pub const JKMPNBMBNPN = struct {
     pub const DEHOGKDKNON_field_desc: struct{ u32, u32 } = .{8, 0};
 };
 pub const FFMIAHDOOPN = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const FNBBOFBEOPN_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const FCPAPEKIHGI_field_desc: struct{ u32, u32 } = .{3, 0};
 };
@@ -20349,7 +20349,7 @@ pub const BIKONPMNEDI = struct {
     pub const OKMJEPIMOJP_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const HallSceneData = struct {
-    pub const PPFKHHDDAKE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const npc_list_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const AJEIMKKHHHO_field_desc: struct{ u32, u32 } = .{2, 8415};
     pub const position_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const IEEFIBJPAHD_field_desc: struct{ u32, u32 } = .{4, 5641};
@@ -20455,7 +20455,7 @@ pub const FLGBFAILEGA = struct {
     pub const EKNGDNIHNLF_field_desc: struct{ u32, u32 } = .{15, 9077};
 };
 pub const FMAENLFMNNH = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const JIIMKCLHDJG_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const DNJIEPIDKJD_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const GOFLEGMBHEH_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -20574,7 +20574,7 @@ pub const HNMHBCAKKMA = struct {
     pub const GIANPLPFKGC_field_desc: struct{ u32, u32 } = .{4, 0};
 };
 pub const HCHBLFNEAOM = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const DLNGBDAJIFC_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const param_list_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const NODELCBGBAA_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -20662,7 +20662,7 @@ pub const BIIDEPODANJ = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{6, 4748};
 };
 pub const CMMPAPKMANB = struct {
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const level_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const GFBLEDHNDGC_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PLECLLFLBCP_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -20678,7 +20678,7 @@ pub const GAKGLIPFBFK = struct {
     pub const KMIPHICGADC_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const ODDLLOONKNC_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const ENNNMGDPKFM_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const GEEFKNDLMJJ_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const HKCOCPBHECN_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const MGBNNJJAMNO_field_desc: struct{ u32, u32 } = .{8, 0};
@@ -20741,12 +20741,12 @@ pub const DEKEFFJLDOO = struct {
 };
 pub const EIFMKCAIMMB = struct {
     pub const cmd_id: u16 = 6238;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{9, 11516};
+    pub const tag_field_desc: struct{ u32, u32 } = .{9, 11516};
 };
 pub const EAIDPKEBGNH = struct {
     pub const BCFNAECPNBA_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const GJPMCCDIHIK_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const GIGPJPGAACI = struct {
     pub const cmd_id: u16 = 4121;
@@ -20795,12 +20795,12 @@ pub const EMOBDCMNNNH = struct {
 };
 pub const OCCGMHELLDJ = struct {
     pub const cmd_id: u16 = 5297;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{15, 13014};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{15, 13014};
 };
 pub const NAPODDAAKON = struct {
     pub const avatar_id_list_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const BBLACIOEBHG_field_desc: struct{ u32, u32 } = .{7, 695};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{15, 16247};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{15, 16247};
 };
 pub const LHIBIELBPHP = struct {
     pub const cmd_id: u16 = 8211;
@@ -20850,7 +20850,7 @@ pub const PIKJAOJKGAI = struct {
     pub const ODDLLOONKNC_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PADJCLALFKP_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const ENNNMGDPKFM_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{6, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const GEEFKNDLMJJ_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const HKCOCPBHECN_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const COHLAGOAOII_field_desc: struct{ u32, u32 } = .{9, 0};
@@ -20883,7 +20883,7 @@ pub const PJCFKDOECEE = struct {
     pub const cmd_id: u16 = 9560;
     pub const FMDPFPKIPMG_field_desc: struct{ u32, u32 } = .{3, 10984};
     pub const ACCMMKGPEPP_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{15, 3912};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{15, 3912};
 };
 pub const GNHPENFKKJH = struct {
     pub const cmd_id: u16 = 1119;
@@ -20918,7 +20918,7 @@ pub const BEJBIEIJFDK = struct {
 };
 pub const NDEGGAONCKD = struct {
     pub const cmd_id: u16 = 2056;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{5, 4506};
+    pub const tag_field_desc: struct{ u32, u32 } = .{5, 4506};
     pub const PLPALJACBCI_field_desc: struct{ u32, u32 } = .{6, 0};
 };
 pub const POKMICFGLCJ = struct {
@@ -20929,7 +20929,7 @@ pub const POKMICFGLCJ = struct {
     pub const CLEBMKCJOAJ_field_desc: struct{ u32, u32 } = .{14, 2293};
 };
 pub const NBECJKBICEK = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const OAKEOPDANHA_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const HMFNNMIBFEK = struct {
@@ -20994,7 +20994,7 @@ pub const BHIIPPKBNBE = struct {
 };
 pub const DJDBNBPIMHJ = struct {
     pub const IBGPBAJLBOI_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const MAKLMDALEGF = struct {
     pub const cmd_id: u16 = 1979;
@@ -21032,7 +21032,7 @@ pub const OJPKMINKGJL = struct {
 };
 pub const KBDLCJJGJEE = struct {
     pub const quest_id_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JINGAEMJADE_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const JCJFNFGFOKP_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const HKNGDMNAOFA_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -21060,7 +21060,7 @@ pub const MJPCEKPCGLC = struct {
 };
 pub const GGBFFCCLBJB = struct {
     pub const cmd_id: u16 = 3369;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{4, 7477};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{4, 7477};
 };
 pub const KDIAHJDJLJO = struct {
     pub const MHIEHKHKGJG_field_desc: struct{ u32, u32 } = .{2, 0};
@@ -21093,7 +21093,7 @@ pub const FOKAKPDIAFB = struct {
 };
 pub const EEOKDIHFNDI = struct {
     pub const cmd_id: u16 = 2980;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{3, 9321};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{3, 9321};
     pub const DILMNCFCMBO_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const DNOFILGKIJH_field_desc: struct{ u32, u32 } = .{15, 0};
 };
@@ -21133,10 +21133,10 @@ pub const EDMEDGGLMGL = struct {
 };
 pub const IIOGPABHBBD = struct {
     pub const cmd_id: u16 = 4087;
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{1, 13351};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{1, 13351};
 };
 pub const AHIKGCHJLDL = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const LOLGLKDMNOB_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const PLFBIJBOMLF_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const NLLELHMBNKP_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -21161,12 +21161,12 @@ pub const LCLIOJJHADJ = struct {
 pub const KBKABNLOCFO = struct {
     pub const cmd_id: u16 = 4892;
     pub const PLPALJACBCI_field_desc: struct{ u32, u32 } = .{6, 0};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{8, 14104};
+    pub const tag_field_desc: struct{ u32, u32 } = .{8, 14104};
 };
 pub const MLENFDGAOHE = struct {
     pub const cmd_id: u16 = 1758;
     pub const PPGDLKIGMJO_field_desc: struct{ u32, u32 } = .{6, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{8, 5949};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{8, 5949};
     pub const CLMCPOHFOBB_field_desc: struct{ u32, u32 } = .{10, 10142};
 };
 pub const OFMEDLKHJEH = struct {
@@ -21378,7 +21378,7 @@ pub const CDOIHNNFGND = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{12, 7846};
 };
 pub const CBAOANAOIPN = struct {
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const CLMCPOHFOBB_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const GOMMEGMMEBJ_field_desc: struct{ u32, u32 } = .{3, 0};
 };
@@ -21396,10 +21396,10 @@ pub const DGPANKFFFKK = struct {
 };
 pub const LKAMOMDCBCI = struct {
     pub const cmd_id: u16 = 9126;
-    pub const DJEBKNBAPLN_field_desc: struct{ u32, u32 } = .{6, 0};
+    pub const buddy_list_field_desc: struct{ u32, u32 } = .{6, 0};
 };
 pub const GBCAHIGNFBM = struct {
-    pub const PPFKHHDDAKE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const npc_list_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const NOMBEIIKFLE_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const PIMNGJHCHKM_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const OEOCCNDNPOC_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -21512,7 +21512,7 @@ pub const MLAEILPEKKF = struct {
 };
 pub const FICOBLDPFDA = struct {
     pub const cmd_id: u16 = 4572;
-    pub const HHNIIFPKNBF_field_desc: struct{ u32, u32 } = .{15, 14121};
+    pub const area_id_field_desc: struct{ u32, u32 } = .{15, 14121};
 };
 pub const KDPDJFHKMGE = struct {
     pub const cmd_id: u16 = 704;
@@ -21800,7 +21800,7 @@ pub const ENKCAKOGILG = struct {
 };
 pub const NMFJCIPDLBH = struct {
     pub const cmd_id: u16 = 2190;
-    pub const INPPLCIHBLK_field_desc: struct{ u32, u32 } = .{7, 9170};
+    pub const zone_id_field_desc: struct{ u32, u32 } = .{7, 9170};
 };
 pub const GCKDJDHDIIO = struct {
     pub const cmd_id: u16 = 4174;
@@ -21866,8 +21866,8 @@ pub const OBMKNBBECBA = struct {
     pub const MDPNKHEHDLO_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const KGPPOEHEIJP_field_desc: struct{ u32, u32 } = .{5, 6231};
     pub const JMAKCIMHCGD_field_desc: struct{ u32, u32 } = .{7, 15575};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{9, 14445};
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{10, 0};
+    pub const tag_field_desc: struct{ u32, u32 } = .{9, 14445};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{10, 0};
     pub const section_id_field_desc: struct{ u32, u32 } = .{11, 5646};
 };
 pub const ADOMNPIILGB = struct {
@@ -21929,7 +21929,7 @@ pub const ADKFFJLCNCG = struct {
 };
 pub const NJOFAHOMKBD = struct {
     pub const cmd_id: u16 = 3342;
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{2, 10933};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{2, 10933};
     pub const GPGHJIJIFMI_field_desc: struct{ u32, u32 } = .{9, 0};
 };
 pub const HEPDHFLILIC = struct {
@@ -21953,7 +21953,7 @@ pub const OJJONMFMPII = struct {
     pub const BPCDOBNIMGO_field_desc: struct{ u32, u32 } = .{11, 3599};
 };
 pub const EMCIEFBEALG = struct {
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{10, 13151};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{10, 13151};
 };
 pub const HNBEIGGGDND = struct {
     pub const cmd_id: u16 = 945;
@@ -22074,7 +22074,7 @@ pub const IKLHHPNFONK = struct {
     pub const NOCFNBGJBJA_field_desc: struct{ u32, u32 } = .{4, 11267};
     pub const HBHJBNLKJFD_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const NIBFLMLPNNA_field_desc: struct{ u32, u32 } = .{6, 13336};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{7, 2824};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{7, 2824};
     pub const ADLOEJKNDKL_field_desc: struct{ u32, u32 } = .{8, 10508};
     pub const LIBIKDLLMEF_field_desc: struct{ u32, u32 } = .{9, 2669};
     pub const CHOJFEJILFD_field_desc: struct{ u32, u32 } = .{10, 0};
@@ -22147,7 +22147,7 @@ pub const KLGCHJDGOBJ = struct {
     pub const EHJHPKKGDKE_field_desc: struct{ u32, u32 } = .{7, 2058};
 };
 pub const IDEPHKEAEJN = struct {
-    pub const DJEBKNBAPLN_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const buddy_list_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const FMHLLPOEEFJ = struct {
 };
@@ -22171,7 +22171,7 @@ pub const AIKPPIEPGBM = struct {
 pub const DBAAFGBFHJK = struct {
     pub const cmd_id: u16 = 7395;
     pub const CKOJOGOKAAA_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{4, 14666};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{4, 14666};
     pub const NKOIMNLIBKB_field_desc: struct{ u32, u32 } = .{6, 0};
 };
 pub const OIFDACFCCMO = struct {
@@ -22293,7 +22293,7 @@ pub const LAICAPCIAPG = struct {
     pub const DMOIPKPKDBD_field_desc: struct{ u32, u32 } = .{4, 12421};
     pub const NMJNDJNIALM_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const JLKAANKLGGB_field_desc: struct{ u32, u32 } = .{9, 15138};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{11, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const INEAEHKNIIN_field_desc: struct{ u32, u32 } = .{13, 1463};
     pub const NDGOJKEHCLJ_field_desc: struct{ u32, u32 } = .{14, 0};
 };
@@ -22335,7 +22335,7 @@ pub const MANEFOFPCJH = struct {
     pub const PMNKIHOKEDI_field_desc: struct{ u32, u32 } = .{12, 0};
 };
 pub const OIOOGFCDAGK = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{7, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const CLMCPOHFOBB_field_desc: struct{ u32, u32 } = .{14, 4510};
 };
 pub const EELFCPGKABG = struct {
@@ -22356,13 +22356,13 @@ pub const MLPELDINCFN = struct {
     pub const AHDAKJPGEEJ_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const section_id_field_desc: struct{ u32, u32 } = .{3, 0};
 };
-pub const ANEPHLBFODK = struct {
-    pub const OOEGIDCFMEB_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{5, 4981};
+pub const NpcInfo = struct {
+    pub const unk_scene_unit_bool_field_desc: struct{ u32, u32 } = .{4, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{5, 4981};
     pub const KEIKDMCIGAC_field_desc: struct{ u32, u32 } = .{6, 0};
-    pub const EMDCPEPBALK_field_desc: struct{ u32, u32 } = .{8, 0};
+    pub const is_active_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const LGNHIMFKPGN_field_desc: struct{ u32, u32 } = .{12, 13832};
-    pub const LJJIMIPLHDI_field_desc: struct{ u32, u32 } = .{15, 0};
+    pub const interacts_info_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const PBCLMIGAIFD = struct {
     pub const LDGEDIMBDKM_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -22398,7 +22398,7 @@ pub const GNLMNIAGELG = struct {
     pub const NDGOJKEHCLJ_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const MEMCMHEMCCM_field_desc: struct{ u32, u32 } = .{13, 0};
     pub const MBLBGLNFIBO_field_desc: struct{ u32, u32 } = .{14, 0};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{15, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{15, 0};
     pub const HMNFILAMIJM_field_desc: struct{ u32, u32 } = .{65, 0};
     pub const INEAEHKNIIN_field_desc: struct{ u32, u32 } = .{184, 3091};
     pub const NLOKPFMAHHD_field_desc: struct{ u32, u32 } = .{323, 11647};
@@ -22407,7 +22407,7 @@ pub const GNLMNIAGELG = struct {
     pub const ILAJDAADEBM_field_desc: struct{ u32, u32 } = .{601, 0};
     pub const JELOKGIJDPH_field_desc: struct{ u32, u32 } = .{610, 6374};
     pub const OGPEGPBGNBB_field_desc: struct{ u32, u32 } = .{1033, 118};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{1361, 11000};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{1361, 11000};
     pub const MGHEBMLCFBH_field_desc: struct{ u32, u32 } = .{1814, 4407};
 };
 pub const GPIMMFLNFHF = struct {
@@ -22426,11 +22426,11 @@ pub const HLHDJJAPPBH = struct {
 };
 pub const BPPMAGKBGCC = struct {
 };
-pub const KEJKKCCNOBH = struct {
-    pub const INPPLCIHBLK_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const PHNFMLCKNPO_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const CGFAJDMJFMD_field_desc: struct{ u32, u32 } = .{3, 0};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{4, 0};
+pub const ZoneRecord = struct {
+    pub const zone_id_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const layer_record_list_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const begin_timestamp_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const LPLNCFNNIGN_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const EFLBMEHOHDK_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const GAKPMFICLIJ_field_desc: struct{ u32, u32 } = .{7, 0};
@@ -22539,21 +22539,21 @@ pub const LNKFFDHMAGC = struct {
     pub const cmd_id: u16 = 4167;
     pub const GHJLDIBLECH_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const KGPPOEHEIJP_field_desc: struct{ u32, u32 } = .{2, 10277};
-    pub const LJHBEAHDJGN_field_desc: struct{ u32, u32 } = .{3, 0};
+    pub const action_type_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const NGLBPAHNIPM_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const GLOFBGKIFDA_field_desc: struct{ u32, u32 } = .{5, 2702};
     pub const section_id_field_desc: struct{ u32, u32 } = .{6, 7425};
     pub const DAIBOEHJDNE_field_desc: struct{ u32, u32 } = .{7, 13247};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{8, 10608};
+    pub const tag_field_desc: struct{ u32, u32 } = .{8, 10608};
     pub const MOIGAMBENNK_field_desc: struct{ u32, u32 } = .{9, 14487};
     pub const GPLHDJGOEDM_field_desc: struct{ u32, u32 } = .{10, 0};
     pub const ODGMDIDGIBA_field_desc: struct{ u32, u32 } = .{11, 0};
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{12, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const GHIPOEFPPNJ_field_desc: struct{ u32, u32 } = .{13, 0};
     pub const JMAKCIMHCGD_field_desc: struct{ u32, u32 } = .{14, 11042};
-    pub const AIHGFHHDNJE_field_desc: struct{ u32, u32 } = .{15, 0};
+    pub const event_name_field_desc: struct{ u32, u32 } = .{15, 0};
     pub const GFDDFAOLDJF_field_desc: struct{ u32, u32 } = .{481, 0};
-    pub const AKLFJLFOPID_field_desc: struct{ u32, u32 } = .{1038, 6109};
+    pub const action_id_field_desc: struct{ u32, u32 } = .{1038, 6109};
 };
 pub const EHJKLJIGBBA = struct {
     pub const KMFKAIBELEA_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -22795,7 +22795,7 @@ pub const ELCDOPOEILB = struct {
     pub const EAFICEIGJCH_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const FANCGKGHDNB_field_desc: struct{ u32, u32 } = .{2, 0};
 };
-pub const PPHJKGOMEBK = struct {
+pub const AddAvatarScNotify = struct {
     pub const cmd_id: u16 = 8264;
     pub const lock_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const perform_type_field_desc: struct{ u32, u32 } = .{8, 0};
@@ -22806,8 +22806,8 @@ pub const IEIAONDGJDK = struct {
     pub const KMHPCAEONKI_field_desc: struct{ u32, u32 } = .{1, 0};
 };
 pub const EIGKKGACMBF = struct {
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const JNIPMLPCJJA_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const interact_id_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const MJHPJGBKLLD = struct {
     pub const cmd_id: u16 = 3684;
@@ -22925,7 +22925,7 @@ pub const ONNIBBCINGG = struct {
     pub const avatar_id_field_desc: struct{ u32, u32 } = .{7, 12475};
 };
 pub const MMILHEFPHCK = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const JDCAOGGDJIL_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const KLDOFJEHCLC = struct {
@@ -22990,7 +22990,7 @@ pub const EBFNDBLHFEE = struct {
 };
 pub const PEIEPKBNDMF = struct {
     pub const cmd_id: u16 = 5543;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{6, 5993};
+    pub const tag_field_desc: struct{ u32, u32 } = .{6, 5993};
 };
 pub const KLCACKDDKLC = struct {
     pub const HJGCIEBNNMH_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -23007,7 +23007,7 @@ pub const IKNHGEANFLN = struct {
 };
 pub const DungeonInfo = struct {
     pub const EIJJCBEONHC_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const NAAFCOMCPHA_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const buddy_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const GHALCNBGADC_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const quest_id_field_desc: struct{ u32, u32 } = .{4, 1076};
     pub const FMJEJCBOACE_field_desc: struct{ u32, u32 } = .{5, 12254};
@@ -23028,7 +23028,7 @@ pub const DungeonInfo = struct {
     pub const PGCAOMFFBGJ_field_desc: struct{ u32, u32 } = .{289, 0};
     pub const KGIHPOGOOMB_field_desc: struct{ u32, u32 } = .{445, 8445};
     pub const DIOJJCBALBM_field_desc: struct{ u32, u32 } = .{470, 0};
-    pub const DJEBKNBAPLN_field_desc: struct{ u32, u32 } = .{515, 0};
+    pub const buddy_list_field_desc: struct{ u32, u32 } = .{515, 0};
     pub const MLAHOLFHFJB_field_desc: struct{ u32, u32 } = .{541, 0};
     pub const MJCJBAMMLNA_field_desc: struct{ u32, u32 } = .{570, 12962};
     pub const OLELHPMNADD_field_desc: struct{ u32, u32 } = .{619, 0};
@@ -23189,7 +23189,7 @@ pub const LBCDJJCPAKB = struct {
 };
 pub const AOPKHNOEAGB = struct {
     pub const IANDBIDAABE_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JINGAEMJADE_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const JCJFNFGFOKP_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const EHMNABBCNOJ_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -23316,7 +23316,7 @@ pub const EADBPIKFCBF = struct {
     pub const AMNHFFBIBPE_field_desc: struct{ u32, u32 } = .{10, 11292};
     pub const KBMHMDOKPBK_field_desc: struct{ u32, u32 } = .{11, 0};
     pub const KBJLHEEDMDO_field_desc: struct{ u32, u32 } = .{12, 14674};
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{13, 11054};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{13, 11054};
     pub const HDALMNFOLAD_field_desc: struct{ u32, u32 } = .{14, 12898};
     pub const EAEKFKFADAG_field_desc: struct{ u32, u32 } = .{15, 0};
 };
@@ -23470,7 +23470,7 @@ pub const NIPFPIEGHFM = struct {
     pub const BMAHFIICOPN_field_desc: struct{ u32, u32 } = .{8, 15952};
     pub const JKPJMAAOOCE_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const MEGFAKFAJPJ_field_desc: struct{ u32, u32 } = .{10, 3413};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{14, 11290};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{14, 11290};
 };
 pub const LNNPNNANMLI = struct {
     pub const cmd_id: u16 = 9323;
@@ -23666,7 +23666,7 @@ pub const MLKJKDPKLKO = struct {
 pub const AGMMAGNFNHN = struct {
     pub const DMFOKDGILLC_field_desc: struct{ u32, u32 } = .{1, 8524};
     pub const MEMCMHEMCCM_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const EDEKLLDMEOO_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const HHABMCMKFLL_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const JLKAANKLGGB_field_desc: struct{ u32, u32 } = .{8, 10443};
@@ -23681,7 +23681,7 @@ pub const LENFOLLBLGL = struct {
     pub const KBPNIBBCPLN_field_desc: struct{ u32, u32 } = .{14, 3101};
 };
 pub const NJICCHEIIIH = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{2, 2116};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{2, 2116};
     pub const HODELKHHPPA_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const PFMHPDMCHDF_field_desc: struct{ u32, u32 } = .{8, 11419};
 };
@@ -23694,7 +23694,7 @@ pub const AGOFHIPCEGH = struct {
     pub const data_field_desc: struct{ u32, u32 } = .{12, 0};
 };
 pub const BAHKNPADGGM = struct {
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const HCOHNFMAJIL_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JDNGNELJKCL_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PENCHELPJPE_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -23730,7 +23730,7 @@ pub const NOEMDHNMAFN = struct {
 };
 pub const ELFLDAHAAJK = struct {
     pub const quest_id_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JINGAEMJADE_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const JCJFNFGFOKP_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const HKNGDMNAOFA_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -23754,7 +23754,7 @@ pub const KAHBBIBFABI = struct {
 pub const OHMNHMALAOI = struct {
     pub const cmd_id: u16 = 2547;
     pub const AMCIMOPAPKH_field_desc: struct{ u32, u32 } = .{2, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{6, 1614};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{6, 1614};
 };
 pub const IOOEOAHGHPD = struct {
     pub const JJJLCJONEJE_field_desc: struct{ u32, u32 } = .{8, 0};
@@ -23807,7 +23807,7 @@ pub const CNCFNAEOCFC = struct {
 pub const INDBKDDPIEB = struct {
     pub const cmd_id: u16 = 1704;
     pub const retcode_field_desc: struct{ u32, u32 } = .{6, 9440};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{14, 11468};
+    pub const tag_field_desc: struct{ u32, u32 } = .{14, 11468};
 };
 pub const CIBCLLHBOMO = struct {
     pub const GLOFBGKIFDA_field_desc: struct{ u32, u32 } = .{13, 4653};
@@ -23833,7 +23833,7 @@ pub const FDMGKIMBOCD = struct {
     pub const lock_field_desc: struct{ u32, u32 } = .{4, 0};
 };
 pub const FPEENOJPPEN = struct {
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const uid_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const KFJGIFDNIJE_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const CNJOMNMEMJJ_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -23859,7 +23859,7 @@ pub const ANPEJIPBBBN = struct {
 };
 pub const CPFHEKEJJIC = struct {
     pub const PKDACHPCDGL_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const CLMCPOHFOBB_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const IFIKMNKCLGO = struct {
@@ -23872,14 +23872,14 @@ pub const BCGFPKAMCJH = struct {
 pub const OADEKEMODME = struct {
     pub const cmd_id: u16 = 4053;
     pub const EAMIMNMMNIC_field_desc: struct{ u32, u32 } = .{3, 0};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{5, 6566};
+    pub const tag_field_desc: struct{ u32, u32 } = .{5, 6566};
     pub const PJKNGPLILHM_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const PLPALJACBCI_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const AHPDEMLNPBE_field_desc: struct{ u32, u32 } = .{9, 1206};
 };
 pub const NKPFPADAKLM = struct {
     pub const cmd_id: u16 = 58;
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{4, 10346};
+    pub const tag_field_desc: struct{ u32, u32 } = .{4, 10346};
     pub const PLPALJACBCI_field_desc: struct{ u32, u32 } = .{14, 0};
 };
 pub const AGDJNDJFBKB = struct {
@@ -23888,7 +23888,7 @@ pub const AGDJNDJFBKB = struct {
     pub const JILHGDGBDGC_field_desc: struct{ u32, u32 } = .{4, 1461};
     pub const state_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const CFPPIABJIGF_field_desc: struct{ u32, u32 } = .{8, 12673};
-    pub const CGFAJDMJFMD_field_desc: struct{ u32, u32 } = .{10, 13918};
+    pub const begin_timestamp_field_desc: struct{ u32, u32 } = .{10, 13918};
     pub const MBJPDGHDGON_field_desc: struct{ u32, u32 } = .{12, 11963};
     pub const DIDPIPNPOLK_field_desc: struct{ u32, u32 } = .{13, 0};
 };
@@ -24012,7 +24012,7 @@ pub const INPMLJJMOOL = struct {
     pub const GJONFENJDKM_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const MBMJGJIEDNF = struct {
-    pub const JFDFCDBAIOP_field_desc: struct{ u32, u32 } = .{4, 753};
+    pub const entrance_id_field_desc: struct{ u32, u32 } = .{4, 753};
     pub const JDFLCMPDKGM_field_desc: struct{ u32, u32 } = .{5, 10158};
     pub const BHHFCNFKBNC_field_desc: struct{ u32, u32 } = .{8, 0};
     pub const KMCKDICNIPI_field_desc: struct{ u32, u32 } = .{9, 0};
@@ -24022,11 +24022,11 @@ pub const MBMJGJIEDNF = struct {
 };
 pub const CIPCMIOEIFF = struct {
     pub const cmd_id: u16 = 9754;
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JEANLOEIDDH_field_desc: struct{ u32, u32 } = .{3, 4769};
     pub const KGPPOEHEIJP_field_desc: struct{ u32, u32 } = .{4, 14825};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{5, 1853};
-    pub const AIHGFHHDNJE_field_desc: struct{ u32, u32 } = .{9, 0};
+    pub const tag_field_desc: struct{ u32, u32 } = .{5, 1853};
+    pub const event_name_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const BONKFGOMPKM_field_desc: struct{ u32, u32 } = .{12, 0};
     pub const NMDBEKBDMCI_field_desc: struct{ u32, u32 } = .{15, 15717};
 };
@@ -24040,7 +24040,7 @@ pub const BIKDBBHEEJJ = struct {
 };
 pub const JAFCJINFMGD = struct {
     pub const id_field_desc: struct{ u32, u32 } = .{5, 2188};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{13, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{13, 0};
 };
 pub const PCGLFLDDNHD = struct {
     pub const cmd_id: u16 = 8418;
@@ -24135,7 +24135,7 @@ pub const HBJGPLJEGOE = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{13, 9093};
 };
 pub const OMPJBJEMEOL = struct {
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const HCOHNFMAJIL_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const JDNGNELJKCL_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PENCHELPJPE_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -24218,7 +24218,7 @@ pub const BPPELNJFGFO = struct {
     pub const DIHHLKDKMMA_field_desc: struct{ u32, u32 } = .{3, 10336};
     pub const IKBOHJPNNDK_field_desc: struct{ u32, u32 } = .{6, 2253};
     pub const rank_field_desc: struct{ u32, u32 } = .{7, 3342};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{10, 12594};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{10, 12594};
     pub const BMAHFIICOPN_field_desc: struct{ u32, u32 } = .{14, 4561};
 };
 pub const GMIEEJFCJLF = struct {
@@ -24272,7 +24272,7 @@ pub const KGGIGHICNPI = struct {
     pub const LGNLPHEFMOJ_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const MGLMDOFFBPH = struct {
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{4, 1705};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{4, 1705};
     pub const JCGFMLAAFIK_field_desc: struct{ u32, u32 } = .{15, 0};
 };
 pub const BGIIBLOKJMP = struct {
@@ -24384,7 +24384,7 @@ pub const KFNLACIBDJN = struct {
 };
 pub const NENMMDOOPGP = struct {
     pub const NJCNPEOMHAL_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const NAMAIBGIJGM_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const EGJKMMFHMCL_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const OHFHOFIBBFN_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -24428,7 +24428,7 @@ pub const EMMKPBNNLIJ = struct {
 pub const INGMBIHNGDI = struct {
 };
 pub const KLJEEHJPEFO = struct {
-    pub const LCBDDOANDHA_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const name_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const GPKCCODLOJI_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const JNABFMKDAKE = struct {
@@ -24514,7 +24514,7 @@ pub const OAOOPJBFMPL = struct {
 };
 pub const GNCCBNKABJL = struct {
     pub const HGJEMKLCPJK_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const LJLKIFGBOJB_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const properties_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const LHKKFGGECIC_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const IFOMLHDAJMD = struct {
@@ -24578,7 +24578,7 @@ pub const HIGPMPCGEDA = struct {
 };
 pub const FBDFAIGKEOB = struct {
     pub const cmd_id: u16 = 2666;
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 590};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 590};
     pub const GEGEDABNOGP_field_desc: struct{ u32, u32 } = .{8, 0};
 };
 pub const PMCNGHKDKPD = struct {
@@ -24616,7 +24616,7 @@ pub const HENNKGHDCHG = struct {
     pub const DIHHLKDKMMA_field_desc: struct{ u32, u32 } = .{2, 15436};
     pub const PBHGHIAMAJL_field_desc: struct{ u32, u32 } = .{3, 13069};
     pub const AJGHJBFBKGL_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const LFEIPLAGBEO_field_desc: struct{ u32, u32 } = .{6, 13071};
+    pub const status_field_desc: struct{ u32, u32 } = .{6, 13071};
     pub const HDALMNFOLAD_field_desc: struct{ u32, u32 } = .{7, 15135};
     pub const BMONLEJKOJL_field_desc: struct{ u32, u32 } = .{9, 14233};
     pub const IBCLJCAOCDK_field_desc: struct{ u32, u32 } = .{13, 0};
@@ -24625,7 +24625,7 @@ pub const HENNKGHDCHG = struct {
 pub const OPGLMEBPKEC = struct {
     pub const cmd_id: u16 = 5130;
     pub const KKOGPJDJNEL_field_desc: struct{ u32, u32 } = .{8, 10188};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{13, 10180};
+    pub const type_field_desc: struct{ u32, u32 } = .{13, 10180};
 };
 pub const ENCAKFBLDGL = struct {
     pub const KKMILANHDIH_field_desc: struct{ u32, u32 } = .{4, 2127};
@@ -24648,7 +24648,7 @@ pub const MKKHBEHFAJH = struct {
     pub const cmd_id: u16 = 5384;
     pub const DIDPIPNPOLK_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const BMAHFIICOPN_field_desc: struct{ u32, u32 } = .{10, 14684};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{15, 7290};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{15, 7290};
 };
 pub const OOEAOENIBCI = struct {
     pub const OKGCLAPJIEO_field_desc: struct{ u32, u32 } = .{3, 11472};
@@ -24663,7 +24663,7 @@ pub const JAPDONIACMO = struct {
     pub const GMPALEKHLIP_field_desc: struct{ u32, u32 } = .{12, 14975};
 };
 pub const PBIEGDICNDG = struct {
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const CNJOMNMEMJJ_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const KFJGIFDNIJE_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const AADEHMJNBCP_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -24761,12 +24761,12 @@ pub const FELCFONCNPP = struct {
 };
 pub const GBNMHJCEPII = struct {
     pub const cmd_id: u16 = 6671;
-    pub const JNIPMLPCJJA_field_desc: struct{ u32, u32 } = .{9, 2855};
+    pub const interact_id_field_desc: struct{ u32, u32 } = .{9, 2855};
 };
 pub const ILOALNDJCHD = struct {
     pub const cmd_id: u16 = 8881;
     pub const KHPPONJAFMP_field_desc: struct{ u32, u32 } = .{5, 12643};
-    pub const HHNIIFPKNBF_field_desc: struct{ u32, u32 } = .{15, 11927};
+    pub const area_id_field_desc: struct{ u32, u32 } = .{15, 11927};
 };
 pub const FightResult = struct {
     pub const DIHHLKDKMMA_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -24857,7 +24857,7 @@ pub const EGMONEELBAG = struct {
 pub const MIOEODNGOEM = struct {
 };
 pub const BHGMEFGJJMO = struct {
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const JIGJLCLCJMD_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const NFCKKLACPOJ_field_desc: struct{ u32, u32 } = .{3, 0};
 };
@@ -24892,7 +24892,7 @@ pub const KDJLNKGNNPA = struct {
 pub const PNEMBAPCIHP = struct {
 };
 pub const BHFIOKBACJC = struct {
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const ODGMDIDGIBA_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const KNONKNPLDJA_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const OKAHMANOCFF_field_desc: struct{ u32, u32 } = .{4, 0};
@@ -25065,7 +25065,7 @@ pub const NLEBPPDLJAC = struct {
 };
 pub const GLPFGGAFKBB = struct {
     pub const FCLJKGPEOJJ_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const FKEMGKCDGED_field_desc: struct{ u32, u32 } = .{13, 11244};
+    pub const group_id_field_desc: struct{ u32, u32 } = .{13, 11244};
 };
 pub const BBAHJHCKPOA = struct {
     pub const cmd_id: u16 = 8126;
@@ -25074,7 +25074,7 @@ pub const BBAHJHCKPOA = struct {
 };
 pub const GFKPFDJNMFF = struct {
     pub const cmd_id: u16 = 5303;
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{6, 2642};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{6, 2642};
     pub const MLJLFMCBAMK_field_desc: struct{ u32, u32 } = .{12, 5668};
     pub const DANNIEGBLFJ_field_desc: struct{ u32, u32 } = .{13, 0};
 };
@@ -25096,7 +25096,7 @@ pub const HHLHPFGAPNA = struct {
     pub const HFAEEDFGHBD_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const KAICBNCCCGE_field_desc: struct{ u32, u32 } = .{3, 0};
 };
-pub const DAPHAPPOIKM = struct {
+pub const GetHadalZoneDataCsReq = struct {
     pub const cmd_id: u16 = 7642;
 };
 pub const EDCKMGMFJBM = struct {
@@ -25140,7 +25140,7 @@ pub const CJFEOLOBGGK = struct {
     pub const CBGDCACIKMG_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const IMPEAGACBNL_field_desc: struct{ u32, u32 } = .{4, 0};
 };
-pub const OCJLNIPGLJF = struct {
+pub const GetAreaMapDataCsReq = struct {
     pub const cmd_id: u16 = 6200;
 };
 pub const GetEquipDataScRsp = struct {
@@ -25194,7 +25194,7 @@ pub const BAPGKJKPJEH = struct {
 };
 pub const APMANMACONH = struct {
     pub const cmd_id: u16 = 8696;
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{10, 1228};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{10, 1228};
 };
 pub const BBHMODGFDCK = struct {
     pub const cmd_id: u16 = 737;
@@ -25268,7 +25268,7 @@ pub const GDOPEGBIKHI = struct {
     pub const DBODHAPDHHA_field_desc: struct{ u32, u32 } = .{2, 38};
     pub const GDIGGEOGNMM_field_desc: struct{ u32, u32 } = .{3, 14023};
     pub const NOCFNBGJBJA_field_desc: struct{ u32, u32 } = .{11, 8087};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{13, 6450};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{13, 6450};
 };
 pub const KMCEADADAJP = struct {
     pub const cmd_id: u16 = 6220;
@@ -25308,7 +25308,7 @@ pub const OCDIJANEHKG = struct {
 };
 pub const NIAPHCNBCII = struct {
     pub const PADJCLALFKP_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const MCGDGDNMKFI_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const BJNNOLIDLLK_field_desc: struct{ u32, u32 } = .{4, 0};
     pub const PBCMOBKDKHB_field_desc: struct{ u32, u32 } = .{5, 0};
@@ -25317,7 +25317,7 @@ pub const NIAPHCNBCII = struct {
 };
 pub const GDMEJBMGHPB = struct {
     pub const OOFDLPHEHHA_field_desc: struct{ u32, u32 } = .{3, 12313};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{11, 8880};
+    pub const type_field_desc: struct{ u32, u32 } = .{11, 8880};
     pub const JBCPKDEJPBI_field_desc: struct{ u32, u32 } = .{13, 2945};
 };
 pub const GHAFNIKMBNL = struct {
@@ -25331,7 +25331,7 @@ pub const FOGJKCLFIHJ = struct {
     pub const CDOGJBLBBAE_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const BECHEIBCCKP_field_desc: struct{ u32, u32 } = .{9, 12437};
     pub const scene_perform_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const EJBFBANMDKD_field_desc: struct{ u32, u32 } = .{12, 16132};
+    pub const layer_item_id_field_desc: struct{ u32, u32 } = .{12, 16132};
     pub const DBLKKFNJPPB_field_desc: struct{ u32, u32 } = .{14, 14860};
     pub const EPIEAFEAFMN_field_desc: struct{ u32, u32 } = .{15, 0};
 };
@@ -25397,7 +25397,7 @@ pub const KKKMMDKJLKL = struct {
     pub const HDALMNFOLAD_field_desc: struct{ u32, u32 } = .{14, 7146};
 };
 pub const CLJIOOEDEFP = struct {
-    pub const HNDHPMOEOAJ_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const npc_id_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const NOMBEIIKFLE_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const FPBMMPLJAGF = struct {
@@ -25470,7 +25470,7 @@ pub const IJOEGIIHHAE = struct {
     pub const retcode_field_desc: struct{ u32, u32 } = .{6, 3067};
 };
 pub const LIJAIJLGLEN = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const DDOGGCPDLCG_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const position_field_desc: struct{ u32, u32 } = .{3, 0};
 };
@@ -25487,7 +25487,7 @@ pub const JCKNPCBCDDI = struct {
 pub const FDHIMCAEOIM = struct {
     pub const cmd_id: u16 = 4245;
     pub const LDFCNBPBBHF_field_desc: struct{ u32, u32 } = .{1, 2396};
-    pub const PEJJEEMGGJO_field_desc: struct{ u32, u32 } = .{2, 15521};
+    pub const buddy_id_field_desc: struct{ u32, u32 } = .{2, 15521};
     pub const DDAIPJHGEFM_field_desc: struct{ u32, u32 } = .{3, 13732};
     pub const AKEAJNKJABA_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const DNKMEFCDIIB_field_desc: struct{ u32, u32 } = .{7, 0};
@@ -25632,7 +25632,7 @@ pub const BCHKOMLKEHD = struct {
 };
 pub const OFHKHFBEOOD = struct {
     pub const DPCFEECIAJL_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const FJFKJIPCDNM_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const is_unlocked_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const GJAGCDOHPFH = struct {
     pub const cmd_id: u16 = 8124;
@@ -25653,7 +25653,7 @@ pub const FPLFCBGMMDG = struct {
     pub const NDDDCELHCIO_field_desc: struct{ u32, u32 } = .{3, 0};
 };
 pub const FMBPACFNNLN = struct {
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{1, 0};
     pub const avatar_id_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const DBHPJPAFABP_field_desc: struct{ u32, u32 } = .{3, 0};
 };
@@ -25671,11 +25671,11 @@ pub const EnterSectionCompleteScRsp = struct {
     pub const cmd_id: u16 = 4604;
     pub const UNK_LLMGAKCFJOF_40_field_desc: struct{ u32, u32 } = .{7, 721};
 };
-pub const DKLGKNDACBK = struct {
-    pub const MGLEFOBOJBD_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IDIDLFEHOGD_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const HFBFHMPGOBJ_field_desc: struct{ u32, u32 } = .{7, 0};
-    pub const HHNIIFPKNBF_field_desc: struct{ u32, u32 } = .{15, 8332};
+pub const UrbanAreaShowInfo = struct {
+    pub const is_urban_area_show_field_desc: struct{ u32, u32 } = .{1, 0};
+    pub const is_area_pop_show_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const is_3d_area_show_field_desc: struct{ u32, u32 } = .{7, 0};
+    pub const area_id_field_desc: struct{ u32, u32 } = .{15, 8332};
 };
 pub const BNJMMDHGFJF = struct {
     pub const cmd_id: u16 = 1117;
@@ -25748,7 +25748,7 @@ pub const CLHPCIOMCIE = struct {
 };
 pub const AHGLMOPOANM = struct {
     pub const MNKKJPMDJEF_field_desc: struct{ u32, u32 } = .{5, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{7, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{7, 0};
 };
 pub const LHLDONEJJKO = struct {
     pub const FKEONCEAFOH_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -25757,7 +25757,7 @@ pub const LHLDONEJJKO = struct {
 };
 pub const IEGMJLHKDBM = struct {
     pub const OKMJEPIMOJP_field_desc: struct{ u32, u32 } = .{1, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{2, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{2, 0};
 };
 pub const MOENMOJKNFN = struct {
     pub const IOPIHFLDLHI_field_desc: struct{ u32, u32 } = .{1, 0};
@@ -25783,7 +25783,7 @@ pub const DFHJCCJGMFL = struct {
     pub const KMIPHICGADC_field_desc: struct{ u32, u32 } = .{2, 0};
     pub const ODDLLOONKNC_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const ENNNMGDPKFM_field_desc: struct{ u32, u32 } = .{4, 0};
-    pub const IKJBLCGBPBE_field_desc: struct{ u32, u32 } = .{5, 0};
+    pub const type_field_desc: struct{ u32, u32 } = .{5, 0};
     pub const GEEFKNDLMJJ_field_desc: struct{ u32, u32 } = .{6, 0};
     pub const HKCOCPBHECN_field_desc: struct{ u32, u32 } = .{7, 0};
     pub const COHLAGOAOII_field_desc: struct{ u32, u32 } = .{8, 0};
@@ -25826,7 +25826,7 @@ pub const JEDJCEMBLCP = struct {
     pub const LHAHKGIIDMH_field_desc: struct{ u32, u32 } = .{3, 0};
     pub const PBHGHIAMAJL_field_desc: struct{ u32, u32 } = .{5, 15423};
     pub const KMOPICMEPOK_field_desc: struct{ u32, u32 } = .{7, 6806};
-    pub const ODJACPNGBNC_field_desc: struct{ u32, u32 } = .{9, 1884};
+    pub const end_timestamp_field_desc: struct{ u32, u32 } = .{9, 1884};
     pub const IGPIJODBBGD_field_desc: struct{ u32, u32 } = .{10, 7838};
     pub const NOCFNBGJBJA_field_desc: struct{ u32, u32 } = .{11, 4573};
     pub const DIHHLKDKMMA_field_desc: struct{ u32, u32 } = .{13, 148};
@@ -25834,16 +25834,16 @@ pub const JEDJCEMBLCP = struct {
 };
 pub const LCJHDLEINFH = struct {
     pub const cmd_id: u16 = 5307;
-    pub const AKLFJLFOPID_field_desc: struct{ u32, u32 } = .{1, 11408};
+    pub const action_id_field_desc: struct{ u32, u32 } = .{1, 11408};
     pub const section_id_field_desc: struct{ u32, u32 } = .{2, 13352};
     pub const KGPPOEHEIJP_field_desc: struct{ u32, u32 } = .{3, 9764};
-    pub const GNJDCFCOIBA_field_desc: struct{ u32, u32 } = .{4, 13272};
+    pub const tag_field_desc: struct{ u32, u32 } = .{4, 13272};
     pub const JMAKCIMHCGD_field_desc: struct{ u32, u32 } = .{6, 5551};
     pub const MOIGAMBENNK_field_desc: struct{ u32, u32 } = .{7, 6877};
     pub const GPLHDJGOEDM_field_desc: struct{ u32, u32 } = .{9, 0};
     pub const FBGEAPNIGIB_field_desc: struct{ u32, u32 } = .{10, 0};
-    pub const LJHBEAHDJGN_field_desc: struct{ u32, u32 } = .{12, 0};
-    pub const NPFMMNAIACF_field_desc: struct{ u32, u32 } = .{13, 0};
+    pub const action_type_field_desc: struct{ u32, u32 } = .{12, 0};
+    pub const owner_type_field_desc: struct{ u32, u32 } = .{13, 0};
 };
 pub const DHIIPEMMEIN = struct {
     pub const cmd_id: u16 = 2842;
